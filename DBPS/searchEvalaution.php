@@ -62,6 +62,7 @@
                     <th>Course</th>
                     <th>Year Level</th>
                     <th>Section</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -76,6 +77,9 @@
                                 <td><?php echo $row['course']; ?></td>
                                 <td><?php echo $row['year_level']; ?></td>
                                 <td><?php echo $row['section']; ?></td>
+                                <td>
+                                <a class="btn btn-primary" href="">Evaluation Form</a>
+                                </td>
                             </tr>
                 <?php
                         }

@@ -94,37 +94,35 @@
                     <th>Year Level</th>
                     <th>Section</th>
                     <th>Evaluation Status</th>
-                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
                     // Check if there are any rows returned
                     if ($result_student->num_rows > 0) {
-                    // Iterate over each row and output it in the table
+                        // Iterate over each row and output it in the table
                         while ($row = mysqli_fetch_assoc($result_student)) {
-                ?>
-                    <tr>
-                        <td><?php echo $row['firstname'] . ' ' . $row['lastname']; ?></td>
-                        <td><?php echo $row['username']; ?></td>
-                        <td><?php echo $row['course']; ?></td>
-                        <td><?php echo $row['year_level']; ?></td>
-                        <td><?php echo $row['section']; ?></td>
-                        <td><?php
-                            // Display "Pending" if Status_E is 0, otherwise display "Remark"
-                            echo $row['Status_E'] == 0 ? 'Pending' : 'Remark';
-                        ?></td>
-                        <td><div class="form-check"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></div></td>
-                    </tr>
-                <?php
+                            ?>
+                            <tr>
+                                <td><?php echo $row['firstname'] . ' ' . $row['lastname']; ?></td>
+                                <td><?php echo $row['username']; ?></td>
+                                <td><?php echo $row['course']; ?></td>
+                                <td><?php echo $row['year_level']; ?></td>
+                                <td><?php echo $row['section']; ?></td>
+                                <td><?php
+                                    // Display "Pending" if Status_E is 0, otherwise display "Remark"
+                                    echo $row['Status_E'] == 0 ? 'Pending' : 'Evaluated';
+                                ?></td>
+                            </tr>
+                            <?php
                         }
                     } else {
-                    // If no rows are returned, display a message
-                ?>
-                    <tr>
-                        <td colspan="5">No students found.</td>
-                    </tr>
-                <?php
+                        // If no rows are returned, display a message
+                        ?>
+                        <tr>
+                            <td colspan="5">No students found.</td>
+                        </tr>
+                        <?php
                     }
                 ?>
             </tbody>

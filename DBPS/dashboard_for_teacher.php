@@ -83,8 +83,7 @@ if (isset($_POST['logout'])) {
 
     
     <div class="menu">
-        <div class="item"  onclick="DashBoardFunction()"><a class="sub-btn"><i class='bx bx-grid-alt'></i><span class="name-text" id="nametxt">Dashboard</span></a></div>
-        <div class="item"><a class="sub-btn"><i class='bx bxs-envelope'></i><span class="name-text" id="nametxt">Messages</span></span>
+        <div class="item"  onclick="DashBoardFunction()"><a class="sub-btn"><i class='bx bx-grid-alt'></i><span class="name-text" id="nametxt">Dashboard</span>
         </a>
         </div>
         <div class="item" onclick="EvaluationFunction()"><a class="sub-btn"><i class='bx bx-task' ></i><span class="name-text" id="nametxt">Evaluation</span></span>
@@ -113,14 +112,8 @@ if (isset($_POST['logout'])) {
         <div class="dashboard" id="txt">Dashboard</div>
     </div>
     <div class="form-event_reminder" id="fre">
-        <form class="reminder" id="rsp">
-
-            
-        </form>
-    
         <form class="event" id="esp">
-            <!-- Add your reminder box content here -->
-            
+            <iframe src="event.php" width="100%" height="100%" frameborder="0" scrolling="auto"></iframe>
         </form>
     </div>
 </div>
@@ -157,7 +150,6 @@ if (isset($_POST['logout'])) {
             var body2 = document.getElementById('body2');
             var body3 = document.getElementById('body3');
             var sp2 = document.getElementById('esp');
-            var sp = document.getElementById('rsp');
             var fre = document.getElementById('fre');
             var rd = document.getElementById('rd');
             var rc = document.getElementById('rc');
@@ -242,13 +234,6 @@ if (isset($_POST['logout'])) {
             } else {
                 txt2.classList.remove('position-text-reverse2');
                 txt2.classList.add('position-text2');
-            }
-            if (sp.classList.contains('reminder-sp')) {
-                sp.classList.remove('reminder-sp');
-                sp.classList.add('reminder-sp-reverse');
-            } else {
-                sp.classList.remove('reminder-sp-reverse');
-                sp.classList.add('reminder-sp');
             }
             if (sp2.classList.contains('event-sp')) {
                 sp2.classList.remove('event-sp');
