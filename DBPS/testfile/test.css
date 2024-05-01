@@ -1,0 +1,330 @@
+h1,h4{
+    color: #fff;
+    
+}
+
+h5{
+    color: #777;
+}
+  
+.dycitxt{
+    margin-left: -50px;
+}
+
+h1{
+    margin: 0px;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+  
+h4{
+    margin: 0px;
+    margin-bottom: 20px;
+    margin-left: 62px;
+}
+
+.gender{
+    color: black;
+    display: flex;
+    margin-left: -30px;
+    margin-top: 10px;
+    color: #777;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.logo00{
+    width: 90px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  
+.logo100{
+    width: 50px;
+    margin-top: 0;
+    margin-left: -50px;
+}
+
+.logo00, .logo100{
+    justify-content: start;
+}
+
+.hero{
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    display: flex;
+    margin-left: -100px;
+    
+}
+body{
+    background-image:linear-gradient(270deg, #1119E1 -27.71%, #0BA9ED 92.29%);
+}
+
+
+.form-box{
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 6% auto;
+    margin-right: 350px;
+    background: #eaeaea;
+    padding: 5px;
+    border-radius: 5%;
+    margin-top: 100px;
+    /*overflow: hidden;*/
+    backdrop-filter: blur(20px);
+    
+}
+
+.form-picbox{
+    width: 800px;
+    height: 480px;
+    position: absolute;
+    margin: 6% auto;
+    margin-left: 50px;
+    margin-top: 120px;
+    background: #ffff;
+    padding: 5px;
+}
+
+.button-box{
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+    margin-top: 25px;
+}
+
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+.toggles-btn{
+    padding: 10px 15px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 7px;
+}
+
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #ffad06, #ffad06);
+    border-radius: 30px;
+    transition: .5s;
+}
+
+#btns{
+    margin-top: 10px;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 7%;
+    background: linear-gradient(to right, #ffad06, #ffad06);
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.input-group{
+    top: 30px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 0px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: #999;
+    outline: none;
+    background: #fff;
+    border-radius: 25px;
+    margin-top: 0px;
+    position: relative;
+}
+
+.input-field{
+    position: relative;
+}
+
+.input-field input{
+    padding: 15px 20px;
+    outline: none;
+    background: transparent;
+    border-radius: 5px;
+    color: #fff;
+    border: 1px solid#ee8456;
+    font-size: 1em;
+    transition: 0.4s cubic-bezier(0.05, 0.81, 0, 0.93);
+}
+
+.input-field input:focus ~ span,
+.input-field input:valid ~ span{
+    font-size: 0.7em;
+    transform: translate x(14px) translateY(-7.5px);
+    padding: 0 5px;
+    border-radius: 2px;
+    background: #212121;
+    letter-spacing: 0em;
+    border: 1px solid #ee8456;
+}
+
+.submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: 10px;
+    background: linear-gradient(to right, #ffad06, #ffad06 ) ;
+    border: 0;
+    outline: 0;
+    border-radius: 30px;
+}
+
+.check-box{
+    margin: 10px 10px 30px 0;
+}
+
+.idk{
+    margin-top: 20px;
+}
+
+.gender{
+    margin: 10px 10px 0px 0;
+    margin-left: -30px;
+}
+
+.date{
+    margin-left: -30px;
+    margin-top: 10px;
+}
+
+.dates, .course{
+    color: #777;
+}
+
+
+.course{
+    margin-left: -30px;
+    margin-top: 10px;
+}
+
+span{
+    color: #777;
+    font-size: 12px;
+    
+}
+
+#login{
+    left: -20px
+    
+}
+
+#register{
+    left: 350px;
+    
+}
+
+#register_student{
+    left: 450px;
+    
+}
+
+#register_teacher{
+    margin-top: 40px;
+    left: 350px;
+    
+}
+
+#register_parent{
+    margin-top: 40px;
+    left: 700px;
+    
+}
+
+.input-icon .icon {
+    position: relative;
+    top: 35px;
+    right: 35px;
+    font-size: 25px;
+    
+ }
+
+
+
+ /*photo slideshow and swiper*/
+ .container{
+    justify-content: start;
+    width: 900px;
+    height: 500px;
+    display: flex;
+    margin-top: 0px;
+    margin-left: 70px;
+    
+  }
+  
+  .swiper{
+    width: 80%;
+    height: 750px;
+    margin-top: -170px;
+  }
+  
+  .swiper-slide img{
+    width: 90%;
+    height: 500px;
+  }
+
+  .swiper .swiper-slide img{
+    margin-top: 270px;
+    object-fit: cover;
+  }
+
+  .swiper-pagination{
+    width: 80%; 
+  }
+
+  .swiper-button-next:after, .swiper-button-prev:after {
+    font-family: swiper-icons;
+    font-size: var(--swiper-navigation-size);
+    text-transform: none !important;
+    letter-spacing: 0;
+    font-variant: initial;
+    line-height: 1;
+    margin-top: 250px;
+    color: black;
+}
+
+.swiper-button-next, .swiper-button-prev{
+    position: absolute;
+    top: var(--swiper-navigation-top-offset,50%);
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+}
+
+.swiper-button-next:after{
+    margin-left: -150px;
+}

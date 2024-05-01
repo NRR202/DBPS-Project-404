@@ -1,0 +1,275 @@
+
+<html>
+
+
+    <HEAD>
+        <title> DYCIAN Performance Monitoring System</title>
+        <link rel="stylesheet" href="css\login_style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+        rel='stylesheet'>
+        <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+        <script>
+            // Function to clear input fields
+            function clearFields() {
+                document.getElementById("login").reset();
+                document.getElementById("register").reset();
+            }
+        </script>
+    </HEAD>
+
+        <body>
+            
+            <div class="hero">
+                <div class="logo-container">
+                    <img class="logo00"src="Images\Logoyanga.png" alt="Your Logo">
+                    <img class="logo100"src="Images\CCSLogo.png" alt="Your Logo">
+                </div>
+                <div class="dycitxt">
+                    <h1>Dycian Performance Monitoring System</h1>
+                    <h4>Dr. Yanga's Colleges Inc.</h4>
+                </div>
+                <div>
+                    <a href="index.html">
+                        <button class="btnback" type="button">Back</button>
+                    </a>
+                </div>
+                <div class="form-box">
+                    <div class="button-box">
+                        <div id="btn"></div>
+                        <button type="buttton" class="toggle-btn" onclick="login()">Log in</button>
+                        <button type="button" class="toggle-btn" onclick="register()">Sign up</button>
+                        <form id="login" class="input-group" action="loginexecute.php" method="POST">
+                            <div class="input-icon"><span class="icon"><i class='bx bx-user-circle' ></i></span>
+                            <input type="text" name="username" class="input-field" placeholder="Username"
+                            required autocomplete="off">
+                        </div>
+                            <div class="input-icon"><span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                            <input type="text" name="password" class="input-field password-field" placeholder="Password"
+                            required autocomplete="off">
+                            <style>
+                                /* Style for the password field */
+                                .password-field {
+                                    -webkit-text-security: disc;
+                                }
+                            </style>
+                        </div>
+                            <button type="submit" class="submit-btn">Log in</button></a>
+
+
+                            
+                        </form>
+                        <form id="register" class="input-group" action="signupexecute.php" method="POST">
+                            <div id="btn1"></div>
+                            <input type="hidden" id="user-type" name="type-entity" value="">
+                            <button type="button" class="type-btn" onclick="student(); selectUserType('Student');">Student</button>
+                            <button type="button" class="type-btn" onclick="teacher(); selectUserType('Teacher');">Teacher</button>
+                            <button type="button" class="type-btn" onclick="parent(); selectUserType('Parent');">Parent</button>
+                            
+                            <script>
+                                function selectUserType(userType) {
+                                    document.getElementById('user-type').value = userType;
+                                }
+                            </script>
+
+                            <div class="input-icon"><span class="icon"><i class='bx bxs-user-rectangle' ></i></i></span>
+                            <input type="text" name="firstname" class="input-field" placeholder="First Name"required autocomplete="off">
+                        </div>
+                            <div class="input-icon"><span class="icon"><i class='bx bxs-user-rectangle' ></i></i></span>
+                            <input type="text" name="lastname" class="input-field" placeholder="Last Name"required autocomplete="off">
+                        </div>
+                            <div class="input-icon"><span class="icon"><i class='bx bx-user-circle' ></i></span>
+                            <input type="text" name="username" class="input-field" placeholder="Username"required autocomplete="off">
+                        </div> 
+                            <div class="input-icon"><span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                            <input type="text" name="password" class="input-field password-field" placeholder="Password"required autocomplete="off">
+                            <style>
+                                /* Style for the password field */
+                                .password-field {
+                                    -webkit-text-security: disc;
+                                }
+                            </style>
+                        </div>
+                            
+                                    <div id="studentinput" class="Student_Info"><h5 class="gender">Gender:&nbsp;
+                                        <input type="radio" name="student_gender" value="M">&nbsp;Male&nbsp;
+                                        <input type="radio" name="student_gender" value="F">&nbsp;Female&nbsp;
+                                        <input type="radio" name="student_gender" value="O">&nbsp;Other&nbsp;
+                                    </h5>
+                                    <h5 class="course">Course:&nbsp;
+                                        <select name="course_select_s">
+                                            <option value="BSIT">BSIT</option>
+                                            <option value="BSCS">BSCS</option>
+                                            <option value="BSCPE">BSCPE</option>
+                                        </select></h5>
+                                    <h6 class="yearlevel">Year Level:&nbsp;
+                                        <select name="year-level">
+                                            <option value="1st year">1st year</option>
+                                            <option value="2nd year">2nd year</option>
+                                            <option value="3rd year">3rd year</option>
+                                            <option value="4th year">4th year</option>
+                                            <option value="5th year">5th year</option>
+                                            <option value="6th year">6th year</option>
+                                        </select></h6>
+                                    <h5 class="course">Section:&nbsp;
+                                        <select name="section-input">
+                                            <option value="A">A</option>
+                                            <option value="B">B</option>
+                                            <option value="C">C</option>
+                                            <option value="D">D</option>
+                                        </select></h5>
+                                    </div>
+                                    
+                                    <div id="teacherinput" class="Teacher_Info"><h5 class="gender">Gender:&nbsp;
+                                        <input type="radio" name="teacher_gender" value="M">&nbsp;Male&nbsp;
+                                        <input type="radio" name="teacher_gender" value="F">&nbsp;Female&nbsp;
+                                        <input type="radio" name="teacher_gender" value="O">&nbsp;Other&nbsp;
+                                    </h5>
+                                    <h5 class="course">Course Handle:&nbsp;
+                                        <select name="course-handle">
+                                            <option value="BSIT">BSIT</option>
+                                            <option value="BSCS">BSCS</option>
+                                            <option value="BSCPE">BSCPE</option>
+                                        </select></h5>
+                                    </div>
+                            
+                                    <div id="parentinput" class="Parent_Info">
+                                        <div class="input-icon"><span class="icon"><i class='bx bxs-user-rectangle' ></i></span>
+                                            <input type="text" id="studentname" name="student_name" class="input-parent" placeholder="Student Name"required autocomplete="off">
+                                        </div>  
+                                        <h2 class="gender">Gender:&nbsp;
+                                        <input type="radio" name="parent_gender" value="M">&nbsp;Male&nbsp;
+                                        <input type="radio" name="parent_gender" value="F">&nbsp;Female&nbsp;
+                                        <input type="radio" name="parent_gender" value="O">&nbsp;Other&nbsp;
+                                        </h2>
+                                    </div>
+                                    
+                        
+                            <button type="submit" class="submit-btn1">register</button>
+                        </form>
+                    </div>
+
+
+                </div>
+                
+                <script>
+                    var x = document.getElementById("login")
+                    var y = document.getElementById("register")
+                    var z = document.getElementById("btn")
+
+                    function register(){
+                        x.style.left = "-500px"
+                        y.style.left = "-20px"
+                        z.style.left = "110px"
+                        document.querySelector('.form-box').classList.add('animate-height');
+                        document.querySelector('.form-box').classList.remove('animate-height-reverse');
+                    }
+
+                    function login (){
+                        x.style.left = "-20px"
+                        y.style.left = "400px"
+                        z.style.left = "0px"
+                        document.querySelector('.form-box').classList.remove('animate-height');
+                        document.querySelector('.form-box').classList.add('animate-height-reverse');
+                    }
+
+                </script>
+                <script>
+                    function toggleSnameRequired(isRequired) {
+                        var studentnameInput = document.getElementById('studentname');
+                        if (isRequired) {
+                            studentnameInput.setAttribute('required', 'required');
+                        } else {
+                            studentnameInput.removeAttribute('required');
+                        }
+                    }
+                
+                    function student() {
+                        var si = document.getElementById("studentinput");
+                        var ti = document.getElementById("teacherinput");
+                        var pi = document.getElementById("parentinput");
+                        var left_1 = document.getElementById("btn1");
+                        left_1.style.left = "-5px";
+                        si.style.visibility = "visible";
+                        ti.style.visibility = "hidden";
+                        pi.style.visibility = "hidden";
+                        toggleSnameRequired(false); // Set username input required
+                    }
+                
+                    function teacher() {
+                        var si = document.getElementById("studentinput");
+                        var ti = document.getElementById("teacherinput");
+                        var pi = document.getElementById("parentinput");
+                        var left_1 = document.getElementById("btn1");
+                        left_1.style.left = "81px";
+                        si.style.visibility = "hidden";
+                        ti.style.visibility = "visible";
+                        pi.style.visibility = "hidden";
+                        toggleSnameRequired(false); // Set username input required
+                    }
+                
+                    function parent() {
+                        var si = document.getElementById("studentinput");
+                        var ti = document.getElementById("teacherinput");
+                        var pi = document.getElementById("parentinput");
+                        var left_1 = document.getElementById("btn1");
+                        left_1.style.left = "165px";
+                        si.style.visibility = "hidden";
+                        ti.style.visibility = "hidden";
+                        pi.style.visibility = "visible";
+                        toggleSnameRequired(true); // Remove username input required
+                    }
+                </script>
+                
+            </div>
+</form>
+
+<div class="hero1">                    
+    <div class="swipe_container">
+     <!-- Slider main container -->
+      <div class="swiper">
+   <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+     <!-- Slides -->
+     <div class="swiper-slide"><img src="Images\CCSimg1.jpg" alt=""></div>
+     <div class="swiper-slide"><img src="Images\CCSimg2.jpg" alt=""></div>
+     <div class="swiper-slide"><img src="Images\CCSimg3.png" alt=""></div>
+     <div class="swiper-slide"><img src="Images\CCSimg4.png" alt=""></div> 
+      </div>
+ 
+      <div class="swiper-pagination"></div>
+ 
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+ 
+  </div>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+     const swiper = new Swiper('.swiper', {
+     autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+     },
+ 
+ loop: true,
+ 
+ pagination: {
+   el: '.swiper-pagination',
+   clickable: true,
+ },
+ 
+ navigation: {
+   nextEl: '.swiper-button-next',
+   prevEl: '.swiper-button-prev',
+ },
+ 
+ });
+  </script>
+</div>
+
+        </body>
+
+
+
+</html>

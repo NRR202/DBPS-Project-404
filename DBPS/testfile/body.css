@@ -1,0 +1,55 @@
+.body{
+    background-color: gray;
+    position: fixed;
+    top: 120;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.hyperlinkbtn{
+    position: fixed;
+    bottom: 20px; /* Adjust this value as needed */
+    right: 20px; /* Adjust this value as needed */
+    width: 125px;
+    height: 45px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.facebooklinkbtn {
+    border: none;
+    background: none;
+    position: absolute;
+    bottom:5;
+    left: 10;
+  }
+  
+  /* Adjust size and other styles as needed */
+.facebooklinkbtn img {
+    width: 60px;
+    height: 60px;
+}
+
+.swipe_container {
+    width: 1241.21px; /* Ensures the container doesn't exceed the width of its parent */
+    height: 700px; /* Ensures the container doesn't exceed the height of its parent */
+    position: absolute;
+    left: 40px;
+    top: 45px;
+  }
+  
+.swipe_container .swiper-slide img {
+    width: 1241.21px;
+    height: 700px;
+  }
+
+.yangapic{
+    width: 600px;
+}
+

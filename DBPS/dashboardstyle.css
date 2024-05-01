@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Poppins', sans-serif;
+}
+
+.sidebar, .logo-details{
+    background: linear-gradient(to bottom, #1119E1 -27.71%, #0BA9ED 92.29%); 
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; 
+    height: 100vh;
+    overflow-y: auto;
+    background: linear-gradient(to bottom, #1119E1 -27.71%, #0BA9ED 92.29%);
+    transition: width 0.6s ease; 
+}
+
+.sidebar .active{
+    width: 60px;
+}
+
+.fullbg{
+    height: 100%;
+    width: 100%;
+    background-image:white;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    display: flex;   
+}
+
+h6{
+    margin: 10px;
+}
+
+.logo00{
+    width: 50px;
+    margin-left: 10px;
+  }
+  
+.logo100{
+    width: 30px;
+    margin-top: 0;
+    margin-left: -30px;
+}
+
+.logo00 .logo100{
+    justify-content: start;
+}
+
+.bx.bx-menu{
+    position: relative; 
+    color: #000;
+    display: flex;
+    margin-left: 25px;
+    margin-top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.sidebar .logo-details{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: transparent;
+}
+.sidebar .logo-details i{
+    font-size: 30px;
+    color: #fff;
+    background: transparent;
+    height: 50px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+
+}
+.sidebar .logo-details .logo_name{
+    font-size: 22px;
+    color: #fff;
+    font-weight: 600;
+    
+}
+
+.menu{
+    width: 100%;
+    margin-top: 0px;
+    background: transparent;
+}
+
+.menu .item{
+    position: relative;
+    cursor: pointer;
+}
+
+.menu .item a{
+    color: #000;
+    font-size:  16px;
+    text-decoration: none;
+    display: block;
+    padding: 5px 30px;
+    line-height: 60px;
+}
+
+.item i{
+    margin-right: 15px;
+}
+
+.item a .dropdown{
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    transition: 0.3s ease;
+}
+
+.item .sub-menu{
+    background: transparent;
+    display: none;
+}
+
+
+span.item {
+    color: black;
+}
+
+
+.user-icon{
+    position: right;
+    color: #000;
+}
+
+
+.sub-item:hover, .sub-btn:hover, .logout:hover{
+    background-color: rgba(255, 255, 255, 0.24);   
+}
+
+.reminder{
+    flex: 1;
+    padding: 20px;
+    position: relative;
+    width: 280px;
+    height: 150px;
+    background: #d9d4d4;
+    margin-left: 300px;
+    margin-top: 130px;
+}
+
+
+.event{
+    flex: 1;
+    padding: 20px;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background: #d9d4d4;
+    margin-left: 600px;
+}
+
+.sidebar, .reminder, .event{
+    justify-content: center;
+}

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>Drop Down Sidebar Mene</title>
+<link rel="stylesheet" href="testdash.css">
+<!---Boxicons CDN Link --->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body> 
+        
+        
+<div class="sidebar" id="sidebar">     
+    <div class="menulogo" onclick="toggleSidebar()">
+        <i class='bx bx-menu'></i>
+    </div>
+    <div class="logo-details">
+        <div class="logo-container">
+            <img class="logo1" src="Images\LogoYanga1.0.png" alt="Your Logo">
+        </div>
+        <span class="logo_name"><h6> DYCIAN Performance <br> Monitoring System</h6></span>
+    </div>
+
+    
+    <div class="menu">
+        <div class="item"><a class="dashboard"><i class='bx bx-grid-alt'></i><span class="name-text" id="nametxt">Dashboard</span></a></div>
+        <div class="item"><a class="sub-btn"><i class='bx bxs-envelope'></i><span class="name-text" id="nametxt">Messages</span></span>
+        </a>
+        </div>
+        <div class="item"><a class="sub-btn"><i class='bx bx-task' ></i><span class="name-text" id="nametxt">Evaluation</span></span>
+        </a>
+        </div>
+        <div class="item"><a class="sub-btn"><i class='bx bx-book-bookmark test'></i><span class="name-text" id="nametxt">Course</span>
+        </a>
+        </div>
+        
+        <div class="item"><a href="http://127.0.0.1:5500/gawaniicko.html" class="logout"><i class='bx bx-log-out'></i><span class="name-text" id="nametxt">Log Out</span></a></div>
+
+    </div>
+</div>
+
+<div class="ProfilePic">
+    <i class='bx bx-user-circle' ></i>
+</div>
+
+<div class="fullbg" id="body">
+    <div class="Name_Role" id="nr">
+        <li>Name:</li>
+        <li>Role: </li>
+    </div>
+    <div class="RectangleDashboard" id="rd">
+        <h3 id="txt">Dashboard</h3>
+    </div>
+    <div class="form-event_reminder" id="fre">
+        <form class="reminder" id="rsp">
+            <!-- Add your reminder box content here -->
+            <div class="reminder-box">
+                div id="right-column-inner"><div id="todo" class="todo todo-wrapper"><aside role="complementary" aria-label="To Do List"><h3 class="h3-med todo-header">To Do</h3><div id="overdue-submissions" class="overdue-submissions overdue-submissions-wrapper"><h4 class="submissions-title">OVERDUE</h4><div class="upcoming-list"><div id="overdue_submissions" class="date-header first  hidden sEventUpcoming-processed"><h4>Thursday, April 4, 2024</h4></div><div class="upcoming-event upcoming-event-block course-event" data-start="1712246340" data-locked=""><h4><span class="infotip sCommonInfotip-processed" tipsygravity="e" aria-label="Database Management Systems 2 : BSIT 2A " tabindex="0" original-title=""><span class="mini-icon common-assessment-icon day-04 submission-event-icon"><span class="visually-hidden">.</span></span><span class="event-title"><a href="/assignment/7241298761" class="sExtlink-processed">MIDTERM EXAM (DMS223)</a><span> <span class="readonly-title event-subtitle">23 days overdue</span><span class="readonly-title event-subtitle">Database Management Systems 2</span>&nbsp;<span class="infotip-content"><div class="realm-title-course"><div class="realm-icon"></div><div class="realm-title-course-title"><div class="realm-main-titles">Database Management Systems 2 : BSIT 2A </div></div></div></span></span></span></span></h4><span class="infotip submission-infotip sCommonInfotip-processed" tabindex="0" original-title=""><img src="/sites/all/themes/schoology_theme/images/error_outline.png" class="infotip" alt="Overdue WarningThis was due on Thursday, April 4, 2024 at 11:59 pm"><span class="infotip-content"> This was due on Thursday, April 4, 2024 at 11:59 pm</span></span></div><a href="/home/overdue-popup" class="popups upcoming-events-popup hidden-important popups-processed sExtlink-processed sEventUpcoming-processed" role="button" title=""></a>
+                </div></div><div class="upcoming-submissions upcoming-submissions-wrapper hidden"><div class="upcoming-list"></div></div></aside></div><div id="upcoming-events" class="upcoming-events upcoming-events-wrapper"><h3 class="h3-med">Upcoming Events</h3><div class="upcoming-list">
+                    <div class="empty">
+                      No upcoming events
+                    </div>
+                  </div></div><div class="recently-completed-wrapper hidden" style="display: block;"><aside role="complementary" aria-label="Recently Completed"><h3 class="h3-med">Recently Completed</h3><div class="recently-completed-list"><div class="recently-completed-event"><span class="infotip sCommonInfotip-processed" tipsygravity="e" aria-label="Database Management Systems 2 : BSIT 2A" tabindex="0" original-title=""><span class="mini-icon grade-item-icon"></span><span class="recently-completed-title"><span class="visually-hidden">assignment.</span><a href="/assignment/7260800046" class="sExtlink-processed">ACTIVITY #6</a><span class="infotip-content"><div class="realm-title-course"><div class="realm-icon"></div><div class="realm-title-course-title"><div class="realm-main-titles">Database Management Systems 2 : BSIT 2A</div></div></div></span></span></span><span class="infotip grade-infotip sCommonInfotip-processed" tabindex="0" original-title=""><span class="recently-completed-grade" aria-label="This material has been submitted but not yet graded">—</span><span class="infotip-content">This material has been submitted but not yet graded</span></span></div><div class="recently-completed-event"><span class="infotip sCommonInfotip-processed" tipsygravity="e" aria-label="Database Management Systems 2 : BSIT 2A" tabindex="0" original-title=""><span class="mini-icon grade-item-icon"></span><span class="recently-completed-title"><span class="visually-hidden">assignment.</span><a href="/assignment/7250716168" class="sExtlink-processed">ACTIVITY #5</a><span class="infotip-content"><div class="realm-title-course"><div class="realm-icon"></div><div class="realm-title-course-title"><div class="realm-main-titles">Database Management Systems 2 : BSIT 2A</div></div></div></span></span></span><span class="infotip grade-infotip sCommonInfotip-processed" tabindex="0" original-title=""><span class="recently-completed-grade" aria-label="This material has been submitted but not yet graded">—</span><span class="infotip-content">This material has been submitted but not yet graded</span></span></div></div></aside></div></div>
+            </div>
+        </form>
+    
+        <form class="event" id="esp">
+            <!-- Add your reminder box content here -->
+            <div class="reminder-box">
+                <div id="home-feed-container" class="edge-wrapper " style="display: block;">
+                    <div id="edge-filters" class="sEdgeFilterProcessed">
+                      <span id="edge-filters-btn" class="clickable">Most Recent</span>
+                      <div class="edge-filters-menus" id="edge-filters-menu">
+                        
+                
+                      </div>
+                    </div>
+                    <h2>Recent Activity</h2><div id="smart-box" class="sHome-processed"><div class="smart-box"><div class="smart-box-mid"><div class="create-type">Post:</div><div class="item-list"><ul class="filter-block"><li class="smart-box-tab-0 filter-item academic add-event first last"><span tabindex="0" role="button" id="smart-box-tab-content-tab-0" class="smartbox-boxtab">Event</span></li>
+                </ul></div>
+                    <div id="smart-box-messages"></div>
+                    <div id="smart-box-content">
+                      <div id="smart-box-tab-content-0" class="smart-box-tab-content"></div>
+                    </div></div></div></div><div class="feed"><div class="item-list"><ul class="s-edge-feed"><li id="edge-assoc-36370035679" class="first" timestamp="1712814946"><div class="s-edge-type-update-post sUpdate-processed">
+                <div class="edge-item"><div class="edge-left"><div class="picture">
+                  <a href="/user/120771024" title="Library Services" class="sExtlink-processed"><div class=" profile-picture-wrapper"><div class="profile-picture"><img src="https://asset-cdn.schoology.com/users/120771024/profile-image/profile_sm?1664843397" alt="Profile picture for Library Services" title="" class="imagecache imagecache-profile_sm"></div></div></a></div>
+                </div><div class="edge-main-wrapper"><span class="edge-sentence"><div class="edge-sentence-actions"><div class="s-update-immersive-reader"><div class="immersive-reader-button-container" id="s-update-edge-immersive-reader-nid-7250721808"><button class="_button_1jkx4_1 _iconOnly_1jkx4_26" title="Immersive Reader"><span class="_icon_1jkx4_26"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 3v4.336h-1.016v-3.34h-5.588c-.762.2-2.236.798-2.236 1.546v5.58h-1.016v-5.58c0-.499-1.219-1.196-2.133-1.545H3.016v13.006h5.283V18H2V3h7.163l.102.05c.355.1 1.625.598 2.337 1.345.812-.897 2.336-1.295 2.54-1.345H21V3z" fill="#000"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15.7 21V9h-.65l-3.85 3.95L9 13v4.2h2.2l3.7 3.8h.8zm4.5-11.4l-.8.6.157.226.17.27.134.235.147.274c.453.88.992 2.27.992 3.895 0 1.716-.601 3.17-1.066 4.037l-.142.254-.127.214-.192.293L19.4 20l.8.6.302-.458.212-.354.157-.287.165-.325c.47-.972.964-2.38.964-4.026 0-1.673-.494-3.107-.964-4.098l-.165-.331-.157-.293-.145-.252-.128-.209L20.2 9.6zm-5.55 1.2l-3.05 3.15H9.95v2.25h1.65l3.05 3.15V10.8zm3 .4l-.85.5.005.014.196.379.169.35.123.282.126.313c.228.6.431 1.336.431 2.062 0 .806-.284 1.653-.556 2.28l-.124.272-.116.236-.182.339-.072.123.85.5a.12.12 0 00.01-.014l.083-.133.143-.258.118-.231.13-.273.135-.31c.294-.706.581-1.631.581-2.531 0-.975-.288-1.925-.581-2.644l-.135-.314-.13-.277a8.446 8.446 0 00-.061-.124l-.11-.213-.183-.328z" fill="#0075DB"></path></svg></span></button></div><script type="text/javascript">(function () {
+                  function immersiveReaderAction() {
+                    window.sgyImmersiveReader.renderButton({"targetId":"s-update-edge-immersive-reader-nid-7250721808","titleSelectorPath":"div.update-sentence-inner a","contentSelectorPath":"#edge-assoc-36370035679","origin":"Update","variant":"icon","beforeLaunch":() => sUpdateImmersiveReaderBeforeLaunch('edge-assoc-36370035679-show-more-link'),"getCustomContent":(contentSelectorPath) => sUpdateImmersiveReaderGetCustomContent(contentSelectorPath, 'Poll')});
+                    window.removeEventListener("SgyImmersiveReaderLoaded", immersiveReaderAction);
+                  }
+                  (window.sgyImmersiveReader === undefined)
+                    ? window.addEventListener("SgyImmersiveReaderLoaded", immersiveReaderAction)
+                    : immersiveReaderAction();
+                })();
+                </script></div></div><div class="update-sentence-inner"><a href="/user/120771024" title="View user profile." class="sExtlink-processed">Library Services</a> <span class="school-arrow-right"><span class="visually-hidden">posted to</span></span> <a href="/school/2558503832" class="sExtlink-processed">Dr. Yanga's Colleges, Inc.</a> <span class="update-body s-rte"><p><span style="font-size:13px;"><strong>New Facebook page of the DYCI Library Services. </strong></span></p>
+                <p><span style="font-size:12px;">We regret to inform you that the former facebook page of the DYCI library services has been compromised, however you can reach us at our new facebook page below.&nbsp;</span></p>
+                <p><span style="font-size:12px;"><a href="https://www.facebook.com/profile.php?id=61557528302634" class="sExtlink-processed">https://www.facebook.com/profile.php?id=61557528302634</a></span></p>
+                <p><img src="https://app.schoology.com/system/files/attachments/page_embeds/m/2024-04/frame_661778cf084d0.png" alt="" width="149" height="186" title=""></p>
+                <p><span style="font-size:12px;">Please like and follow to recieve important news, updates and announcements. Thank you.</span></p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p></span><a href="/update_post/7250721808/show_more/178753d50d8773a5e2d2433febd7708d" id="edge-assoc-36370035679-show-more-link" class="show-more-link sExtlink-processed">Show More</a></div></span><span class="edge-main"><div class="post-body"></div></span><div class="edge-footer"><div class="created"><span class="small gray">Thu Apr 11, 2024 at 1:55 pm</span></div>&nbsp;·&nbsp;<span tabindex="0" role="button" class="like-btn clickable schoology-processed" id="s-like-n-7250721808" ajax="/like/n/7250721808"><span class="content">Like&nbsp;</span><span class="visually-hidden">'s comment</span></span>
+                      <div class="feed-comments s-update-edge-no-comments s-update-edge-no-comment-box">
+                        <div class="feed-comments-top" style="display: block"></div>
+                        <span class="s-like-sentence"><span></span><a href="/likes/n/7250721808" class="like-details-btn schoology-processed sExtlink-processed">7 people</a> liked this</span>
+                        
+                        
+                        
+                      </div></div>
+                </div>
+                </div>
+                
+                </div></li>
+                <li id="edge-assoc-36370035638" class="" timestamp="1712814946"><div class="s-edge-type-update-post sUpdate-processed">
+                <div class="edge-item"><div class="edge-left"><div class="picture">
+                  <a href="/user/120771024" title="Library Services" class="sExtlink-processed"><div class=" profile-picture-wrapper"><div class="profile-picture"><img src="https://asset-cdn.schoology.com/users/120771024/profile-image/profile_sm?1664843397" alt="Profile picture for Library Services" title="" class="imagecache imagecache-profile_sm"></div></div></a></div>
+                </div><div class="edge-main-wrapper"><span class="edge-sentence"><div class="edge-sentence-actions"><div class="s-update-immersive-reader"><div class="immersive-reader-button-container" id="s-update-edge-immersive-reader-nid-7250721812"><button class="_button_1jkx4_1 _iconOnly_1jkx4_26" title="Immersive Reader"><span class="_icon_1jkx4_26"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 3v4.336h-1.016v-3.34h-5.588c-.762.2-2.236.798-2.236 1.546v5.58h-1.016v-5.58c0-.499-1.219-1.196-2.133-1.545H3.016v13.006h5.283V18H2V3h7.163l.102.05c.355.1 1.625.598 2.337 1.345.812-.897 2.336-1.295 2.54-1.345H21V3z" fill="#000"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15.7 21V9h-.65l-3.85 3.95L9 13v4.2h2.2l3.7 3.8h.8zm4.5-11.4l-.8.6.157.226.17.27.134.235.147.274c.453.88.992 2.27.992 3.895 0 1.716-.601 3.17-1.066 4.037l-.142.254-.127.214-.192.293L19.4 20l.8.6.302-.458.212-.354.157-.287.165-.325c.47-.972.964-2.38.964-4.026 0-1.673-.494-3.107-.964-4.098l-.165-.331-.157-.293-.145-.252-.128-.209L20.2 9.6zm-5.55 1.2l-3.05 3.15H9.95v2.25h1.65l3.05 3.15V10.8zm3 .4l-.85.5.005.014.196.379.169.35.123.282.126.313c.228.6.431 1.336.431 2.062 0 .806-.284 1.653-.556 2.28l-.124.272-.116.236-.182.339-.072.123.85.5a.12.12 0 00.01-.014l.083-.133.143-.258.118-.231.13-.273.135-.31c.294-.706.581-1.631.581-2.531 0-.975-.288-1.925-.581-2.644l-.135-.314-.13-.277a8.446 8.446 0 00-.061-.124l-.11-.213-.183-.328z" fill="#0075DB"></path></svg></span></button></div><script type="text/javascript">(function () {
+                  function immersiveReaderAction() {
+                    window.sgyImmersiveReader.renderButton({"targetId":"s-update-edge-immersive-reader-nid-7250721812","titleSelectorPath":"div.update-sentence-inner a","contentSelectorPath":"#edge-assoc-36370035638","origin":"Update","variant":"icon","beforeLaunch":() => sUpdateImmersiveReaderBeforeLaunch('edge-assoc-36370035638-show-more-link'),"getCustomContent":(contentSelectorPath) => sUpdateImmersiveReaderGetCustomContent(contentSelectorPath, 'Poll')});
+                    window.removeEventListener("SgyImmersiveReaderLoaded", immersiveReaderAction);
+                  }
+                  (window.sgyImmersiveReader === undefined)
+                    ? window.addEventListener("SgyImmersiveReaderLoaded", immersiveReaderAction)
+                    : immersiveReaderAction();
+                })();
+                </script></div></div><div class="update-sentence-inner"><a href="/user/120771024" title="View user profile." class="sExtlink-processed">Library Services</a> <span class="school-arrow-right"><span class="visually-hidden">posted to</span></span> <a href="/school/4758202496" class="sExtlink-processed">CCS</a> <span class="update-body s-rte"><p><span style="font-size:13px;"><strong>New Facebook page of the DYCI Library Services. </strong></span></p>
+                <p><span style="font-size:12px;">We regret to inform you that the former facebook page of the DYCI library services has been compromised, however you can reach us at our new facebook page below.&nbsp;</span></p>
+                <p><span style="font-size:12px;"><a href="https://www.facebook.com/profile.php?id=61557528302634" class="sExtlink-processed">https://www.facebook.com/profile.php?id=61557528302634</a></span></p>
+                <p><img src="https://app.schoology.com/system/files/attachments/page_embeds/m/2024-04/frame_661778cf084d0.png" alt="" width="149" height="186" title=""></p>
+                <p><span style="font-size:12px;">Please like and follow to recieve important news, updates and announcements. Thank you.</span></p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p></span><a href="/update_post/7250721812/show_more/a758f9789b70d29240de1ad9823a07cc" id="edge-assoc-36370035638-show-more-link" class="show-more-link sExtlink-processed">Show More</a></div></span><span class="edge-main"><div class="post-body"></div></span><div class="edge-footer"><div class="created"><span class="small gray">Thu Apr 11, 2024 at 1:55 pm</span></div>&nbsp;·&nbsp;<span tabindex="0" role="button" class="like-btn clickable schoology-processed" id="s-like-n-7250721812" ajax="/like/n/7250721812"><span class="content">Like&nbsp;</span><span class="visually-hidden">'s comment</span></span>
+                      <div class="feed-comments s-update-edge-no-comments s-update-edge-no-comment-box">
+                        <div class="feed-comments-top" style="display: block"></div>
+                        <span class="s-like-sentence"><span></span><a href="/likes/n/7250721812" class="like-details-btn schoology-processed sExtlink-processed">1 person</a> likes this</span>
+                        
+                        
+                        
+                      </div></div>
+                </div>
+                </div>
+                
+                </div></li>
+                <li id="edge-assoc-36271003936" class="" timestamp="1712207159"><div class="s-edge-type-update-post sUpdate-processed">
+                <div class="edge-item"><div class="edge-left"><div class="picture">
+                  <a href="/user/120771024" title="Library Services" class="sExtlink-processed"><div class=" profile-picture-wrapper"><div class="profile-picture"><img src="https://asset-cdn.schoology.com/users/120771024/profile-image/profile_sm?1664843397" alt="Profile picture for Library Services" title="" class="imagecache imagecache-profile_sm"></div></div></a></div>
+                </div><div class="edge-main-wrapper"><span class="edge-sentence"><div class="edge-sentence-actions"><div class="s-update-immersive-reader"><div class="immersive-reader-button-container" id="s-update-edge-immersive-reader-nid-7241279014"><button class="_button_1jkx4_1 _iconOnly_1jkx4_26" title="Immersive Reader"><span class="_icon_1jkx4_26"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 3v4.336h-1.016v-3.34h-5.588c-.762.2-2.236.798-2.236 1.546v5.58h-1.016v-5.58c0-.499-1.219-1.196-2.133-1.545H3.016v13.006h5.283V18H2V3h7.163l.102.05c.355.1 1.625.598 2.337 1.345.812-.897 2.336-1.295 2.54-1.345H21V3z" fill="#000"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15.7 21V9h-.65l-3.85 3.95L9 13v4.2h2.2l3.7 3.8h.8zm4.5-11.4l-.8.6.157.226.17.27.134.235.147.274c.453.88.992 2.27.992 3.895 0 1.716-.601 3.17-1.066 4.037l-.142.254-.127.214-.192.293L19.4 20l.8.6.302-.458.212-.354.157-.287.165-.325c.47-.972.964-2.38.964-4.026 0-1.673-.494-3.107-.964-4.098l-.165-.331-.157-.293-.145-.252-.128-.209L20.2 9.6zm-5.55 1.2l-3.05 3.15H9.95v2.25h1.65l3.05 3.15V10.8zm3 .4l-.85.5.005.014.196.379.169.35.123.282.126.313c.228.6.431 1.336.431 2.062 0 .806-.284 1.653-.556 2.28l-.124.272-.116.236-.182.339-.072.123.85.5a.12.12 0 00.01-.014l.083-.133.143-.258.118-.231.13-.273.135-.31c.294-.706.581-1.631.581-2.531 0-.975-.288-1.925-.581-2.644l-.135-.314-.13-.277a8.446 8.446 0 00-.061-.124l-.11-.213-.183-.328z" fill="#0075DB"></path></svg></span></button></div><script type="text/javascript">(function () {
+                  function immersiveReaderAction() {
+                    window.sgyImmersiveReader.renderButton({"targetId":"s-update-edge-immersive-reader-nid-7241279014","titleSelectorPath":"div.update-sentence-inner a","contentSelectorPath":"#edge-assoc-36271003936","origin":"Update","variant":"icon","beforeLaunch":() => sUpdateImmersiveReaderBeforeLaunch('edge-assoc-36271003936-show-more-link'),"getCustomContent":(contentSelectorPath) => sUpdateImmersiveReaderGetCustomContent(contentSelectorPath, 'Poll')});
+                    window.removeEventListener("SgyImmersiveReaderLoaded", immersiveReaderAction);
+                  }
+                  (window.sgyImmersiveReader === undefined)
+                    ? window.addEventListener("SgyImmersiveReaderLoaded", immersiveReaderAction)
+                    : immersiveReaderAction();
+                })();
+                </script></div></div><div class="update-sentence-inner"><a href="/user/120771024" title="View user profile." class="sExtlink-processed">Library Services</a> <span class="school-arrow-right"><span class="visually-hidden">posted to</span></span> <a href="/school/4758202496" class="sExtlink-processed">CCS</a> <span class="update-body s-rte"><p style="line-height:1.3800000000000001;text-align:justify;margin-top:0pt;margin-bottom:10pt;" dir="ltr"><span style="font-size:11pt;font-family:Calibri, sans-serif;color:#0d0d0d;vertical-align:baseline;white-space:pre-wrap;">Good day, Dycians!</span></p>
+                <p style="line-height:1.3800000000000001;text-align:justify;margin-top:0pt;margin-bottom:10pt;" dir="ltr"><span style="font-size:11pt;font-family:Calibri, sans-serif;color:#050505;vertical-align:baseline;white-space:pre-wrap;">Discover our collection of online resources, tailored to meet your learning and research needs. Explore a world of information from eBooks to academic journals and educational databases.&nbsp;</span></p>
+                <p style="line-height:1.3800000000000001;text-align:justify;margin-top:0pt;margin-bottom:10pt;" dir="ltr"><span style="font-size:11pt;font-family:Calibri, sans-serif;color:#050505;vertical-align:baseline;white-space:pre-wrap;">Below are the online resources of the DYCI Library Services with their respective access information:</span></p>
+                <p><img src="https://app.schoology.com/system/files/attachments/page_embeds/m/2024-04/CCS_BROCHURE_660e350aa76e1.png" alt="" width="584" height="451" title=""></p>
+                <p style="line-height:1.3800000000000001;text-align:justify;margin-top:0pt;margin-bottom:10pt;" dir="ltr"><span style="font-size:11pt;font-family:Calibri, sans-serif;color:#0d0d0d;vertical-align:baseline;white-space:pre-wrap;">1. </span><span style="font-size:11pt;font-family:Calibri, sans-serif;color:#0d0d0d;font-weight:bold;vertical-align:baseline;white-space:pre-wrap;">Harvard Business Review</span></p>
+                <p style="line-height:1.3800000000000001;text-align:justify;margin-top:0pt;margin-bottom:10pt;" dir="ltr"><span style="font-size:11pt;font-family:Calibri, sans-serif;color:#0d0d0d;vertical-align:baseline;white-space:pre-wrap;">(Access for faculty only)</span></p>
+                <p style="line-height:1.3800000000000001;text-align:justify;margin-top:0pt;margin-bottom:10pt;" dir="ltr"><span style="font-size:11pt;font-family:Calibri, sans-serif;color:#0d0d0d;vertical-align:baseline;white-space:pre-wrap;">For access kindly contact us at </span><a href="mailto:library.services@dyci.edu.ph" class="sExtlink-processed mailto"><span style="font-size:11pt;font-family:Calibri, sans-serif;color:#1155cc;vertical-align:baseline;white-space:pre-wrap;">...</span></a><span class="mailto"></span></p></span><a href="/update_post/7241279014/show_more/9060de7aadd6bd78b443c580fe9b4344" id="edge-assoc-36271003936-show-more-link" class="show-more-link sExtlink-processed">Show More</a></div></span><span class="edge-main"><div class="post-body"></div></span><div class="edge-footer"><div class="created"><span class="small gray">Thu Apr 4, 2024 at 1:05 pm</span></div>&nbsp;·&nbsp;<span tabindex="0" role="button" class="like-btn clickable schoology-processed" id="s-like-n-7241279014" ajax="/like/n/7241279014"><span class="content">Like&nbsp;</span><span class="visually-hidden">'s comment</span></span>
+                      <div class="feed-comments s-update-edge-hide-comments-form s-update-edge-no-comment-box">
+                        <div class="feed-comments-top" style="display: none"></div>
+                        
+                        
+                        
+                        
+                      </div></div>
+                </div>
+                </div>
+                
+                </div></li>
+                <li id="edge-assoc-35960346209" class="" timestamp="1710211248"><div class="s-edge-type-update-post sUpdate-processed">
+                <div class="edge-item"><div class="edge-left"><div class="picture">
+                  <a href="/user/120576856" title="DYCI Guidance and Counseling Center" class="sExtlink-processed"><div class=" profile-picture-wrapper"><div class="profile-picture"><img src="https://asset-cdn.schoology.com/users/120576856/profile-image/profile_sm?1663661881" alt="Profile picture for DYCI Guidance and Counseling Center" title="" class="imagecache imagecache-profile_sm"></div></div></a></div>
+                </div><div class="edge-main-wrapper"><span class="edge-sentence"><div class="edge-sentence-actions"><div class="s-update-immersive-reader"><div class="immersive-reader-button-container" id="s-update-edge-immersive-reader-nid-7211292861"><button class="_button_1jkx4_1 _iconOnly_1jkx4_26" title="Immersive Reader"><span class="_icon_1jkx4_26"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 3v4.336h-1.016v-3.34h-5.588c-.762.2-2.236.798-2.236 1.546v5.58h-1.016v-5.58c0-.499-1.219-1.196-2.133-1.545H3.016v13.006h5.283V18H2V3h7.163l.102.05c.355.1 1.625.598 2.337 1.345.812-.897 2.336-1.295 2.54-1.345H21V3z" fill="#000"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15.7 21V9h-.65l-3.85 3.95L9 13v4.2h2.2l3.7 3.8h.8zm4.5-11.4l-.8.6.157.226.17.27.134.235.147.274c.453.88.992 2.27.992 3.895 0 1.716-.601 3.17-1.066 4.037l-.142.254-.127.214-.192.293L19.4 20l.8.6.302-.458.212-.354.157-.287.165-.325c.47-.972.964-2.38.964-4.026 0-1.673-.494-3.107-.964-4.098l-.165-.331-.157-.293-.145-.252-.128-.209L20.2 9.6zm-5.55 1.2l-3.05 3.15H9.95v2.25h1.65l3.05 3.15V10.8zm3 .4l-.85.5.005.014.196.379.169.35.123.282.126.313c.228.6.431 1.336.431 2.062 0 .806-.284 1.653-.556 2.28l-.124.272-.116.236-.182.339-.072.123.85.5a.12.12 0 00.01-.014l.083-.133.143-.258.118-.231.13-.273.135-.31c.294-.706.581-1.631.581-2.531 0-.975-.288-1.925-.581-2.644l-.135-.314-.13-.277a8.446 8.446 0 00-.061-.124l-.11-.213-.183-.328z" fill="#0075DB"></path></svg></span></button></div><script type="text/javascript">(function () {
+                  function immersiveReaderAction() {
+                    window.sgyImmersiveReader.renderButton({"targetId":"s-update-edge-immersive-reader-nid-7211292861","titleSelectorPath":"div.update-sentence-inner a","contentSelectorPath":"#edge-assoc-35960346209","origin":"Update","variant":"icon","beforeLaunch":() => sUpdateImmersiveReaderBeforeLaunch('edge-assoc-35960346209-show-more-link'),"getCustomContent":(contentSelectorPath) => sUpdateImmersiveReaderGetCustomContent(contentSelectorPath, 'Poll')});
+                    window.removeEventListener("SgyImmersiveReaderLoaded", immersiveReaderAction);
+                  }
+                  (window.sgyImmersiveReader === undefined)
+                    ? window.addEventListener("SgyImmersiveReaderLoaded", immersiveReaderAction)
+                    : immersiveReaderAction();
+                })();
+                </script></div></div><div class="update-sentence-inner"><a href="/user/120576856" title="View user profile." class="sExtlink-processed">DYCI Guidance and Counseling Center</a> <span class="school-arrow-right"><span class="visually-hidden">posted to</span></span> <a href="/school/4758202496" class="sExtlink-processed">CCS</a> <span class="update-body s-rte"><div style="font-family:'system-ui', '-apple-system', BlinkMacSystemFont, sans-serif;color:#050505;font-size:15px;white-space:pre-wrap;">
+                <div style="font-family:'system-ui', '-apple-system', BlinkMacSystemFont, sans-serif;color:#050505;font-size:15px;white-space:pre-wrap;">Good day, graduating <span class="x3nfvp2 x1j61x8r x1fcty0u xdj266r xhhsvwb xat24cr xgzva0m xxymvpz xlup9mm x1kky2od" style="vertical-align:middle;margin:0px 1px;height:16px;width:16px;font-family:inherit;"><img src="https://static.xx.fbcdn.net/images/emoji.php/v9/tc4/2/16/1f393.png" alt="🎓" width="16" height="16" class="xz74otr"></span> and <span class="x3nfvp2 x1j61x8r x1fcty0u xdj266r xhhsvwb xat24cr xgzva0m xxymvpz xlup9mm x1kky2od" style="vertical-align:middle;margin:0px 1px;height:16px;width:16px;font-family:inherit;"><img src="https://static.xx.fbcdn.net/images/emoji.php/v9/t1e/2/16/1f469_1f3fb_200d_1f4bb.png" alt="👩🏻‍💻" width="16" height="16" class="xz74otr"></span> intern<span class="x3nfvp2 x1j61x8r x1fcty0u xdj266r xhhsvwb xat24cr xgzva0m xxymvpz xlup9mm x1kky2od" style="vertical-align:middle;margin:0px 1px;height:16px;width:16px;font-family:inherit;"><img src="https://static.xx.fbcdn.net/images/emoji.php/v9/t7f/2/16/1f468_1f3fb_200d_1f4bb.png" alt="👨🏻‍💻" width="16" height="16" class="xz74otr"></span>DYCIans!</div>
+                <div style="font-family:'system-ui', '-apple-system', BlinkMacSystemFont, sans-serif;color:#050505;font-size:15px;white-space:pre-wrap;">As we are about to embark on a new journey of work experiences, here is Sir Francis, one of the guidance advocates, helping you to prepare for your interviews.</div>
+                <div style="font-family:'system-ui', '-apple-system', BlinkMacSystemFont, sans-serif;color:#050505;font-size:15px;white-space:pre-wrap;">God bless DYCIans!<span class="x3nfvp2 x1j61x8r x1fcty0u xdj266r xhhsvwb xat24cr xgzva0m xxymvpz xlup9mm x1kky2od" style="vertical-align:middle;margin:0px 1px;height:16px;width:16px;font-family:inherit;"><img src="https://static.xx.fbcdn.net/images/emoji.php/v9/t75/2/16/2728.png" alt="✨" width="16" height="16" class="xz74otr"></span></div>
+                <p><iframe src="https://app.schoology.com/media/ifr/5986473537" scrolling="no" frameborder="0" style="border:0;" allowfullscreen="true"></iframe></p>
+                </div></span><a href="/update_post/7211292861/show_more/aaf9d687b21a30356302cad3bb76ea65" id="edge-assoc-35960346209-show-more-link" class="show-more-link sExtlink-processed">Show More</a></div></span><span class="edge-main"><div class="post-body"></div></span><div class="edge-footer"><div class="created"><span class="small gray">Tue Mar 12, 2024 at 10:40 am</span></div>&nbsp;·&nbsp;<span tabindex="0" role="button" class="like-btn clickable schoology-processed" id="s-like-n-7211292861" ajax="/like/n/7211292861"><span class="content">Like&nbsp;</span><span class="visually-hidden">'s comment</span></span>
+                      <div class="feed-comments s-update-edge-hide-comments-form s-update-edge-no-comment-box">
+                        <div class="feed-comments-top" style="display: none"></div>
+                        
+                        
+                        
+                        
+                      </div></div>
+                </div>
+                </div>
+                
+                </div></li>
+                <li id="edge-assoc-35146744118" class="" timestamp="1706056067"><div class="s-edge-type-update-post sUpdate-processed">
+                <div class="edge-item"><div class="edge-left"><div class="picture">
+                  <a href="/user/120576856" title="DYCI Guidance and Counseling Center" class="sExtlink-processed"><div class=" profile-picture-wrapper"><div class="profile-picture"><img src="https://asset-cdn.schoology.com/users/120576856/profile-image/profile_sm?1663661881" alt="Profile picture for DYCI Guidance and Counseling Center" title="" class="imagecache imagecache-profile_sm"></div></div></a></div>
+                </div><div class="edge-main-wrapper"><span class="edge-sentence"><div class="edge-sentence-actions"><div class="s-update-immersive-reader"><div class="immersive-reader-button-container" id="s-update-edge-immersive-reader-nid-7133215865"><button class="_button_1jkx4_1 _iconOnly_1jkx4_26" title="Immersive Reader"><span class="_icon_1jkx4_26"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 3v4.336h-1.016v-3.34h-5.588c-.762.2-2.236.798-2.236 1.546v5.58h-1.016v-5.58c0-.499-1.219-1.196-2.133-1.545H3.016v13.006h5.283V18H2V3h7.163l.102.05c.355.1 1.625.598 2.337 1.345.812-.897 2.336-1.295 2.54-1.345H21V3z" fill="#000"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15.7 21V9h-.65l-3.85 3.95L9 13v4.2h2.2l3.7 3.8h.8zm4.5-11.4l-.8.6.157.226.17.27.134.235.147.274c.453.88.992 2.27.992 3.895 0 1.716-.601 3.17-1.066 4.037l-.142.254-.127.214-.192.293L19.4 20l.8.6.302-.458.212-.354.157-.287.165-.325c.47-.972.964-2.38.964-4.026 0-1.673-.494-3.107-.964-4.098l-.165-.331-.157-.293-.145-.252-.128-.209L20.2 9.6zm-5.55 1.2l-3.05 3.15H9.95v2.25h1.65l3.05 3.15V10.8zm3 .4l-.85.5.005.014.196.379.169.35.123.282.126.313c.228.6.431 1.336.431 2.062 0 .806-.284 1.653-.556 2.28l-.124.272-.116.236-.182.339-.072.123.85.5a.12.12 0 00.01-.014l.083-.133.143-.258.118-.231.13-.273.135-.31c.294-.706.581-1.631.581-2.531 0-.975-.288-1.925-.581-2.644l-.135-.314-.13-.277a8.446 8.446 0 00-.061-.124l-.11-.213-.183-.328z" fill="#0075DB"></path></svg></span></button></div><script type="text/javascript">(function () {
+                  function immersiveReaderAction() {
+                    window.sgyImmersiveReader.renderButton({"targetId":"s-update-edge-immersive-reader-nid-7133215865","titleSelectorPath":"div.update-sentence-inner a","contentSelectorPath":"#edge-assoc-35146744118","origin":"Update","variant":"icon","beforeLaunch":() => sUpdateImmersiveReaderBeforeLaunch('edge-assoc-35146744118-show-more-link'),"getCustomContent":(contentSelectorPath) => sUpdateImmersiveReaderGetCustomContent(contentSelectorPath, 'Poll')});
+                    window.removeEventListener("SgyImmersiveReaderLoaded", immersiveReaderAction);
+                  }
+                  (window.sgyImmersiveReader === undefined)
+                    ? window.addEventListener("SgyImmersiveReaderLoaded", immersiveReaderAction)
+                    : immersiveReaderAction();
+                })();
+                </script></div></div><div class="update-sentence-inner"><a href="/user/120576856" title="View user profile." class="sExtlink-processed">DYCI Guidance and Counseling Center</a> <span class="school-arrow-right"><span class="visually-hidden">posted to</span></span> <a href="/school/4758202496" class="sExtlink-processed">CCS</a> <span class="update-body s-rte"><p><span style="color:#050505;font-family:'system-ui', '-apple-system', BlinkMacSystemFont, sans-serif;font-size:15px;white-space:pre-wrap;">Setting SMART objectives is the first step toward achieving success. Join us on a transforming journey as the Guidance and Counseling Center and your BS Psychology friends Christian and Alex unveil a reminder on how to start the year and semester well. </span><span class="x3nfvp2 x1j61x8r x1fcty0u xdj266r xhhsvwb xat24cr xgzva0m xxymvpz xlup9mm x1kky2od" style="margin:0px 1px;height:16px;vertical-align:middle;width:16px;font-family:'system-ui', '-apple-system', BlinkMacSystemFont, sans-serif;color:#050505;font-size:15px;white-space:pre-wrap;"><img src="https://static.xx.fbcdn.net/images/emoji.php/v9/t65/2/16/1f680.png" alt="🚀" width="16" height="16" class="xz74otr"></span><span class="x3nfvp2 x1j61x8r x1fcty0u xdj266r xhhsvwb xat24cr xgzva0m xxymvpz xlup9mm x1kky2od" style="margin:0px 1px;height:16px;vertical-align:middle;width:16px;font-family:'system-ui', '-apple-system', BlinkMacSystemFont, sans-serif;color:#050505;font-size:15px;white-space:pre-wrap;"><img src="https://static.xx.fbcdn.net/images/emoji.php/v9/t4f/2/16/1f3af.png" alt="🎯" width="16" height="16" class="xz74otr"></span><span style="color:#050505;font-family:'system-ui', '-apple-system', BlinkMacSystemFont, sans-serif;font-size:15px;white-space:pre-wrap;"> Embrace a systematic, measurable, attainable, realistic, and time-based approach to your goals. Let's make every step count, DYCIans!</span></p>
+                <p><iframe src="https://app.schoology.com/media/ifr/5955413847" scrolling="no" frameborder="0" style="border:0;" allowfullscreen="true"></iframe></p></span><a href="/update_post/7133215865/show_more/8cb07331cb807dabedad43e476b33b14" id="edge-assoc-35146744118-show-more-link" class="show-more-link sExtlink-processed">Show More</a></div></span><span class="edge-main"><div class="post-body"></div></span><div class="edge-footer"><div class="created"><span class="small gray">Wed Jan 24, 2024 at 8:27 am</span></div>&nbsp;·&nbsp;<span tabindex="0" role="button" class="like-btn clickable schoology-processed" id="s-like-n-7133215865" ajax="/like/n/7133215865"><span class="content">Like&nbsp;</span><span class="visually-hidden">'s comment</span></span>
+                      <div class="feed-comments s-update-edge-no-comments s-update-edge-no-comment-box">
+                        <div class="feed-comments-top" style="display: block"></div>
+                        <span class="s-like-sentence"><span></span><a href="/likes/n/7133215865" class="like-details-btn schoology-processed sExtlink-processed">2 people</a> liked this</span>
+                        
+                        
+                        
+                      </div></div>
+                </div>
+                </div>
+                
+                </div></li>
+                <li id="edge-assoc-34987556644" class="" timestamp="1705046233"><div class="s-edge-type-update-post sUpdate-processed">
+                <div class="edge-item"><div class="edge-left"><div class="picture">
+                  <a href="/user/108463320" title="Elsa  Angeles" class="sExtlink-processed"><div class=" profile-picture-wrapper"><div class="profile-picture"><img src="https://asset-cdn.schoology.com/users/108463320/profile-image/profile_sm?1626914614" alt="Profile picture for Elsa  Angeles" title="" class="imagecache imagecache-profile_sm"></div></div></a></div>
+                </div><div class="edge-main-wrapper"><span class="edge-sentence"><div class="edge-sentence-actions"><div class="s-update-immersive-reader"><div class="immersive-reader-button-container" id="s-update-edge-immersive-reader-nid-7113746808"><button class="_button_1jkx4_1 _iconOnly_1jkx4_26" title="Immersive Reader"><span class="_icon_1jkx4_26"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 3v4.336h-1.016v-3.34h-5.588c-.762.2-2.236.798-2.236 1.546v5.58h-1.016v-5.58c0-.499-1.219-1.196-2.133-1.545H3.016v13.006h5.283V18H2V3h7.163l.102.05c.355.1 1.625.598 2.337 1.345.812-.897 2.336-1.295 2.54-1.345H21V3z" fill="#000"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15.7 21V9h-.65l-3.85 3.95L9 13v4.2h2.2l3.7 3.8h.8zm4.5-11.4l-.8.6.157.226.17.27.134.235.147.274c.453.88.992 2.27.992 3.895 0 1.716-.601 3.17-1.066 4.037l-.142.254-.127.214-.192.293L19.4 20l.8.6.302-.458.212-.354.157-.287.165-.325c.47-.972.964-2.38.964-4.026 0-1.673-.494-3.107-.964-4.098l-.165-.331-.157-.293-.145-.252-.128-.209L20.2 9.6zm-5.55 1.2l-3.05 3.15H9.95v2.25h1.65l3.05 3.15V10.8zm3 .4l-.85.5.005.014.196.379.169.35.123.282.126.313c.228.6.431 1.336.431 2.062 0 .806-.284 1.653-.556 2.28l-.124.272-.116.236-.182.339-.072.123.85.5a.12.12 0 00.01-.014l.083-.133.143-.258.118-.231.13-.273.135-.31c.294-.706.581-1.631.581-2.531 0-.975-.288-1.925-.581-2.644l-.135-.314-.13-.277a8.446 8.446 0 00-.061-.124l-.11-.213-.183-.328z" fill="#0075DB"></path></svg></span></button></div><script type="text/javascript">(function () {
+                  function immersiveReaderAction() {
+                    window.sgyImmersiveReader.renderButton({"targetId":"s-update-edge-immersive-reader-nid-7113746808","titleSelectorPath":"div.update-sentence-inner a","contentSelectorPath":"#edge-assoc-34987556644","origin":"Update","variant":"icon","beforeLaunch":() => sUpdateImmersiveReaderBeforeLaunch('edge-assoc-34987556644-show-more-link'),"getCustomContent":(contentSelectorPath) => sUpdateImmersiveReaderGetCustomContent(contentSelectorPath, 'Poll')});
+                    window.removeEventListener("SgyImmersiveReaderLoaded", immersiveReaderAction);
+                  }
+                  (window.sgyImmersiveReader === undefined)
+                    ? window.addEventListener("SgyImmersiveReaderLoaded", immersiveReaderAction)
+                    : immersiveReaderAction();
+                })();
+                </script></div></div><div class="update-sentence-inner"><a href="/user/108463320" title="View user profile." class="sExtlink-processed">Elsa  Angeles</a> <span class="school-arrow-right"><span class="visually-hidden">posted to</span></span> <a href="/school/2558503832" class="sExtlink-processed">Dr. Yanga's Colleges, Inc.</a> <span class="update-body s-rte"><p style="margin-bottom:0cm;"><strong><span style="font-size:14pt;line-height:107%;font-family:Arial, sans-serif;">Dear fellow Edukampyon,</span></strong></p>
+                <p style="margin-bottom:0cm;"><span style="font-size:12pt;line-height:107%;font-family:Arial, sans-serif;">&nbsp;</span></p>
+                <p style="margin-bottom:0cm;"><span style="font-size:12pt;line-height:107%;font-family:Arial, sans-serif;">EARN 5 CPD CREDIT UNITS!</span></p>
+                <p style="margin-bottom:0cm;"><span style="font-size:12pt;line-height:107%;font-family:Arial, sans-serif;">&nbsp;</span></p>
+                <p style="margin-bottom:0cm;"><span style="font-size:12pt;line-height:107%;font-family:'Segoe UI Emoji', sans-serif;">📚</span><span style="font-size:12pt;line-height:107%;font-family:Arial, sans-serif;"> Join Rex Education’s Annual Educators’ Congress (AECON 2024) in collaboration with DepEd and COCOPEA.</span></p>
+                <p style="margin-bottom:0cm;"><span style="font-size:12pt;line-height:107%;font-family:Arial, sans-serif;">&nbsp;</span></p>
+                <p style="margin-bottom:0cm;"><span style="font-size:12pt;line-height:107%;font-family:'Segoe UI Emoji', sans-serif;">🗓️</span><span style="font-size:12pt;line-height:107%;font-family:Arial, sans-serif;"> Date: January 19, 2024 (Friday)</span></p>
+                <p style="margin-bottom:0cm;"><span style="font-size:12pt;line-height:107%;font-family:'Segoe UI Emoji', sans-serif;">⏰</span><span style="font-size:12pt;line-height:107%;font-family:Arial, sans-serif;"> Time: 9:00 AM–4:00 PM</span></p>
+                <p style="margin-bottom:0cm;"><span style="font-size:12pt;line-height:107%;font-family:'Segoe UI Emoji', sans-serif;">📍</span><span style="font-size:12pt;line-height:107%;font-family:Arial, sans-serif;"> Location: Virtual Events and Activation Platform (VEAP)</span></p>
+                <p style="margin-bottom:0cm;"><span style="font-size:12pt;line-height:107%;font-family:'Segoe UI Emoji', sans-serif;">🌈</span><span style="font-size:12pt;line-height:107%;font-family:Arial, sans-serif;"> Theme: Navigating the Educational Landscape: Brightly Looking at the MATATAG Curriculum</span></p>
+                <p style="margin-bottom:0cm;"><span style="font-size:12pt;line-height:107%;font-family:Arial, sans-serif;">&nbsp;</span></p>
+                <p style="margin-bottom:0cm;"><span style="font-size:12pt;line-height:107%;font-family:Arial, sans-serif;">Engage with experts from...</span></p></span><a href="/update_post/7113746808/show_more/76b0a53f98a2f7ffc7fa97d9729ff299" id="edge-assoc-34987556644-show-more-link" class="show-more-link sExtlink-processed">Show More</a></div></span><span class="edge-main"><div class="post-body"></div></span><div class="edge-footer"><div class="created"><span class="small gray">Fri Jan 12, 2024 at 3:57 pm</span></div>&nbsp;·&nbsp;<span tabindex="0" role="button" class="like-btn clickable schoology-processed" id="s-like-n-7113746808" ajax="/like/n/7113746808"><span class="content">Like&nbsp;</span><span class="visually-hidden">'s comment</span></span>
+                      <div class="feed-comments s-update-edge-no-comments s-update-edge-no-comment-box">
+                        <div class="feed-comments-top" style="display: block"></div>
+                        <span class="s-like-sentence"><span></span><a href="/likes/n/7113746808" class="like-details-btn schoology-processed sExtlink-processed">7 people</a> liked this</span>
+                        
+                        
+                        
+                      </div></div>
+                </div>
+                </div>
+                
+                </div></li>
+                <li id="edge-assoc-34382138366" class="" timestamp="1700490008"><div class="s-edge-type-update-post sUpdate-processed">
+                <div class="edge-item"><div class="edge-left"><div class="picture">
+                  <a href="/user/108463320" title="Elsa  Angeles" class="sExtlink-processed"><div class=" profile-picture-wrapper"><div class="profile-picture"><img src="https://asset-cdn.schoology.com/users/108463320/profile-image/profile_sm?1626914614" alt="Profile picture for Elsa  Angeles" title="" class="imagecache imagecache-profile_sm"></div></div></a></div>
+                </div><div class="edge-main-wrapper"><span class="edge-sentence"><div class="edge-sentence-actions"><div class="s-update-immersive-reader"><div class="immersive-reader-button-container" id="s-update-edge-immersive-reader-nid-7041854684"><button class="_button_1jkx4_1 _iconOnly_1jkx4_26" title="Immersive Reader"><span class="_icon_1jkx4_26"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 3v4.336h-1.016v-3.34h-5.588c-.762.2-2.236.798-2.236 1.546v5.58h-1.016v-5.58c0-.499-1.219-1.196-2.133-1.545H3.016v13.006h5.283V18H2V3h7.163l.102.05c.355.1 1.625.598 2.337 1.345.812-.897 2.336-1.295 2.54-1.345H21V3z" fill="#000"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15.7 21V9h-.65l-3.85 3.95L9 13v4.2h2.2l3.7 3.8h.8zm4.5-11.4l-.8.6.157.226.17.27.134.235.147.274c.453.88.992 2.27.992 3.895 0 1.716-.601 3.17-1.066 4.037l-.142.254-.127.214-.192.293L19.4 20l.8.6.302-.458.212-.354.157-.287.165-.325c.47-.972.964-2.38.964-4.026 0-1.673-.494-3.107-.964-4.098l-.165-.331-.157-.293-.145-.252-.128-.209L20.2 9.6zm-5.55 1.2l-3.05 3.15H9.95v2.25h1.65l3.05 3.15V10.8zm3 .4l-.85.5.005.014.196.379.169.35.123.282.126.313c.228.6.431 1.336.431 2.062 0 .806-.284 1.653-.556 2.28l-.124.272-.116.236-.182.339-.072.123.85.5a.12.12 0 00.01-.014l.083-.133.143-.258.118-.231.13-.273.135-.31c.294-.706.581-1.631.581-2.531 0-.975-.288-1.925-.581-2.644l-.135-.314-.13-.277a8.446 8.446 0 00-.061-.124l-.11-.213-.183-.328z" fill="#0075DB"></path></svg></span></button></div><script type="text/javascript">(function () {
+                  function immersiveReaderAction() {
+                    window.sgyImmersiveReader.renderButton({"targetId":"s-update-edge-immersive-reader-nid-7041854684","titleSelectorPath":"div.update-sentence-inner a","contentSelectorPath":"#edge-assoc-34382138366","origin":"Update","variant":"icon","beforeLaunch":() => sUpdateImmersiveReaderBeforeLaunch('edge-assoc-34382138366-show-more-link'),"getCustomContent":(contentSelectorPath) => sUpdateImmersiveReaderGetCustomContent(contentSelectorPath, 'Poll')});
+                    window.removeEventListener("SgyImmersiveReaderLoaded", immersiveReaderAction);
+                  }
+                  (window.sgyImmersiveReader === undefined)
+                    ? window.addEventListener("SgyImmersiveReaderLoaded", immersiveReaderAction)
+                    : immersiveReaderAction();
+                })();
+                </script></div></div><div class="update-sentence-inner"><a href="/user/108463320" title="View user profile." class="sExtlink-processed">Elsa  Angeles</a> <span class="school-arrow-right"><span class="visually-hidden">posted to</span></span> <a href="/school/2558503832" class="sExtlink-processed">Dr. Yanga's Colleges, Inc.</a> <span class="update-body s-rte"><p><span style="font-size:12pt;line-height:107%;font-family:Arial, sans-serif;">Big thanks to all the Edukampyons who joined us for Ms. Selene Estaris discussion, your enthusiasm fuels our educational journey! </span></p>
+                <p><span style="font-size:12pt;line-height:107%;font-family:Arial, sans-serif;">Don't forget to mark your calendars for November 21 as we welcome back Mr. Francis Jim Tuscano, who will unlock 'Creative Potential' with ChatGPT and Generative AIs. </span></p>
+                <p><span style="font-size:12pt;line-height:107%;font-family:Arial, sans-serif;">See you there!</span></p>
+                <p><span style="font-size:12pt;line-height:107%;font-family:Arial, sans-serif;">Don't miss out – tune in to our Facebook Live </span></p>
+                <p><span style="font-size:12pt;line-height:107%;font-family:Arial, sans-serif;color:#4472c4;">...</span></p></span><a href="/update_post/7041854684/show_more/3f1c405dfc5db013be1716e2a62a4a85" id="edge-assoc-34382138366-show-more-link" class="show-more-link sExtlink-processed">Show More</a></div></span><span class="edge-main"><div class="post-body"></div></span><div class="edge-footer"><div class="created"><span class="small gray">Mon Nov 20, 2023 at 10:20 pm</span></div>&nbsp;·&nbsp;<span tabindex="0" role="button" class="like-btn clickable schoology-processed" id="s-like-n-7041854684" ajax="/like/n/7041854684"><span class="content">Like&nbsp;</span><span class="visually-hidden">'s comment</span></span>
+                      <div class="feed-comments s-update-edge-no-comments s-update-edge-no-comment-box">
+                        <div class="feed-comments-top" style="display: block"></div>
+                        <span class="s-like-sentence"><span></span><a href="/likes/n/7041854684" class="like-details-btn schoology-processed sExtlink-processed">10 people</a> liked this</span>
+                        
+                        
+                        
+                      </div></div>
+                </div>
+                </div>
+                
+                </div></li>
+                <li id="edge-assoc-34323334027" class="" timestamp="1700098708"><div class="s-edge-type-update-post sUpdate-processed">
+                <div class="edge-item"><div class="edge-left"><div class="picture">
+                  <a href="/user/120771024" title="Library Services" class="sExtlink-processed"><div class=" profile-picture-wrapper"><div class="profile-picture"><img src="https://asset-cdn.schoology.com/users/120771024/profile-image/profile_sm?1664843397" alt="Profile picture for Library Services" title="" class="imagecache imagecache-profile_sm"></div></div></a></div>
+                </div><div class="edge-main-wrapper"><span class="edge-sentence"><div class="edge-sentence-actions"><div class="s-update-immersive-reader"><div class="immersive-reader-button-container" id="s-update-edge-immersive-reader-nid-7037472120"><button class="_button_1jkx4_1 _iconOnly_1jkx4_26" title="Immersive Reader"><span class="_icon_1jkx4_26"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 3v4.336h-1.016v-3.34h-5.588c-.762.2-2.236.798-2.236 1.546v5.58h-1.016v-5.58c0-.499-1.219-1.196-2.133-1.545H3.016v13.006h5.283V18H2V3h7.163l.102.05c.355.1 1.625.598 2.337 1.345.812-.897 2.336-1.295 2.54-1.345H21V3z" fill="#000"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15.7 21V9h-.65l-3.85 3.95L9 13v4.2h2.2l3.7 3.8h.8zm4.5-11.4l-.8.6.157.226.17.27.134.235.147.274c.453.88.992 2.27.992 3.895 0 1.716-.601 3.17-1.066 4.037l-.142.254-.127.214-.192.293L19.4 20l.8.6.302-.458.212-.354.157-.287.165-.325c.47-.972.964-2.38.964-4.026 0-1.673-.494-3.107-.964-4.098l-.165-.331-.157-.293-.145-.252-.128-.209L20.2 9.6zm-5.55 1.2l-3.05 3.15H9.95v2.25h1.65l3.05 3.15V10.8zm3 .4l-.85.5.005.014.196.379.169.35.123.282.126.313c.228.6.431 1.336.431 2.062 0 .806-.284 1.653-.556 2.28l-.124.272-.116.236-.182.339-.072.123.85.5a.12.12 0 00.01-.014l.083-.133.143-.258.118-.231.13-.273.135-.31c.294-.706.581-1.631.581-2.531 0-.975-.288-1.925-.581-2.644l-.135-.314-.13-.277a8.446 8.446 0 00-.061-.124l-.11-.213-.183-.328z" fill="#0075DB"></path></svg></span></button></div><script type="text/javascript">(function () {
+                  function immersiveReaderAction() {
+                    window.sgyImmersiveReader.renderButton({"targetId":"s-update-edge-immersive-reader-nid-7037472120","titleSelectorPath":"div.update-sentence-inner a","contentSelectorPath":"#edge-assoc-34323334027","origin":"Update","variant":"icon","beforeLaunch":() => sUpdateImmersiveReaderBeforeLaunch('edge-assoc-34323334027-show-more-link'),"getCustomContent":(contentSelectorPath) => sUpdateImmersiveReaderGetCustomContent(contentSelectorPath, 'Poll')});
+                    window.removeEventListener("SgyImmersiveReaderLoaded", immersiveReaderAction);
+                  }
+                  (window.sgyImmersiveReader === undefined)
+                    ? window.addEventListener("SgyImmersiveReaderLoaded", immersiveReaderAction)
+                    : immersiveReaderAction();
+                })();
+                </script></div></div><div class="update-sentence-inner"><a href="/user/120771024" title="View user profile." class="sExtlink-processed">Library Services</a> <span class="school-arrow-right"><span class="visually-hidden">posted to</span></span> <a href="/school/2558503832" class="sExtlink-processed">Dr. Yanga's Colleges, Inc.</a> <span class="update-body s-rte"><p style="line-height:1.7999999999999998;text-align:justify;margin-top:0pt;margin-bottom:0pt;" dir="ltr"><span style="font-size:12px;font-family:Arial, sans-serif;color:#050505;background-color:transparent;vertical-align:baseline;">We are delighted to announce that the Sofia Library has active subscriptions to a wide array of dynamic online resources, designed to empower and enrich your academic and personal growth. These invaluable resources include:</span></p>
+                <p><span style="font-size:12px;">&nbsp;</span></p>
+                <p style="line-height:1.7999999999999998;text-align:justify;margin-top:0pt;margin-bottom:0pt;" dir="ltr"><span style="font-size:12px;font-family:Arial, sans-serif;color:#050505;background-color:transparent;vertical-align:baseline;"><span style="border:none;width:624px;height:936px;"><img src="https://lh7-us.googleusercontent.com/uS5Xw2rJKkboBYlRnfae0gQtQGM3D7JfP85uDxW_edcB5QoxZ8VnKE1jJseFeZtk7vueUD3o9xq35fzWS3Xi4N-CJ8KiyKAfm-FVuhEDvYiN3s4oPsQO03FDUUAdOIQnv7Y7LYfCqgtS_S8MnMBdocQ" width="624" height="936" style="margin-left:0px;margin-top:0px;" alt="uS5Xw2rJKkboBYlRnfae0gQtQGM3D7JfP85uDxW_edcB5QoxZ8VnKE1jJseFeZtk7vueUD3o9xq35fzWS3Xi4N-CJ8KiyKAfm-FVuhEDvYiN3s4oPsQO03FDUUAdOIQnv7Y7LYfCqgtS_S8MnMBdocQ"></span></span></p>
+                <p><span style="font-size:12px;">&nbsp;</span></p>
+                <p style="line-height:1.7999999999999998;text-align:justify;margin-top:0pt;margin-bottom:0pt;" dir="ltr"><span style="font-size:12px;font-family:Arial, sans-serif;color:#050505;background-color:transparent;vertical-align:baseline;">We encourage you to explore these resources to their fullest potential and make the most of this incredible opportunity to broaden your knowledge horizon.</span></p>
+                <p style="line-height:1.7999999999999998;text-align:justify;margin-top:0pt;margin-bottom:0pt;" dir="ltr">&nbsp;</p>
+                <p style="line-height:1.7999999999999998;text-align:justify;margin-top:0pt;margin-bottom:0pt;" dir="ltr"><span style="font-size:12px;font-family:Arial, sans-serif;color:#050505;background-color:transparent;vertical-align:baseline;">Happy...</span></p></span><a href="/update_post/7037472120/show_more/be41256c9ac49b20bacd20233cec90d4" id="edge-assoc-34323334027-show-more-link" class="show-more-link sExtlink-processed">Show More</a></div></span><span class="edge-main"><div class="post-body"></div></span><div class="edge-footer"><div class="created"><span class="small gray">Thu Nov 16, 2023 at 9:38 am</span></div>&nbsp;·&nbsp;<span tabindex="0" role="button" class="like-btn clickable schoology-processed" id="s-like-n-7037472120" ajax="/like/n/7037472120"><span class="content">Like&nbsp;</span><span class="visually-hidden">'s comment</span></span>
+                      <div class="feed-comments s-update-edge-no-comments s-update-edge-no-comment-box">
+                        <div class="feed-comments-top" style="display: block"></div>
+                        <span class="s-like-sentence"><span></span><a href="/likes/n/7037472120" class="like-details-btn schoology-processed sExtlink-processed">12 people</a> liked this</span>
+                        
+                        
+                        
+                      </div></div>
+                </div>
+                </div>
+                
+                </div></li>
+                <li id="edge-assoc-34323073436" class="" timestamp="1700096690"><div class="s-edge-type-update-post sUpdate-processed">
+                <div class="edge-item"><div class="edge-left"><div class="picture">
+                  <a href="/user/120771024" title="Library Services" class="sExtlink-processed"><div class=" profile-picture-wrapper"><div class="profile-picture"><img src="https://asset-cdn.schoology.com/users/120771024/profile-image/profile_sm?1664843397" alt="Profile picture for Library Services" title="" class="imagecache imagecache-profile_sm"></div></div></a></div>
+                </div><div class="edge-main-wrapper"><span class="edge-sentence"><div class="edge-sentence-actions"><div class="s-update-immersive-reader"><div class="immersive-reader-button-container" id="s-update-edge-immersive-reader-nid-7037452414"><button class="_button_1jkx4_1 _iconOnly_1jkx4_26" title="Immersive Reader"><span class="_icon_1jkx4_26"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 3v4.336h-1.016v-3.34h-5.588c-.762.2-2.236.798-2.236 1.546v5.58h-1.016v-5.58c0-.499-1.219-1.196-2.133-1.545H3.016v13.006h5.283V18H2V3h7.163l.102.05c.355.1 1.625.598 2.337 1.345.812-.897 2.336-1.295 2.54-1.345H21V3z" fill="#000"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15.7 21V9h-.65l-3.85 3.95L9 13v4.2h2.2l3.7 3.8h.8zm4.5-11.4l-.8.6.157.226.17.27.134.235.147.274c.453.88.992 2.27.992 3.895 0 1.716-.601 3.17-1.066 4.037l-.142.254-.127.214-.192.293L19.4 20l.8.6.302-.458.212-.354.157-.287.165-.325c.47-.972.964-2.38.964-4.026 0-1.673-.494-3.107-.964-4.098l-.165-.331-.157-.293-.145-.252-.128-.209L20.2 9.6zm-5.55 1.2l-3.05 3.15H9.95v2.25h1.65l3.05 3.15V10.8zm3 .4l-.85.5.005.014.196.379.169.35.123.282.126.313c.228.6.431 1.336.431 2.062 0 .806-.284 1.653-.556 2.28l-.124.272-.116.236-.182.339-.072.123.85.5a.12.12 0 00.01-.014l.083-.133.143-.258.118-.231.13-.273.135-.31c.294-.706.581-1.631.581-2.531 0-.975-.288-1.925-.581-2.644l-.135-.314-.13-.277a8.446 8.446 0 00-.061-.124l-.11-.213-.183-.328z" fill="#0075DB"></path></svg></span></button></div><script type="text/javascript">(function () {
+                  function immersiveReaderAction() {
+                    window.sgyImmersiveReader.renderButton({"targetId":"s-update-edge-immersive-reader-nid-7037452414","titleSelectorPath":"div.update-sentence-inner a","contentSelectorPath":"#edge-assoc-34323073436","origin":"Update","variant":"icon","beforeLaunch":() => sUpdateImmersiveReaderBeforeLaunch('edge-assoc-34323073436-show-more-link'),"getCustomContent":(contentSelectorPath) => sUpdateImmersiveReaderGetCustomContent(contentSelectorPath, 'Poll')});
+                    window.removeEventListener("SgyImmersiveReaderLoaded", immersiveReaderAction);
+                  }
+                  (window.sgyImmersiveReader === undefined)
+                    ? window.addEventListener("SgyImmersiveReaderLoaded", immersiveReaderAction)
+                    : immersiveReaderAction();
+                })();
+                </script></div></div><div class="update-sentence-inner"><a href="/user/120771024" title="View user profile." class="sExtlink-processed">Library Services</a> <span class="school-arrow-right"><span class="visually-hidden">posted to</span></span> <a href="/school/4758202496" class="sExtlink-processed">CCS</a> <span class="update-body s-rte"><p style="line-height:1.7999999999999998;text-align:justify;margin-top:0pt;margin-bottom:0pt;" dir="ltr"><span style="font-size:12px;font-family:Arial, sans-serif;color:#050505;background-color:transparent;vertical-align:baseline;">We are delighted to announce that the Sofia Library has active subscriptions to a wide array of dynamic online resources, designed to empower and enrich your academic and personal growth. These invaluable resources include:</span></p>
+                <p><span style="font-size:12px;">&nbsp;</span></p>
+                <p style="line-height:1.7999999999999998;text-align:justify;margin-top:0pt;margin-bottom:0pt;" dir="ltr"><span style="font-size:12px;">&nbsp;</span></p>
+                <p style="line-height:1.7999999999999998;text-align:justify;margin-top:0pt;margin-bottom:0pt;" dir="ltr"><span style="font-size:12px;"><span style="font-family:Arial, sans-serif;color:#050505;background-color:transparent;vertical-align:baseline;">URL: </span><a href="https://www.perlego.com/login" class="sExtlink-processed"><span style="font-family:Arial, sans-serif;color:#1155cc;background-color:transparent;vertical-align:baseline;">https://www.perlego.com/login</span></a></span></p>
+                <p><span style="font-size:12px;">&nbsp;</span></p>
+                <p style="line-height:1.7999999999999998;text-align:justify;margin-top:0pt;margin-bottom:0pt;" dir="ltr"><span style="font-size:12px;font-family:Arial, sans-serif;color:#050505;background-color:transparent;vertical-align:baseline;"><span style="border:none;width:624px;height:523px;"><img src="https://lh7-us.googleusercontent.com/oWJKt462ufFNOVIkeoVOAKL6cLQ1qSQEj66nKb3mIytzavIv1VX-8aE82KjZE4YajeW72TM_WmA2jnIbuTj445r3SKO0gm3f-NxC-z3HBIQDB10ywe181re_hqHZf-CP-RbbZm5dfzhC5-xIPGqWCAw" width="624" height="523" style="margin-left:0px;margin-top:0px;" alt="oWJKt462ufFNOVIkeoVOAKL6cLQ1qSQEj66nKb3mIytzavIv1VX-8aE82KjZE4YajeW72TM_WmA2jnIbuTj445r3SKO0gm3f-NxC-z3HBIQDB10ywe181re_hqHZf-CP-RbbZm5dfzhC5-xIPGqWCAw"></span></span></p>
+                <p style="line-height:1.7999999999999998;text-align:justify;margin-top:0pt;margin-bottom:0pt;" dir="ltr"><span style="font-size:12px;"><span style="font-family:Arial, sans-serif;color:#050505;background-color:transparent;vertical-align:baseline;">URL: </span><a href="https://www.turnitin.com/login_page.asp?lang=en_us" class="sExtlink-processed"><span style="font-family:Arial, sans-serif;color:#1155cc;background-color:transparent;vertical-align:baseline;">https://www.turnitin.com/login_page.asp?lang=en_us</span></a></span></p>
+                <p><span style="font-size:12px;">&nbsp;</span></p>
+                <p style="line-height:1.7999999999999998;text-align:justify;margin-top:0pt;margin-bottom:0pt;" dir="ltr"><span><span style="font-size:11pt;font-family:Arial, sans-serif;vertical-align:baseline;"><span style="border:none;width:624px;height:523px;"><img src="https://lh7-us.googleusercontent.com/LQVUIrKZy7vMLjrsj9UpHqzMoAEM3AQ2X2ee7YSCrfrVRIhnAsJMHUkNFjknLv8L50AKIxbMbf2nbnHjtH9lhrpf9OG1MKfMIdK9Vy4Wekvir_Ac9ddxmFcgbRK3ftOFb5efEGLIZZOvjjBNc5bw4iQ" width="624" height="523" style="margin-left:0px;margin-top:0px;" alt="LQVUIrKZy7vMLjrsj9UpHqzMoAEM3AQ2X2ee7YSCrfrVRIhnAsJMHUkNFjknLv8L50AKIxbMbf2nbnHjtH9lhrpf9OG1MKfMIdK9Vy4Wekvir_Ac9ddxmFcgbRK3ftOFb5efEGLIZZOvjjBNc5bw4iQ"></span></span></span></p>
+                <p style="line-height:1.7999999999999998;text-align:justify;margin-top:0pt;margin-bottom:0pt;" dir="ltr"><span style="font-size:12px;"><span style="font-family:Arial, sans-serif;color:#050505;background-color:transparent;vertical-align:baseline;">URL: </span><a href="https://ejournals.ph/login.php?link=http://ejournals.ph/" class="sExtlink-processed"><span style="font-family:Arial, sans-serif;color:#1155cc;background-color:transparent;vertical-align:baseline;">...</span></a></span></p></span><a href="/update_post/7037452414/show_more/b1e2a1af6908ad86e1a98fdeca47648e" id="edge-assoc-34323073436-show-more-link" class="show-more-link sExtlink-processed">Show More</a></div></span><span class="edge-main"><div class="post-body"></div></span><div class="edge-footer"><div class="created"><span class="small gray">Thu Nov 16, 2023 at 9:04 am</span></div>&nbsp;·&nbsp;<span tabindex="0" role="button" class="like-btn clickable schoology-processed" id="s-like-n-7037452414" ajax="/like/n/7037452414"><span class="content">Like&nbsp;</span><span class="visually-hidden">'s comment</span></span>
+                      <div class="feed-comments s-update-edge-no-comments s-update-edge-no-comment-box">
+                        <div class="feed-comments-top" style="display: block"></div>
+                        <span class="s-like-sentence"><span></span><a href="/likes/n/7037452414" class="like-details-btn schoology-processed sExtlink-processed">1 person</a> likes this</span>
+                        
+                        
+                        
+                      </div></div>
+                </div>
+                </div>
+                
+                </div></li>
+                <li id="edge-assoc-34298661436" class="" timestamp="1700015199"><div class="s-edge-type-update-post sUpdate-processed">
+                <div class="edge-item"><div class="edge-left"><div class="picture">
+                  <a href="/user/108463320" title="Elsa  Angeles" class="sExtlink-processed"><div class=" profile-picture-wrapper"><div class="profile-picture"><img src="https://asset-cdn.schoology.com/users/108463320/profile-image/profile_sm?1626914614" alt="Profile picture for Elsa  Angeles" title="" class="imagecache imagecache-profile_sm"></div></div></a></div>
+                </div><div class="edge-main-wrapper"><span class="edge-sentence"><div class="edge-sentence-actions"><div class="s-update-immersive-reader"><div class="immersive-reader-button-container" id="s-update-edge-immersive-reader-nid-7035577819"><button class="_button_1jkx4_1 _iconOnly_1jkx4_26" title="Immersive Reader"><span class="_icon_1jkx4_26"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 3v4.336h-1.016v-3.34h-5.588c-.762.2-2.236.798-2.236 1.546v5.58h-1.016v-5.58c0-.499-1.219-1.196-2.133-1.545H3.016v13.006h5.283V18H2V3h7.163l.102.05c.355.1 1.625.598 2.337 1.345.812-.897 2.336-1.295 2.54-1.345H21V3z" fill="#000"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15.7 21V9h-.65l-3.85 3.95L9 13v4.2h2.2l3.7 3.8h.8zm4.5-11.4l-.8.6.157.226.17.27.134.235.147.274c.453.88.992 2.27.992 3.895 0 1.716-.601 3.17-1.066 4.037l-.142.254-.127.214-.192.293L19.4 20l.8.6.302-.458.212-.354.157-.287.165-.325c.47-.972.964-2.38.964-4.026 0-1.673-.494-3.107-.964-4.098l-.165-.331-.157-.293-.145-.252-.128-.209L20.2 9.6zm-5.55 1.2l-3.05 3.15H9.95v2.25h1.65l3.05 3.15V10.8zm3 .4l-.85.5.005.014.196.379.169.35.123.282.126.313c.228.6.431 1.336.431 2.062 0 .806-.284 1.653-.556 2.28l-.124.272-.116.236-.182.339-.072.123.85.5a.12.12 0 00.01-.014l.083-.133.143-.258.118-.231.13-.273.135-.31c.294-.706.581-1.631.581-2.531 0-.975-.288-1.925-.581-2.644l-.135-.314-.13-.277a8.446 8.446 0 00-.061-.124l-.11-.213-.183-.328z" fill="#0075DB"></path></svg></span></button></div><script type="text/javascript">(function () {
+                  function immersiveReaderAction() {
+                    window.sgyImmersiveReader.renderButton({"targetId":"s-update-edge-immersive-reader-nid-7035577819","titleSelectorPath":"div.update-sentence-inner a","contentSelectorPath":"#edge-assoc-34298661436","origin":"Update","variant":"icon","beforeLaunch":() => sUpdateImmersiveReaderBeforeLaunch('edge-assoc-34298661436-show-more-link'),"getCustomContent":(contentSelectorPath) => sUpdateImmersiveReaderGetCustomContent(contentSelectorPath, 'Poll')});
+                    window.removeEventListener("SgyImmersiveReaderLoaded", immersiveReaderAction);
+                  }
+                  (window.sgyImmersiveReader === undefined)
+                    ? window.addEventListener("SgyImmersiveReaderLoaded", immersiveReaderAction)
+                    : immersiveReaderAction();
+                })();
+                </script></div></div><div class="update-sentence-inner"><a href="/user/108463320" title="View user profile." class="sExtlink-processed">Elsa  Angeles</a> <span class="school-arrow-right"><span class="visually-hidden">posted to</span></span> <a href="/school/2558503832" class="sExtlink-processed">Dr. Yanga's Colleges, Inc.</a> <span class="update-body s-rte"><p><span style="font-size:12pt;line-height:107%;font-family:'Arial Nova', sans-serif;">Let’s keep the learning spirit alive as we gear up for Ms. Selene Estaris' session, 'Generative AI Playground.’ </span></p>
+                <p><span style="font-size:12pt;line-height:107%;font-family:'Arial Nova', sans-serif;">&nbsp;</span></p>
+                <p><span style="font-size:12pt;line-height:107%;font-family:'Arial Nova', sans-serif;">Get ready and discover how AI can empower teachers for greater efficiency and productivity in education!</span></p>
+                <p><span style="font-size:12pt;line-height:107%;font-family:'Arial Nova', sans-serif;">&nbsp;</span></p>
+                <p><span style="font-size:12pt;line-height:107%;font-family:'Arial Nova', sans-serif;">Embrace this opportunity! Tune in to our Facebook Live </span></p>
+                <p><span style="font-size:12pt;line-height:107%;font-family:'Arial Nova', sans-serif;"><a href="https://www.facebook.com/OfficialRexEducation/" class="sExtlink-processed">https://www.facebook.com/OfficialRexEducation/</a></span></p>
+                <p><span style="font-size:12pt;line-height:107%;font-family:'Arial Nova', sans-serif;"></span></p>
+                <p><span style="font-size:12pt;line-height:107%;font-family:'Arial Nova', sans-serif;"></span></p>
+                <p><img src="https://dyci.schoology.com/system/files/attachments/page_embeds/m/2023-11/viber_image_2023-11-15_10-03-39-226_65542bf94fc5e.jpg" alt="" title="" class="sizeimg"></p></span><a href="/update_post/7035577819/show_more/e02ba74f2b29acf6082544bdce6d0aa7" id="edge-assoc-34298661436-show-more-link" class="show-more-link sExtlink-processed">Show More</a></div></span><span class="edge-main"><div class="post-body"></div></span><div class="edge-footer"><div class="created"><span class="small gray">Wed Nov 15, 2023 at 10:26 am</span></div>&nbsp;·&nbsp;<span tabindex="0" role="button" class="like-btn clickable schoology-processed" id="s-like-n-7035577819" ajax="/like/n/7035577819"><span class="content">Like&nbsp;</span><span class="visually-hidden">'s comment</span></span>
+                      <div class="feed-comments s-update-edge-no-comments s-update-edge-no-comment-box">
+                        <div class="feed-comments-top" style="display: block"></div>
+                        <span class="s-like-sentence"><span></span><a href="/likes/n/7035577819" class="like-details-btn schoology-processed sExtlink-processed">6 people</a> liked this</span>
+                        
+                        
+                        
+                      </div></div>
+                </div>
+                </div>
+                
+                </div></li>
+                <li class="s-edge-feed-more-link last" style="display: list-item;"><a href="/home/feed?page=1" class="active sExtlink-processed sEdgeMore-processed">more</a></li>
+                
+                </ul></div></div></div>
+        </form>
+    </div>
+</div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <script>
+        var isLarge = false; // Initial state
+        function toggleSidebar() {
+            var body = document.getElementById('body');
+            var sp2 = document.getElementById('esp');
+            var sp = document.getElementById('rsp');
+            var fre = document.getElementById('fre');
+            var rd = document.getElementById('rd');
+            var txt = document.getElementById('txt');
+            var sidebar = document.getElementById('sidebar');
+            var elements = document.getElementsByClassName('name-text');
+            if (body.classList.contains('resize')) {
+                body.classList.remove('resize');
+                body.classList.add('resize-reverse');
+            } else {
+                body.classList.remove('resize-reverse');
+                body.classList.add('resize');
+            }
+            if (sidebar.classList.contains('sidebar-resize')) {
+                sidebar.classList.remove('sidebar-resize');
+                sidebar.classList.add('sidebar-resize-reverse');
+            } else {
+                sidebar.classList.remove('sidebar-resize-reverse');
+                sidebar.classList.add('sidebar-resize');
+            }
+            if (fre.classList.contains('position')) {
+                fre.classList.remove('position');
+                fre.classList.add('position-reverse');
+            } else {
+                fre.classList.remove('position-reverse');
+                fre.classList.add('position');
+            }
+            if (rd.classList.contains('position-size')) {
+                rd.classList.remove('position-size');
+                rd.classList.add('position-size-reverse');
+            } else {
+                rd.classList.remove('position-size-reverse');
+                rd.classList.add('position-size');
+            }
+            if (txt.classList.contains('position-text')) {
+                txt.classList.remove('position-text');
+                txt.classList.add('position-text-reverse');
+            } else {
+                txt.classList.remove('position-text-reverse');
+                txt.classList.add('position-text');
+            }
+            if (sp.classList.contains('reminder-sp')) {
+                sp.classList.remove('reminder-sp');
+                sp.classList.add('reminder-sp-reverse');
+            } else {
+                sp.classList.remove('reminder-sp-reverse');
+                sp.classList.add('reminder-sp');
+            }
+            if (sp2.classList.contains('event-sp')) {
+                sp2.classList.remove('event-sp');
+                sp2.classList.add('event-sp-reverse');
+            } else {
+                sp2.classList.remove('event-sp-reverse');
+                sp2.classList.add('event-sp');
+            }
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].classList.toggle('hidden'); // Toggle the 'hidden' class
+            }
+            var menuItems = document.querySelectorAll('.menu .item a');
+            // Toggle between two sets of styles based on the current state
+                if (!isLarge) {
+                    menuItems.forEach(function(item) {
+                        item.classList.add('large'); // Add 'large' class
+                    });
+                } else {
+                    menuItems.forEach(function(item) {
+                        item.classList.remove('large'); // Remove 'large' class
+                    });
+                }
+            var titleNames = document.querySelectorAll('h6'); // Select h6 elements
+                // Toggle between two sets of styles based on the current state
+                if (!isLarge) {
+                    titleNames.forEach(function(item) {
+                        item.classList.add('hidden'); // Add 'hidden' class
+                    });
+                } else {
+                    titleNames.forEach(function(item) {
+                        item.classList.remove('hidden'); // Remove 'hidden' class
+                    });
+                }
+                // Toggle the state
+                isLarge = !isLarge
+        }
+    </script>
+
+    <script>
+        $(document).ready(function(){
+
+        $('.sub-btn').click(function(){
+            $(this).next('.sub-menu').slideToggle();
+            $(this).find('.dropdown').toggleClass('rotate');
+        });
+    });
+
+    </script>
+
+
+
+    </body>
+
+
+
+</body>
+</html>
