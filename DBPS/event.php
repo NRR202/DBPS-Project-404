@@ -5,6 +5,23 @@
               WHERE e.Status_E = 0";
     $result_student = mysqli_query($con, $query);
 ?>
+<?php
+    require_once('php/config.php');
+    $query = "SELECT COUNT(*) AS count_zero FROM evaluationstatus WHERE Status_E = 0";
+    $result = mysqli_query($con, $query);
+    $row = mysqli_fetch_assoc($result);
+    // Free result set
+    mysqli_free_result($result);
+?>
+
+<?php
+    require_once('php/config.php');
+    $queryone = "SELECT COUNT(*) AS count_one FROM evaluationstatus WHERE Status_E = 1";
+    $resultone = mysqli_query($con, $queryone);
+    $rowone = mysqli_fetch_assoc($resultone);
+    // Free result set
+    mysqli_free_result($resultone);
+?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -17,6 +34,10 @@
 </head>
 <body class="colorset">
 <div class="nameheader">Evaluation Task</div>
+<div class="tablecounts">
+    <div>Evaluation Pending: <?php echo $row['count_zero']; ?></div>
+    <div>Evaluation Completed: <?php echo $rowone['count_one']; ?></div>
+</div>
 <div class="CourseTecherTable">
     <br>
         <table class="table">
@@ -83,6 +104,15 @@
     font-size: 45pt;
     font-family: "Dutch801 XBd BT", Arial, sans-serif;
     margin-left: 30px;
+}
+.tablecounts{
+    position: absolute;
+    top: 8px;
+    right: 70px;
+    font-size: 20pt;
+    font-family: "Dutch801 XBd BT", Arial, sans-serif;
+    border-style: solid;
+    border-color: gray;
 }
 </style>
 </body>
