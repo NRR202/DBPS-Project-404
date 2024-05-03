@@ -42,9 +42,9 @@
             <div class="nameheader">Course</div>
             <select class="CourseIteminEvaluation" id="courses" name="courses">
                 <option value="">All Course</option>
-                <option value="BSIT">BSIT</option>
-                <option value="BSCpE">BSCpE</option>
-                <option value="BSCS">BSCS</option>
+                <option value="BSIT" <?php if(isset($_GET['courses']) && $_GET['courses'] == 'BSIT') echo 'selected="selected"'; ?>>BSIT</option>
+                <option value="BSCPE" <?php if(isset($_GET['courses']) && $_GET['courses'] == 'BSCPE') echo 'selected="selected"'; ?>>BSCPE</option>
+                <option value="BSCS" <?php if(isset($_GET['courses']) && $_GET['courses'] == 'BSCS') echo 'selected="selected"'; ?>>BSCS</option>
             </select>
         </div>
         <div class="namesearchbar">Search</div>
@@ -62,6 +62,7 @@
                     <th>Course</th>
                     <th>Year Level</th>
                     <th>Section</th>
+                    <th>Gender</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -77,6 +78,7 @@
                                 <td><?php echo $row['course']; ?></td>
                                 <td><?php echo $row['year_level']; ?></td>
                                 <td><?php echo $row['section']; ?></td>
+                                <td><?php echo $row['gender']; ?></td>
                                 <td>
                                 <a class="btn btn-primary" href="">Evaluation Form</a>
                                 </td>

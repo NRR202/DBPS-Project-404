@@ -111,8 +111,6 @@
     right: 70px;
     font-size: 20pt;
     font-family: "Dutch801 XBd BT", Arial, sans-serif;
-    border-style: solid;
-    border-color: gray;
 }
 </style>
 </body>

@@ -1,6 +1,5 @@
 <?php
     require_once('php/config.php');
-
     // Check if the search button is clicked
     if (isset($_GET['search'])) {
         // Fetch search parameters if submitted
@@ -8,6 +7,7 @@
         $searchSection = isset($_GET['sections']) ? $_GET['sections'] : '';
         $searchYearLevel = isset($_GET['yearlevel']) ? $_GET['yearlevel'] : '';
 
+        
         // Construct the SQL query based on search parameters
         $query = "SELECT s.*, e.Status_E
                   FROM student_info s
@@ -60,25 +60,25 @@
         <div class="courses">Course Student:</div>
         <select class="CourseItem" id="courses" name="courses">
             <option value="">All Courses</option>
-            <option value="BSIT">BSIT</option>
-            <option value="BSCPE">BSCPE</option>
-            <option value="BSCS">BSCS</option>
+            <option value="BSIT" <?php if(isset($_GET['courses']) && $_GET['courses'] == 'BSIT') echo 'selected="selected"'; ?>>BSIT</option>
+            <option value="BSCPE" <?php if(isset($_GET['courses']) && $_GET['courses'] == 'BSCPE') echo 'selected="selected"'; ?>>BSCPE</option>
+            <option value="BSCS" <?php if(isset($_GET['courses']) && $_GET['courses'] == 'BSCS') echo 'selected="selected"'; ?>>BSCS</option>
         </select>
         <div class="section">Section:</div>
         <select class="SectionItem" id="sections" name="sections">
             <option value="">All Section</option>
-            <option value="A">A</option>
-            <option value="B">B</option>
-            <option value="C">C</option>
-            <option value="D">D</option>
+            <option value="A" <?php if(isset($_GET['sections']) && $_GET['sections'] == 'A') echo 'selected="selected"'; ?>>A</option>
+            <option value="B" <?php if(isset($_GET['sections']) && $_GET['sections'] == 'B') echo 'selected="selected"'; ?>>B</option>
+            <option value="C" <?php if(isset($_GET['sections']) && $_GET['sections'] == 'C') echo 'selected="selected"'; ?>>C</option>
+            <option value="D" <?php if(isset($_GET['sections']) && $_GET['sections'] == 'D') echo 'selected="selected"'; ?>>D</option>
         </select>
         <div class="yearlevel">Year Level:</div>
         <select class="YearLevelItem" id="yearlevel" name="yearlevel">
             <option value="">All Year Level</option>
-            <option value="1st year">1st Year</option>
-            <option value="2nd year">2nd Year</option>
-            <option value="3rd year">3rd Year</option>
-            <option value="4th year">4th Year</option>
+            <option value="1st year" <?php if(isset($_GET['yearlevel']) && $_GET['yearlevel'] == '1st year') echo 'selected="selected"'; ?>>1st Year</option>
+            <option value="2nd year" <?php if(isset($_GET['yearlevel']) && $_GET['yearlevel'] == '2nd year') echo 'selected="selected"'; ?>>2nd Year</option>
+            <option value="3rd year" <?php if(isset($_GET['yearlevel']) && $_GET['yearlevel'] == '3rd year') echo 'selected="selected"'; ?>>3rd Year</option>
+            <option value="4th year" <?php if(isset($_GET['yearlevel']) && $_GET['yearlevel'] == '4th year') echo 'selected="selected"'; ?>>4th Year</option>
         </select>
         <button type="submit" name="search" class="searchCourseButton">Search</button>
     </form>
@@ -88,12 +88,12 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>Student Name</th>
                     <th>Student ID</th>
+                    <th>Student Name</th>
                     <th>Course</th>
                     <th>Year Level</th>
                     <th>Section</th>
-                    <th>Evaluation Status</th>
+                    <th>Gender</th>
                 </tr>
             </thead>
             <tbody>
@@ -104,15 +104,12 @@
                         while ($row = mysqli_fetch_assoc($result_student)) {
                             ?>
                             <tr>
-                                <td><?php echo $row['firstname'] . ' ' . $row['lastname']; ?></td>
                                 <td><?php echo $row['username']; ?></td>
+                                <td><?php echo $row['firstname'] . ' ' . $row['lastname']; ?></td>
                                 <td><?php echo $row['course']; ?></td>
                                 <td><?php echo $row['year_level']; ?></td>
                                 <td><?php echo $row['section']; ?></td>
-                                <td><?php
-                                    // Display "Pending" if Status_E is 0, otherwise display "Remark"
-                                    echo $row['Status_E'] == 0 ? 'Pending' : 'Evaluated';
-                                ?></td>
+                                <td><?php echo $row['gender']; ?></td>
                             </tr>
                             <?php
                         }
