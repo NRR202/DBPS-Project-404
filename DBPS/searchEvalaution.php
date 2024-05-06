@@ -1,6 +1,10 @@
 <?php
     require_once('php/config.php');
-
+    $sql_teacher = "SELECT * FROM teacher_info WHERE username = ?";
+    $stmt_teacher = $con->prepare($sql_teacher);
+    $stmt_teacher->bind_param("s", $_SESSION['user_name']);
+    $stmt_teacher->execute();
+    $result_teacher = $stmt_teacher->get_result();
     // Check if the search button is clicked
     if (isset($_GET['search'])) {
         // Fetch search parameters if submitted
@@ -33,6 +37,7 @@
 <meta charset="UTF-8">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <script defer src="js\bootstrap.bundle.min.js"></script>
+<script src="js\functionality.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="colorset">
@@ -53,48 +58,52 @@
     </form>
 </div>
 <div id="studentTable" class="evaluationtable">
-    <br>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Student Name</th>
-                    <th>Student ID</th>
-                    <th>Course</th>
-                    <th>Year Level</th>
-                    <th>Section</th>
-                    <th>Gender</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                <?php
-                    if ($result_student->num_rows > 0) {
-                        while($row = mysqli_fetch_assoc($result_student)){
-                ?>
+        <div class="row tbl-fixed">
+            <table class="table-striped table-condensed">
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Student ID</th>
+                        <th>Course</th>
+                        <th>Year Level</th>
+                        <th>Section</th>
+                        <th>Gender</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <?php
+                        if ($result_student->num_rows > 0) {
+                            while($row = mysqli_fetch_assoc($result_student)){
+                    ?>
+                                <tr>
+                                    <td><?php echo $row['firstname'] . ' ' . $row['lastname']; ?></td>
+                                    <td><?php echo $row['username']; ?></td>
+                                    <td><?php echo $row['course']; ?></td>
+                                    <td><?php echo $row['year_level']; ?></td>
+                                    <td><?php echo $row['section']; ?></td>
+                                    <td><?php echo $row['gender']; ?></td>
+                                    <td>
+                                    <a class="btn btn-primary" href="evaluationform.php?firstname=<?php echo urlencode($row['firstname']); ?>&lastname1=<?php echo urlencode($row['lastname']); ?>
+                                    &course=<?php echo urlencode($row['course']); ?>&section=<?php echo urlencode($row['section']); ?>
+                                    &year_level=<?php echo urlencode($row['year_level']); ?>&user=<?php echo urlencode($row['username']); ?>" target="_blank">Evaluation Form</a>
+                                        
+                                    </td>
+                                </tr>
+                    <?php
+                            }
+                        } else {
+                    ?>
                             <tr>
-                                <td><?php echo $row['firstname'] . ' ' . $row['lastname']; ?></td>
-                                <td><?php echo $row['username']; ?></td>
-                                <td><?php echo $row['course']; ?></td>
-                                <td><?php echo $row['year_level']; ?></td>
-                                <td><?php echo $row['section']; ?></td>
-                                <td><?php echo $row['gender']; ?></td>
-                                <td>
-                                <a class="btn btn-primary" href="">Evaluation Form</a>
-                                </td>
+                                <td colspan="5">No students found.</td>
                             </tr>
-                <?php
+                    <?php
                         }
-                    } else {
-                ?>
-                        <tr>
-                            <td colspan="5">No students found.</td>
-                        </tr>
-                <?php
-                    }
-                ?>
-            </tbody>
-        </table>
+                    ?>
+                </tbody>
+            </table>
+        </div>
 </div>
 <style>
 .nameheader{
@@ -120,12 +129,45 @@
 
 }
 .evaluationtable{
-    position: relative;
-    top: 30px;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
     font-size: 18px;
+    overflow: hidden;
 }
-.colorset{
-    background-color: #d9d4d4;
+.tbl-fixed {
+    overflow-y: scroll;
+    height: fit-content;
+    max-height: 120vh;
+}
+
+table {
+    border-collapse: separate;
+    width: 100%; /* Ensure table takes full width */
+}
+
+table th {
+    position: sticky;
+    top: 0px;
+    background: white;
+    text-align: center;
+}
+
+table td {
+    text-align: center;
+}
+
+.evaluationtable table tbody tr:nth-child(odd) {
+    background-color: lightgray; /* Set background color for odd rows */
+}
+
+.evaluationtable table tbody tr:nth-child(even) {
+    background-color: white; /* Set background color for even rows */
+}
+body{
+    background: #d9d4d4;
 }
 </style>
 </body>

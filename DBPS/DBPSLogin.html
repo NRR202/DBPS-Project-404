@@ -54,6 +54,27 @@
                                 }
                             </style>
                         </div>
+                            <div class="label1">New user?</div>
+                            <span class="label2click" onclick="register()">Sign Up</span>
+                            <style>
+                                .label1{
+                                    position: absolute;
+                                    font-family: sans-serif;
+                                    font-size: 10pt;
+                                    right: 53px;
+                                    top: 142px;
+                                }
+                                .label2click{
+                                    position: absolute;
+                                    cursor: pointer;
+                                    color: blue; /* Set color to blue */
+                                    text-decoration: underline; /* Underline the text */
+                                    font-size: 11pt;
+                                    right: 0px;
+                                    top: 140px;
+                                }
+
+                            </style>
                             <button type="submit" class="submit-btn">Log in</button></a>
 
 
@@ -62,7 +83,7 @@
                         <form id="register" class="input-group" action="signupexecute.php" method="POST">
                             <div id="btn1"></div>
                             <input type="hidden" id="user-type" name="type-entity" value="">
-                            <button type="button" class="type-btn" onclick="student(); selectUserType('Student');">Student</button>
+                            <button type="button" class="type-btn" selected onclick="student(); selectUserType('Student');" id="studentbtn">Student</button>
                             <button type="button" class="type-btn" onclick="teacher(); selectUserType('Teacher');">Teacher</button>
                             <button type="button" class="type-btn" onclick="parent(); selectUserType('Parent');">Parent</button>
                             
@@ -163,6 +184,7 @@
                         z.style.left = "110px"
                         document.querySelector('.form-box').classList.add('animate-height');
                         document.querySelector('.form-box').classList.remove('animate-height-reverse');
+                        document.getElementById('studentbtn').click();
                     }
 
                     function login (){

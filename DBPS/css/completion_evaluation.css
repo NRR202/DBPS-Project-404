@@ -1,0 +1,27 @@
+.box_notify{
+    margin: 30px auto; /* Center the div horizontally */
+    width: 90%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40pt;
+    font-weight: bold;
+    text-align: center;
+}
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+    text-align: center;
+}
+span{
+    color: blue; /* Set color to blue */
+    text-decoration: underline; /* Underline the text */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    justify-self: right;
+    margin-bottom: 0px;
+}

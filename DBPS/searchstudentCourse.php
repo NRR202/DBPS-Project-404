@@ -84,8 +84,8 @@
     </form>
 </div>
 <div class="CourseTecherTable" id="CTT">
-    <br>
-        <table class="table">
+    <div class="row tbl-fixed">
+        <table class="table-striped table-condensed">
             <thead>
                 <tr>
                     <th>Student ID</th>
@@ -124,6 +124,7 @@
                 ?>
             </tbody>
         </table>
+    </div>
 </div>
 <style>
 .CourseTecherTable{
@@ -134,7 +135,7 @@
     left: 260px;
     border-style: solid;
     border-color: gray;
-    
+    overflow: hidden;
 }
 .SelectionTable{
     position: absolute;
@@ -159,8 +160,37 @@
     top: 310px;
     width: 200px;
 }
-.colorset{
+body{
     background-color: #d9d4d4;
+}
+.tbl-fixed {
+    overflow-y: scroll;
+    height: fit-content;
+    max-height: 200vh;
+}
+
+table {
+    border-collapse: separate;
+    width: 100%; /* Ensure table takes full width */
+}
+
+table th {
+    position: sticky;
+    top: 0px;
+    background: white;
+    text-align: center;
+}
+
+table td {
+    text-align: center;
+}
+
+.CourseTecherTable table tbody tr:nth-child(odd) {
+    background-color: lightgray; /* Set background color for odd rows */
+}
+
+.CourseTecherTable table tbody tr:nth-child(even) {
+    background-color: white; /* Set background color for even rows */
 }
 </style>
 </body>

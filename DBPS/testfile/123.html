@@ -3,69 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text and Image Input</title>
+    <title>Evaluation Form</title>
     <style>
-        /* Basic CSS for styling */
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
         }
+        
         .container {
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 600px;
+            margin: 20px auto;
             padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        input[type="file"] {
-            margin-bottom: 10px;
+
+        .form-group {
+            margin-bottom: 20px;
         }
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 10px;
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Your Document Title</h1>
-        
-        <!-- Text input -->
-        <textarea id="textInput" rows="4" cols="50"></textarea>
-        <input type="text">
-        <!-- Image upload -->
-        <input type="file" id="imageInput" accept="image/*">
-        
-        <!-- Preview area for the uploaded image -->
-        <img id="imagePreview" src="#" alt="Image Preview">
-        
-        <!-- Button to submit -->
-        <button onclick="saveContent()">Save</button>
-    </div>
 
-    <script>
-        // JavaScript for handling image preview
-        const imageInput = document.getElementById('imageInput');
-        const imagePreview = document.getElementById('imagePreview');
+<div class="container">
+    <h2>Evaluation Form</h2>
+    <form>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
 
-        imageInput.addEventListener('change', function() {
-            const file = this.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function() {
-                    imagePreview.src = reader.result;
-                }
-                reader.readAsDataURL(file);
-            }
-        });
-
-        // JavaScript function to save content
-        function saveContent() {
-            const textInput = document.getElementById('textInput').value;
-            // You can send the textInput and imagePreview.src data to the server for further processing
-            // For example, using AJAX to send the data to a server-side script like PHP or Node.js
-            console.log('Text:', textInput);
-            console.log('Image:', imagePreview.src);
-            // Here, you can perform further actions like saving the data to a database or file
-        }
-    </script>
 </body>
 </html>

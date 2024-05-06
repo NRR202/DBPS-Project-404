@@ -215,10 +215,40 @@ function EvaluationFunction() {
     course.style.visibility = "hidden";
     evaluation.style.visibility = "visible";
 }
-$(document).ready(function(){
+// Function to toggle between iframes
+function toggleIframe(iframeIdToShow, iframeIdToHide) {
+    document.getElementById(iframeIdToShow).style.display = "block";
+    document.getElementById(iframeIdToHide).style.display = "none";
+}
 
-    $('.sub-btn').click(function(){
-        $(this).next('.sub-menu').slideToggle();
-        $(this).find('.dropdown').toggleClass('rotate');
+// Attach event listeners to each row's Evaluation Form link for the first iframe
+var evalLinks1 = document.querySelectorAll('.evaluation-link1');
+evalLinks1.forEach(function(link) {
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default link behavior
+        toggleIframe('evaluationFormFrame1', 'evaluationFormFrame2'); // Show iframe 1 and hide iframe 2
     });
 });
+
+// Attach event listeners to each row's Evaluation Form link for the second iframe
+var evalLinks2 = document.querySelectorAll('.evaluation-link2');
+evalLinks2.forEach(function(link) {
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default link behavior
+        toggleIframe('evaluationFormFrame2', 'evaluationFormFrame1'); // Show iframe 2 and hide iframe 1
+    });
+});
+
+function EvaluationFunction(button) {
+    var dashboard = document.getElementById('body');
+    var course = document.getElementById('body2');
+    var evaluation = document.getElementById('body3');
+    dashboard.style.position = "fixed";
+    dashboard.style.visibility = "hidden";
+    course.style.visibility = "hidden";
+    evaluation.style.visibility = "visible";
+    
+    // Disable the button after it's clicked
+    button.disabled = true;
+}
+

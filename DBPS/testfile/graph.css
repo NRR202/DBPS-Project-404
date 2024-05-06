@@ -1,7 +1,9 @@
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 *{
  margin: 0;
  padding: 0;
+ box-sizing: border-box;
+ font-family: 'Poppins', sans-serif;
 }
 
 
@@ -50,10 +52,6 @@
     }
 }
 
-.background1{
-    width: 100%;
-    height: 100%;
-}
 
 .fullbg{
     left: 410px;
@@ -199,30 +197,13 @@
 }
 
 
-.title{
+h6{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 24px;
-    margin-top: 30px;
+    margin-top: 31px;
     margin-left: 7px;
     color: white;
     white-space: nowrap;
-    font-weight: bold;
-    left: 0px;
-}
-
-.Name_indicate{
-    font-size: 25px;
-    font-weight: bold;
-    color: gray;
-    margin-left: 60px;
-    padding-top: 3px;
-}
-
-.Role_indicate{
-    font-size: 25px;
-    font-weight: bold;
-    color: gray;
-    margin-left: 60px;
 }
 
 .hidden{
@@ -245,7 +226,7 @@
 
 .menu .item a{
     color: white;
-    font-size: 22px;
+    font-size: 20px;
     text-decoration: none;
     display: block;
     padding: 16px 24px;
@@ -259,8 +240,6 @@
     padding: 22px 54px;
     font-size: 40px;
 }
-
-
 
 .item i{
     margin-right: 15px;
@@ -294,6 +273,51 @@ span.item {
     background-color: rgba(255, 255, 255, 0.24);   
 }
 
+.reminder{
+    position: absolute;
+    left: 50px;
+    top: 167px;
+    width: 430px;
+    height: 500px;
+    background: #d9d4d4;
+    border-style: solid;
+    border-color: gray;
+}
+
+.reminder-sp {
+    animation-name: change-sp;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.reminder-sp-reverse {
+    animation-name: change-sp-reverse;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-sp {
+    from {
+        left: 50px; /* Set the initial height */
+        width: 430px;
+    }
+    to {
+        left: -60px; /* Adjust as needed */
+        width: 540px;
+    }
+}
+
+@keyframes change-sp-reverse {
+    from {
+        left: -60px; /* Adjust as needed */
+        width: 540px;
+    }
+    to {
+        left: 50px; /* Set the height back to its original value */
+        width: 430px;
+    }
+}
+
 .sEdgeFilterProcessed{
     margin-top: 10px;
     margin-left: 10px;
@@ -302,10 +326,11 @@ span.item {
 
 .event{
     position: absolute;
-    width: 1400px;
+    display: inline-table;
+    width: 900px;
     height: 750px;
     background: #d9d4d4;
-    left: 40px;
+    left: 550px;
     top: 167px;
     border-style: solid;
     border-color: gray;
@@ -325,23 +350,23 @@ span.item {
 
 @keyframes change-sp2 {
     from {
-        width: 1400px;
-        left: 40px;
+        width: 900px;
+        left: 550px;
     }
     to {
-        width: 1660px;
-        left: -70px;
+        width: 1030px;
+        left: 675px;
     }
 }
 
 @keyframes change-sp2-reverse {
     from {
-        width: 1660px;
-        left: -70px;
+        width: 1030px;
+        left: 675px;
     }
     to {
-        width: 1400px;
-        left: 40px;
+        width: 900px;
+        left: 550px;
     }
 }
 
@@ -404,94 +429,13 @@ span.b {
     white-space: nowrap;
 }
 .logout{
-    background-color: transparent;
-    border: none;
-    color: white;
-    display: inline-flex;
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    bottom: 20px;
-}
-
-.logout-text{
-    margin-left: 15px;
-    margin-top: -5px;
-}
-
-.hide {
-    animation-name: change-hidden;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-.show {
-    animation-name: change-appear;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes change-hidden {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes change-appear {
-    from {
-        opacity: 0; /* Adjust as needed */
-    }
-    to {
-        opacity: 1; /* Set the height back to its original value */
-    }
-}
-
-.logoutform{
-    position: absolute;
-    left: 29px;
-    bottom: 20px;
-    color: white;
-    font-size: 22px;
-    transition: padding 0.5s, font-size 0.5s;
     white-space: nowrap;
-    font-weight: 900;
 }
-
-.logoutform.enlarge{
-    font-size: 40px;
-    margin-left: 20px;
+.name-text{
+    transition: visibility 0ms ease;
 }
-.hide2 {
-    animation-name: change-hidden2;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-.show2 {
-    animation-name: change-appear2;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes change-hidden2 {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes change-appear2 {
-    from {
-        opacity: 0; /* Adjust as needed */
-    }
-    to {
-        opacity: 1; /* Set the height back to its original value */
-    }
+.name-text.hidden {
+    visibility: hidden;
 }
 .test{
     margin-left: 0px;
@@ -499,7 +443,9 @@ span.b {
 a{
     font-size: small;
 }
-
+i{
+    padding-left: -10px;
+}
 .ProfilePic{
     color: white;
     background-color: #1119E1;
@@ -510,12 +456,6 @@ a{
     right: 30px;
     height: 101px;
     border-radius: 50px;
-}
-
-.profilepic{
-    width: 100px;
-    margin-bottom: 80px;
-    color: white;
 }
 .form-event_reminder{
     position: absolute;
@@ -529,7 +469,7 @@ a{
     top: 0px;
 }
 
-.form-evaluation-for-teacher{
+.form-evaluation-for-student{
     position: absolute;
     left: 0px;
     top: 0px;
@@ -627,36 +567,6 @@ a{
     border-top-left-radius: 0px;
 }
 
-.position-eva-size {
-    animation-name: change-position-size-eva ;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-.position-eva-reverse {
-    animation-name: change-position-size-reverse-eva;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes change-position-size-eva {
-    from {
-        width: 480px; /* Set the initial height */
-    }
-    to {
-        width: 585px; /* Adjust as needed */
-    }
-}
-
-@keyframes change-position-size-reverse-eva {
-    from {
-        width: 585px; /* Adjust as needed */
-    }
-    to {
-        width: 480px; /* Set the height back to its original value */
-    }
-}
-
 .RectangleCourse{
     background-color: #FFA500;
     position: absolute;
@@ -727,21 +637,19 @@ a{
         width: 480px; /* Set the height back to its original value */
     }
 }
-
-.dashboard{
+h3{
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 50px;
-    margin-top: 8px;
+    margin-top: 15px;
     margin-left: 100px;
-    font-weight: bold;
 }
 
 .evaluationname{
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 50px;
-    margin-top: 8px;
+    margin-top: 15px;
     margin-left: 110px;
     font-weight: bold;
 }
@@ -750,39 +658,9 @@ a{
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 50px;
-    margin-top: 8px;
+    margin-top: 15px;
     margin-left: 140px;
     font-weight: bold;
-}
-
-.position-text3 {
-    animation-name: change-position-text3;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-.position-text-reverse3 {
-    animation-name: change-position-text-reverse3;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes change-position-text3 {
-    from {
-        margin-left: 110px; /* Set the initial height */
-    }
-    to {
-        margin-left: 155px; /* Adjust as needed */
-    }
-}
-
-@keyframes change-position-text-reverse3 {
-    from {
-        margin-left: 155px; /* Adjust as needed */
-    }
-    to {
-        margin-left: 110px; /* Set the height back to its original value */
-    }
 }
 
 .position-text2 {
@@ -802,13 +680,13 @@ a{
         margin-left: 140px; /* Set the initial height */
     }
     to {
-        margin-left: 190px; /* Adjust as needed */
+        margin-left: 145px; /* Adjust as needed */
     }
 }
 
 @keyframes change-position-text-reverse2 {
     from {
-        margin-left: 190px; /* Adjust as needed */
+        margin-left: 145px; /* Adjust as needed */
     }
     to {
         margin-left: 140px; /* Set the height back to its original value */
@@ -847,7 +725,7 @@ a{
 .Name_Role{
     position: absolute;
     background-color: #d9d4d4;
-    width: 500px;
+    width: 3 15px;
     height: 90px;
     top: 6px;
     right: 115px;
@@ -866,7 +744,7 @@ li{
     width: 98%;
 }
 
-.evaluationforTeacher{
+.evaluationforStudent{
     position: absolute;
     width: 1400px;
     height: 750px;
@@ -906,23 +784,65 @@ li{
         width: 1400px; /* Set the height back to its original value */
     }
 }
-.CourseTecherTable{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    bottom: 30px;
-    border-style: solid;
-    border-color: gray;
-    width: 890px;
-    
+
+ul.filter-block, ul.s-edge-feed{
+    margin-left: 10px;
 }
 
-.SelectionCourse {
+.graph-board {
     position: absolute;
-    top: 10px;
-    left: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
+    left: 50px;
+    top: 700px; 
+}
+.graph{
+    position: relative;
     font-weight: bold;
-    color: gray;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    background: #FFA500;
+    border-style: solid;
+    border-color: #FFA500;
+    border-radius: 250px;
+    width: 100px;
+    height: 40px;
+}
+
+.graph-img{
+    top: 100px;
+    width: 100px;
+    height: 100px;
+}
+
+.graphs{
+    top: 100px;
+}
+.chartContainer{
+    position: absolute;
+    background-color: #d9d4d4;
+    width: 3 15px;
+    height: 500px;
+    top: 150px;
+    right: 115px;
+    border-style: solid;
+    border-color: gray;
+}
+
+.chartContainer1{
+    position: absolute;
+    background-color: #d9d4d4;
+    width: 3 15px;
+    height: 500px;
+    top: 150px;
+    right: 115px;
+    border-style: solid;
+    border-color: gray;
+}
+
+canvas.canvasjs-chart-canvas{
+    top:150px
+}
+
+.canvasjs-chart-credit {
+    display: none;
 }

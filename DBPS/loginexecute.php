@@ -5,13 +5,19 @@ session_start();
 if (!isset($_SESSION['login_attempts'])) {
     // Initialize login attempts session variable
     $_SESSION['login_attempts'] = 0;
+    // Initialize last login attempt time session variable
+    $_SESSION['last_login_attempt_time'] = 0;
+}
+
+// Reset login attempts if the last attempt was made more than 20 seconds ago
+if ((time() - $_SESSION['last_login_attempt_time']) > 20) {
+    $_SESSION['login_attempts'] = 0; // Reset login attempts
 }
 
 // Check if the user has reached the maximum number of login attempts
 if ($_SESSION['login_attempts'] >= 3) {
     // Display error message and redirect to login page
-    echo "You have exceeded the maximum number of login attempts. Please try again later.";
-    echo '<meta http-equiv="refresh" content="1;url=DBPSLogin.html">'; // Redirect to login page
+    echo '<script>alert("You have exceeded the maximum number of login attempts. Please try again later.");window.location.href = "DBPSLogin.html";</script>';
     exit; // Stop further execution
 }
 
@@ -47,7 +53,7 @@ if ($result === false) {
     // Check if any rows were returned
     if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
-        $role = $row['type_entity']; // Assuming 'role' is the column name for user role
+        $role = $row['type_entity']; // Assuming 'type_entity' is the column name for user role
 
         // Set session based on user role
         $_SESSION['user_name'] = $username;
@@ -62,33 +68,28 @@ if ($result === false) {
             header("Location: dashboard_for_teacher.php"); // Redirect to teacher dashboard
             exit();
         } elseif ($role == 'Student') {
-            echo "Login Successful as " . $role;
-            header(""); // Redirect to student dashboard or other role-specific dashboard
+            echo "Login Successful as Student";
+            header("Location: student-user.html"); // Redirect to student dashboard or other role-specific dashboard
             exit();
-        } elseif ($role == 'Parent'){
-            echo "Login Successful as " . $role;
-            header(""); // Redirect to student dashboard or other role-specific dashboard
+        } elseif ($role == 'Parent') {
+            echo "Login Successful as Parent";
+            header("Location: parent-user.html"); // Redirect to student dashboard or other role-specific dashboard
             exit();
         } else {
-            echo "Login Successful as " . $role;
-            header(""); // Redirect to student dashboard or other role-specific dashboard
+            echo "Login Successful as Administrator";
+            header("Location: admin-user.html"); // Redirect to student dashboard or other role-specific dashboard
             exit();
         }
     } else {
         // Increment login attempts
         $_SESSION['login_attempts']++;
 
+        // Update last login attempt time
+        $_SESSION['last_login_attempt_time'] = time();
+
         // User doesn't exist or invalid credentials
-        echo "Invalid username or password either Account not Exist";
-        echo '<meta http-equiv="refresh" content="1;url=DBPSLogin.html">';
-        
-        // Redirect to login page after three failed attempts
-        if ($_SESSION['login_attempts'] >= 3) {
-            echo '<meta http-equiv="refresh" content="1;url=DBPSLogin.html">'; // Redirect to login page
-        }
+        echo '<script>alert("Invalid username or password either Account not Exist");window.location.href = "DBPSLogin.html";</script>';
     }
 }
-
 $conn->close();
-
 ?>

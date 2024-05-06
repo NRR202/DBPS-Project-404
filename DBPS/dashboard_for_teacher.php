@@ -52,6 +52,7 @@ if (isset($_POST['logout'])) {
     header("Location: index.html");
     exit();
 }
+$_SESSION['teacher_info'] = $teacher_info;
 ?>
 
 <!DOCTYPE html>
@@ -107,7 +108,7 @@ if (isset($_POST['logout'])) {
 </div>
 
 <div class="fullbg" id="body">
-    
+    <img src = "Images\v960-ning-31.jpg" class="background1">
     <div class="RectangleDashboard" id="rd">
         <div class="dashboard" id="txt">Dashboard</div>
     </div>
@@ -119,32 +120,29 @@ if (isset($_POST['logout'])) {
 </div>
 
 <div class="fullbg2" id="body2">
-  <div class="RectangleCourse" id="rc">
-      <div class="coursename" id="txt2">Course</div>
-  </div>
-  <div class="form-course-for-student">
-      <form class="CourseforStudent" id="cs">
-        <iframe id="searchResults" src="searchstudentCourse.php" width="100%" height="100%" frameborder="0" scrolling="auto"></iframe>
-      </form>
-  </div>
+    <img src = "Images\v960-ning-31.jpg" class="background1">
+    <div class="RectangleCourse" id="rc">
+        <div class="coursename" id="txt2">Course</div>
+    </div>
+    <div class="form-course-for-student">
+        <form class="CourseforStudent" id="cs">
+            <iframe id="searchResults" src="searchstudentCourse.php" width="100%" height="100%" frameborder="0" scrolling="auto"></iframe>
+        </form>
+    </div>
 </div>
-
 <div class="fullbg3" id="body3">
-  <div class="RectangleEvaluation" id="eva">
-      <div class="evaluationname" id="txt3">Evaluation</div>
-  </div>
-  <div class="form-evaluation-for-teacher">
-      <form class="evaluationforTeacher" id="es">
-        <iframe src="searchEvalaution.php" width="100%" height="100%" frameborder="0" scrolling="auto"></iframe>
-      </form>
-  </div>
+    <img src = "Images\v960-ning-31.jpg" class="background1">
+    <div class="RectangleEvaluation" id="eva">
+        <div class="evaluationname" id="txt3">Evaluation</div>
+    </div>
+    <div class="form-evaluation-for-teacher">
+        <form class="evaluationforTeacher" id="es">
+            <iframe id="evaluationFormFrame1" src="searchEvalaution.php" width="100%" height="100%" frameborder="0" scrolling="auto"></iframe>
+        </form>
+    </div>
 </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js\functionality.js"></script>
     </body>
-
-
-
 </body>
 </html>
