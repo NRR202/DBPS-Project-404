@@ -69,15 +69,15 @@ if ($result === false) {
             exit();
         } elseif ($role == 'Student') {
             echo "Login Successful as Student";
-            header("Location: student-user.html"); // Redirect to student dashboard or other role-specific dashboard
+            header("Location: dashboard_for_student.php"); // Redirect to student dashboard or other role-specific dashboard
             exit();
         } elseif ($role == 'Parent') {
             echo "Login Successful as Parent";
-            header("Location: parent-user.html"); // Redirect to student dashboard or other role-specific dashboard
+            header("Location: dashbaord_parent.html"); // Redirect to student dashboard or other role-specific dashboard
             exit();
         } else {
             echo "Login Successful as Administrator";
-            header("Location: admin-user.html"); // Redirect to student dashboard or other role-specific dashboard
+            header("Location: dashboard_for_admin.php"); // Redirect to student dashboard or other role-specific dashboard
             exit();
         }
     } else {

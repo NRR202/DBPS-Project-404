@@ -76,85 +76,6 @@
     visibility: hidden;
 }
 
-.fullbg3{
-    left: 410px;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    background-color:white;
-    position: fixed; 
-    visibility: hidden;
-}
-
-.fullbg4{
-    left: 410px;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    background-color:white;
-    position: fixed; 
-    visibility: hidden;
-}
-
-.resize4 {
-    animation-name: change-width4;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-.resize-reverse4 {
-    animation-name: change-width-reverse4;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes change-width4 {
-    from {
-        left: 410px; /* Set the initial height */
-    }
-    to {
-        left: 150px; /* Adjust as needed */
-    }
-}
-
-@keyframes change-width-reverse4 {
-    from {
-        left: 150px; /* Adjust as needed */
-    }
-    to {
-        left: 410px; /* Set the height back to its original value */
-    }
-}
-
-.resize3 {
-    animation-name: change-width3;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-.resize-reverse3 {
-    animation-name: change-width-reverse3;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes change-width3 {
-    from {
-        left: 410px; /* Set the initial height */
-    }
-    to {
-        left: 150px; /* Adjust as needed */
-    }
-}
-
-@keyframes change-width-reverse3 {
-    from {
-        left: 150px; /* Adjust as needed */
-    }
-    to {
-        left: 410px; /* Set the height back to its original value */
-    }
-}
 
 .resize2 {
     animation-name: change-width2;
@@ -363,8 +284,6 @@ span.item {
     animation-fill-mode: forwards;
 }
 
-
-
 @keyframes change-sp2 {
     from {
         width: 1430px;
@@ -548,6 +467,12 @@ a{
     z-index: 1;
     right: 30px;
 }
+
+.profilepic{
+    width: 100px;
+    margin-bottom: 80px;
+    color: white;
+}
 .form-event_reminder{
     position: absolute;
     left: 0px;
@@ -555,12 +480,6 @@ a{
 }
 
 .form-course-for-student{
-    position: absolute;
-    left: 0px;
-    top: 0px;
-}
-
-.form-evaluation-for-teacher{
     position: absolute;
     left: 0px;
     top: 0px;
@@ -647,84 +566,6 @@ a{
     border-top-left-radius: 0px;
 }
 
-.RectangleEvaluation{
-    background-color: #FFA500;
-    position: absolute;
-    width: 480px;
-    height: 90px;
-    left: 25px;
-    top: 50px;
-    border-radius: 50px;
-    border-top-left-radius: 0px;
-}
-.RectangleConsultation{
-    background-color: #FFA500;
-    position: absolute;
-    width: 480px;
-    height: 90px;
-    left: 25px;
-    top: 50px;
-    border-radius: 50px;
-    border-top-left-radius: 0px;
-}
-.position-cons-size {
-    animation-name: change-position-size-cons ;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-.position-cons-reverse {
-    animation-name: change-position-size-reverse-cons;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes change-position-size-cons {
-    from {
-        width: 480px; /* Set the initial height */
-    }
-    to {
-        width: 585px; /* Adjust as needed */
-    }
-}
-
-@keyframes change-position-size-reverse-cons {
-    from {
-        width: 585px; /* Adjust as needed */
-    }
-    to {
-        width: 480px; /* Set the height back to its original value */
-    }
-}
-.position-eva-size {
-    animation-name: change-position-size-eva ;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-.position-eva-reverse {
-    animation-name: change-position-size-reverse-eva;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes change-position-size-eva {
-    from {
-        width: 480px; /* Set the initial height */
-    }
-    to {
-        width: 585px; /* Adjust as needed */
-    }
-}
-
-@keyframes change-position-size-reverse-eva {
-    from {
-        width: 585px; /* Adjust as needed */
-    }
-    to {
-        width: 480px; /* Set the height back to its original value */
-    }
-}
 
 .RectangleCourse{
     background-color: #FFA500;
@@ -764,7 +605,7 @@ a{
     }
     to {
         width: 480px; /* Set the height back to its original value */
-    }
+  }
 }
 
 .position-size {
@@ -802,16 +643,7 @@ a{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 50px;
     margin-top: 8px;
-    margin-left: 100px;
-    font-weight: bold;
-}
-
-.evaluationname{
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 50px;
-    margin-top: 8px;
-    margin-left: 110px;
+    margin-left: 45px;
     font-weight: bold;
 }
 
@@ -822,82 +654,7 @@ a{
     margin-top: 8px;
     margin-left: 140px;
     font-weight: bold;
-}
-
-.Consultmessa{
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 42px;
-    margin-top: 12px;
-    margin-left: 15px;
-    font-weight: bold;
     white-space: nowrap;
-}
-.position-text4 {
-    animation-name: change-position-text4;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-.position-text-reverse4 {
-    animation-name: change-position-text-reverse4;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes change-position-text4 {
-    from {
-        margin-left: 15px; /* Set the initial height */
-        font-size: 42px;
-        margin-top: 12px;
-    }
-    to {
-        margin-left: 25px; /* Adjust as needed */
-        font-size: 50px;
-        margin-top: 8px;
-    }
-}
-
-@keyframes change-position-text-reverse4 {
-    from {
-        margin-left: 25px; /* Adjust as needed */
-        font-size: 50px;
-        margin-top: 8px;
-    }
-    to {
-        margin-left: 15px; /* Set the height back to its original value */
-        font-size: 42px;
-        margin-top: 12px;
-    }
-}
-.position-text3 {
-    animation-name: change-position-text3;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-.position-text-reverse3 {
-    animation-name: change-position-text-reverse3;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes change-position-text3 {
-    from {
-        margin-left: 110px; /* Set the initial height */
-    }
-    to {
-        margin-left: 155px; /* Adjust as needed */
-    }
-}
-
-@keyframes change-position-text-reverse3 {
-    from {
-        margin-left: 155px; /* Adjust as needed */
-    }
-    to {
-        margin-left: 110px; /* Set the height back to its original value */
-    }
 }
 
 .position-text2 {
@@ -914,19 +671,19 @@ a{
 
 @keyframes change-position-text2 {
     from {
-        margin-left: 140px; /* Set the initial height */
+        margin-left: 115px; /* Set the initial height */
     }
     to {
-        margin-left: 190px; /* Adjust as needed */
+        margin-left: 165px; /* Adjust as needed */
     }
 }
 
 @keyframes change-position-text-reverse2 {
     from {
-        margin-left: 190px; /* Adjust as needed */
+        margin-left: 165px; /* Adjust as needed */
     }
     to {
-        margin-left: 140px; /* Set the height back to its original value */
+        margin-left: 115px; /* Set the height back to its original value */
     }
 }
 
@@ -944,19 +701,19 @@ a{
 
 @keyframes change-position-text {
     from {
-        margin-left: 100px; /* Set the initial height */
+        margin-left: 45px; /* Set the initial height */
     }
     to {
-        margin-left: 145px; /* Adjust as needed */
+        margin-left: 105px; /* Adjust as needed */
     }
 }
 
 @keyframes change-position-text-reverse {
     from {
-        margin-left: 145px; /* Adjust as needed */
+        margin-left: 105px; /* Adjust as needed */
     }
     to {
-        margin-left: 100px; /* Set the height back to its original value */
+        margin-left: 45px; /* Set the height back to its original value */
     }
 }
 .Name_Role{
@@ -980,87 +737,7 @@ li{
 .sizeimg{
     width: 98%;
 }
-.consultationforTeacher{
-    position: absolute;
-    width: 1430px;
-    height: 750px;
-    background: #d9d4d4;
-    left: 40px;
-    top: 167px;
-    border-style: solid;
-    border-color: gray;
-}
 
-.position-consultation {
-    animation-name: change-position-consultation;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-.position-consultation-reverse {
-    animation-name: change-position-consultation-reverse;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes change-position-consultation {
-    from {
-        width: 1430px; /* Set the initial height */
-    }
-    to {
-        width: 1690px; /* Adjust as needed */
-    }
-}
-
-@keyframes change-position-consultation-reverse {
-    from {
-        width: 1690px; /* Adjust as needed */
-    }
-    to {
-        width: 1430px; /* Set the height back to its original value */
-    }
-}
-
-.evaluationforTeacher{
-    position: absolute;
-    width: 1430px;
-    height: 750px;
-    background: #d9d4d4;
-    left: 40px;
-    top: 167px;
-    border-style: solid;
-    border-color: gray;
-}
-
-.position-evaluation {
-    animation-name: change-position-evaluation;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-.position-evaluation-reverse {
-    animation-name: change-position-evaluation-reverse;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes change-position-evaluation {
-    from {
-        width: 1430px; /* Set the initial height */
-    }
-    to {
-        width: 1690px; /* Adjust as needed */
-    }
-}
-
-@keyframes change-position-evaluation-reverse {
-    from {
-        width: 1690px; /* Adjust as needed */
-    }
-    to {
-        width: 1430px; /* Set the height back to its original value */
-    }
-}
 .CourseTecherTable{
     position: absolute;
     top: 30px;
@@ -1080,4 +757,10 @@ li{
     font-size: 30px;
     font-weight: bold;
     color: gray;
+}
+
+.coursename{
+    width: 100px;
+    height: 60px;
+    background-color: #FFA500; 
 }

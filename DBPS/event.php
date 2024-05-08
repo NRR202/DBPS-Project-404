@@ -136,18 +136,6 @@ table td {
 </style>
 </style>
     <script src="js/functionality.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Find the button element by its ID
-            var evaluationButton = document.getElementById('evaluationButton');
-
-            // Attach an event listener to the button
-            evaluationButton.addEventListener('click', function() {
-                // Call EvaluationFunction() passing the button element as a parameter
-                EvaluationFunction(evaluationButton);
-            });
-        });
-    </script>
 </body>
 </html>
 

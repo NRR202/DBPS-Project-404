@@ -2,19 +2,6 @@
     require_once('php/config.php');
 
     session_start(); // Start the session
-
-    $user_id = $_GET['user']; // Assuming you're getting the userID from the form
-    $stmt_check_user = $con->prepare("SELECT * FROM evaluationstatus WHERE userID = ?");
-    $stmt_check_user->bind_param("s", $user_id);
-    $stmt_check_user->execute();
-    $result = $stmt_check_user->get_result();
-    $row = $result->fetch_assoc();
-    // Check if there are any rows returned
-    if ($row && $row['Status_E'] == 1) {
-        // If userID exists and Status_E is greater than 0 (assuming 1 or higher means evaluation is completed), show an alert and close the window
-        echo "<script>alert('You have already evaluated the form.'); window.close();</script>";
-        exit(); // Make sure to exit after showing the alert
-    }
     // Check if the session variable is set and contains teacher information
     if (isset($_SESSION['teacher_info'])) {
         // Retrieve the teacher information from the session variable
@@ -32,7 +19,19 @@
     $section = $_GET['section'];
     $year_level = $_GET['year_level'];
     $teachername = $name;
-
+    $studentname = $firstname . ' ' . $lastname;
+    $user_id = $_GET['user']; // Assuming you're getting the userID from the form
+    $stmt_check_user = $con->prepare("SELECT * FROM evaluationformtable WHERE teacher_name = ? AND Student_Name = ?");
+    $stmt_check_user->bind_param("ss", $name, $studentname);
+    $stmt_check_user->execute();
+    $result = $stmt_check_user->get_result();
+    $row = $result->fetch_assoc();
+    // Check if there are any rows returned
+    if ($row && $row['Status_E'] == 1) {
+        // If userID exists and Status_E is greater than 0 (assuming 1 or higher means evaluation is completed), show an alert and close the window
+        echo "<script>alert('You have already evaluated the form.'); window.close();</script>";
+        exit(); // Make sure to exit after showing the alert
+    }
     ?>
 
 <!DOCTYPE html>

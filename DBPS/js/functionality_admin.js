@@ -2,26 +2,16 @@ var isLarge = false; // Initial state
 function toggleSidebar() {
     var body = document.getElementById('body');
     var csp = document.getElementById('cs');
-    var conp = document.getElementById('cons')
-    var esp = document.getElementById('es');
     var body2 = document.getElementById('body2');
-    var body3 = document.getElementById('body3');
-    var body4 = document.getElementById('body4');
     var sp2 = document.getElementById('esp');
     var fre = document.getElementById('fre');
     var rd = document.getElementById('rd');
     var rc = document.getElementById('rc');
-    var re = document.getElementById('eva');
-    var rcon = document.getElementById('rcon');
     var txt = document.getElementById('txt');
     var txt2 = document.getElementById('txt2');
-    var txt3 = document.getElementById('txt3');
-    var txt4 = document.getElementById('txt4');
     var sidebar = document.getElementById('sidebar');
     var dashnm = document.getElementById('dhtxt');
-    var evanm = document.getElementById('etxt');
     var cournm = document.getElementById('ctxt');
-    var consum = document.getElementById('cntxt');
     var logoutbtn = document.getElementById('logouttxt');
     if (dashnm.classList.contains('hide2')) {
         dashnm.classList.remove('hide2');
@@ -30,13 +20,6 @@ function toggleSidebar() {
         dashnm.classList.remove('show2');
         dashnm.classList.add('hide2');
     }
-    if (evanm.classList.contains('hide2')) {
-        evanm.classList.remove('hide2');
-        evanm.classList.add('show2');
-    } else {
-        evanm.classList.remove('show2');
-        evanm.classList.add('hide2');
-    }
     if (cournm.classList.contains('hide2')) {
         cournm.classList.remove('hide2');
         cournm.classList.add('show2');
@@ -44,33 +27,12 @@ function toggleSidebar() {
         cournm.classList.remove('show2');
         cournm.classList.add('hide2');
     }
-    if (consum.classList.contains('hide2')) {
-        consum.classList.remove('hide2');
-        consum.classList.add('show2');
-    } else {
-        consum.classList.remove('show2');
-        consum.classList.add('hide2');
-    }
     if (logoutbtn.classList.contains('hide')) {
         logoutbtn.classList.remove('hide');
         logoutbtn.classList.add('show');
     } else {
         logoutbtn.classList.remove('show');
         logoutbtn.classList.add('hide');
-    }
-    if (conp.classList.contains('position-consultation')) {
-        conp.classList.remove('position-consultation');
-        conp.classList.add('position-consultation-reverse');
-    } else {
-        conp.classList.remove('position-consultation-reverse');
-        conp.classList.add('position-consultation');
-    }
-    if (esp.classList.contains('position-evaluation')) {
-        esp.classList.remove('position-evaluation');
-        esp.classList.add('position-evaluation-reverse');
-    } else {
-        esp.classList.remove('position-evaluation-reverse');
-        esp.classList.add('position-evaluation');
     }
     if (csp.classList.contains('position-course')) {
         csp.classList.remove('position-course');
@@ -92,20 +54,6 @@ function toggleSidebar() {
     } else {
         body2.classList.remove('resize-reverse2');
         body2.classList.add('resize2');
-    }
-    if (body3.classList.contains('resize3')) {
-        body3.classList.remove('resize3');
-        body3.classList.add('resize-reverse3');
-    } else {
-        body3.classList.remove('resize-reverse3');
-        body3.classList.add('resize3');
-    }
-    if (body4.classList.contains('resize4')) {
-        body4.classList.remove('resize4');
-        body4.classList.add('resize-reverse4');
-    } else {
-        body4.classList.remove('resize-reverse4');
-        body4.classList.add('resize4');
     }
     if (sidebar.classList.contains('sidebar-resize')) {
         sidebar.classList.remove('sidebar-resize');
@@ -135,20 +83,7 @@ function toggleSidebar() {
         rc.classList.remove('position-course-reverse');
         rc.classList.add('position-course-size');
     }
-    if (re.classList.contains('position-eva-size')) {
-        re.classList.remove('position-eva-size');
-        re.classList.add('position-eva-reverse');
-    } else {
-        re.classList.remove('position-eva-reverse');
-        re.classList.add('position-eva-size');
-    }
-    if (rcon.classList.contains('position-eva-size')) {
-        rcon.classList.remove('position-eva-size');
-        rcon.classList.add('position-eva-reverse');
-    } else {
-        rcon.classList.remove('position-eva-reverse');
-        rcon.classList.add('position-eva-size');
-    }
+    
     if (txt.classList.contains('position-text')) {
         txt.classList.remove('position-text');
         txt.classList.add('position-text-reverse');
@@ -165,20 +100,6 @@ function toggleSidebar() {
         txt2.classList.add('position-text2');
     }
 
-    if (txt3.classList.contains('position-text3')) {
-        txt3.classList.remove('position-text3');
-        txt3.classList.add('position-text-reverse3');
-    } else {
-        txt3.classList.remove('position-text-reverse3');
-        txt3.classList.add('position-text3');
-    }
-    if (txt4.classList.contains('position-text4')) {
-        txt4.classList.remove('position-text4');
-        txt4.classList.add('position-text-reverse4');
-    } else {
-        txt4.classList.remove('position-text-reverse4');
-        txt4.classList.add('position-text4');
-    }
 
     if (sp2.classList.contains('event-sp')) {
         sp2.classList.remove('event-sp');
@@ -231,46 +152,17 @@ function DashBoardFunction() {
     var dashboard = document.getElementById('body');
     var course = document.getElementById('body2');
     var evaluation = document.getElementById('body3');
-    var consultation = document.getElementById('body4');
     dashboard.style.position = "absolute";
     dashboard.style.visibility = "visible";
     course.style.visibility = "hidden";
-    evaluation.style.visibility = "hidden";
-    consultation.style.visibility = "hidden";
 }
-function CourseFunction() {
+function AccountManagement() {
     var dashboard = document.getElementById('body');
     var course = document.getElementById('body2');
     var evaluation = document.getElementById('body3');
-    var consultation = document.getElementById('body4');
     dashboard.style.position = "fixed";
     dashboard.style.visibility = "hidden";
     course.style.visibility = "visible";
-    evaluation.style.visibility = "hidden";
-    consultation.style.visibility = "hidden";
-}
-function EvaluationFunction() {
-    var dashboard = document.getElementById('body');
-    var course = document.getElementById('body2');
-    var evaluation = document.getElementById('body3');
-    var consultation = document.getElementById('body4');
-    dashboard.style.position = "fixed";
-    dashboard.style.visibility = "hidden";
-    course.style.visibility = "hidden";
-    evaluation.style.visibility = "visible";
-    consultation.style.visibility = "hidden";
-}
-
-function ConsultationFunction() {
-    var dashboard = document.getElementById('body');
-    var course = document.getElementById('body2');
-    var evaluation = document.getElementById('body3');
-    var consultation = document.getElementById('body4');
-    dashboard.style.position = "fixed";
-    dashboard.style.visibility = "hidden";
-    course.style.visibility = "hidden";
-    evaluation.style.visibility = "hidden";
-    consultation.style.visibility = "visible";
 }
 // Function to toggle between iframes
 function toggleIframe(iframeIdToShow, iframeIdToHide) {
@@ -296,4 +188,16 @@ evalLinks2.forEach(function(link) {
     });
 });
 
+function EvaluationFunction(button) {
+    var dashboard = document.getElementById('body');
+    var course = document.getElementById('body2');
+    var evaluation = document.getElementById('body3');
+    dashboard.style.position = "fixed";
+    dashboard.style.visibility = "hidden";
+    course.style.visibility = "hidden";
+    evaluation.style.visibility = "visible";
+    
+    // Disable the button after it's clicked
+    button.disabled = true;
+}
 
