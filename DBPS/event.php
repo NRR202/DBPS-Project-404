@@ -1,12 +1,26 @@
 <?php
+    session_start();
+    if (isset($_SESSION['teacher_info'])) {
+    // Retrieve the teacher information from the session variable
+    $teacher_info = $_SESSION['teacher_info'];
+
+        // Display the name if available
+        if (isset($teacher_info['firstname']) && isset($teacher_info['lastname'])) {
+            $name = $teacher_info['firstname'] . ' ' . $teacher_info['lastname'];
+        }
+    } 
     require_once('php/config.php');
-    $query = "SELECT s.*, e.Status_E FROM student_info s
-              LEFT JOIN evaluationstatus e ON s.username = e.userID";
+    $query = "SELECT s.*, e.Status_E 
+          FROM student_info s
+          LEFT JOIN evaluationformtable e ON s.username = e.Student_ID AND e.teacher_name = '$name'";
     $result_student = mysqli_query($con, $query);
 ?>
 <?php
     require_once('php/config.php');
-    $query = "SELECT COUNT(*) AS count_zero FROM evaluationstatus WHERE Status_E = 0";
+    $query = "SELECT COUNT(COALESCE(e.Status_E, 1)) AS count_zero, s.*
+          FROM student_info s
+          LEFT JOIN evaluationformtable e ON s.username = e.Student_ID AND e.teacher_name = '$name'
+          WHERE e.Status_E IS NULL";
     $result = mysqli_query($con, $query);
     $row = mysqli_fetch_assoc($result);
     // Free result set
@@ -15,7 +29,10 @@
 
 <?php
     require_once('php/config.php');
-    $queryone = "SELECT COUNT(*) AS count_one FROM evaluationstatus WHERE Status_E = 1";
+    $queryone = "SELECT COUNT(e.Status_E) AS count_one, s.*
+    FROM student_info s
+    LEFT JOIN evaluationformtable e ON s.username = e.Student_ID AND e.teacher_name = '$name'
+    WHERE e.Status_E = 1";
     $resultone = mysqli_query($con, $queryone);
     $rowone = mysqli_fetch_assoc($resultone);
     // Free result set

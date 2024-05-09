@@ -6,25 +6,26 @@
         $searchCourse = isset($_GET['courses']) ? $_GET['courses'] : '';
         $searchSection = isset($_GET['sections']) ? $_GET['sections'] : '';
         $searchYearLevel = isset($_GET['yearlevel']) ? $_GET['yearlevel'] : '';
-
+        $searchName = isset($_GET['namestudent']) ? $_GET['namestudent'] : '';
         
         // Construct the SQL query based on search parameters
-        $query = "SELECT s.*, e.Status_E
-                  FROM student_info s
-                  LEFT JOIN evaluationformtable e ON s.username = e.Student_ID
+        $query = "SELECT *
+                  FROM student_info
                   WHERE 1=1"; // Start with a basic query
 
         // Append conditions based on search parameters
         if (!empty($searchSection)) {
-            $query .= " AND s.section = '$searchSection'";
+            $query .= " AND section = '$searchSection'";
         }
         if (!empty($searchCourse)) {
-            $query .= " AND s.course = '$searchCourse'";
+            $query .= " AND course = '$searchCourse'";
         }
         if (!empty($searchYearLevel)) {
-            $query .= " AND s.year_level = '$searchYearLevel'";
+            $query .= " AND year_level = '$searchYearLevel'";
         }
-
+        if (!empty($searchName)) {
+            $query .= " AND (firstname LIKE '%$searchName%' OR lastname LIKE '%$searchName%')";
+        }
         // Execute the query
         $result_student = mysqli_query($con, $query);
 
@@ -34,9 +35,7 @@
         }
     } else {
         // If search button is not clicked, fetch all students
-        $query = "SELECT s.*, e.Status_E
-                  FROM student_info s
-                  LEFT JOIN evaluationformtable e ON s.username = e.Student_ID";
+        $query = "SELECT * FROM student_info";
         $result_student = mysqli_query($con, $query);
 
         // Check for errors
@@ -44,8 +43,8 @@
             die("Query failed: " . mysqli_error($con));
         }
     }
+    mysqli_close($con);
 ?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -55,7 +54,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="colorset">
-<div class="SelectionTable">
+<div class="SearchArea">
     <form id="searchForm" method="GET" action="">
         <div class="courses">Course Student:</div>
         <select class="CourseItem" id="courses" name="courses">
@@ -80,10 +79,12 @@
             <option value="3rd year" <?php if(isset($_GET['yearlevel']) && $_GET['yearlevel'] == '3rd year') echo 'selected="selected"'; ?>>3rd Year</option>
             <option value="4th year" <?php if(isset($_GET['yearlevel']) && $_GET['yearlevel'] == '4th year') echo 'selected="selected"'; ?>>4th Year</option>
         </select>
+        <div class="namesearch">Name:</div>
+        <input type="text" name="namestudent" value="<?php if(isset($_GET['namestudent'])){echo $_GET['namestudent'];}?>" maxlength="50" class="namestu" autocomplete="off">
         <button type="submit" name="search" class="searchCourseButton">Search</button>
     </form>
 </div>
-<div class="CourseTecherTable" id="CTT">
+<div class="StudentInfoTable" id="SIF">
     <div class="row tbl-fixed">
         <table class="table-striped table-condensed">
             <thead>
@@ -94,6 +95,7 @@
                     <th>Year Level</th>
                     <th>Section</th>
                     <th>Gender</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -110,6 +112,7 @@
                                 <td><?php echo $row['year_level']; ?></td>
                                 <td><?php echo $row['section']; ?></td>
                                 <td><?php echo $row['gender']; ?></td>
+                                <td><button type="button" class="btn btn-danger delete-btn" onclick="confirmDelete('<?php echo urlencode($row['username']); ?>')">Delete</button></td>
                             </tr>
                             <?php
                         }
@@ -127,38 +130,25 @@
     </div>
 </div>
 <style>
-.CourseTecherTable{
+.courses{
+    margin-left: 10px;
+}
+.courses, .section, .yearlevel, .namesearch{
+    display: inline-block;
+    font-weight: bold;
+    background-color: transparent;
+}
+.StudentInfoTable{
     position: absolute;
-    top: 30px;
-    right: 30px;
-    bottom: 30px;
-    left: 260px;
-    border-style: solid;
-    border-color: gray;
+    top: 50px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    font-size: 12pt;
     overflow: hidden;
 }
-.SelectionTable{
-    position: absolute;
-    left: 15px;
-    top: 15px;
-    font-size: 25px;
-    margin-top: 0px;
-    font-weight: bold;
-}
-.section{
-    margin-top: 20px;
-}
-.yearlevel{
-    margin-top: 20px;
-}
-.YearLevelItem{
-    display: block;
-}
-.searchCourseButton{
-    position: absolute;
-    left: 10px;
-    top: 310px;
-    width: 200px;
+.namestu{
+    width: 360px;
 }
 body{
     background-color: #d9d4d4;
@@ -166,7 +156,7 @@ body{
 .tbl-fixed {
     overflow-y: scroll;
     height: fit-content;
-    max-height: 200vh;
+    max-height: 120vh;
 }
 
 table {
@@ -185,14 +175,29 @@ table td {
     text-align: center;
 }
 
-.CourseTecherTable table tbody tr:nth-child(odd) {
+.StudentInfoTable table tbody tr:nth-child(odd) {
     background-color: lightgray; /* Set background color for odd rows */
 }
 
-.CourseTecherTable table tbody tr:nth-child(even) {
+.StudentInfoTable table tbody tr:nth-child(even) {
     background-color: white; /* Set background color for even rows */
 }
+.SearchArea{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 40;
+}
 </style>
+<script>
+    function confirmDelete(username) {
+        if (confirm("Are you sure you want to delete user '" + username + "'?")) {
+            window.location.href = "deletestudentuser.php?user=" + encodeURIComponent(username);
+        } else {
+            // Stay on the page
+        }
+    }
+</script>
 </body>
 </html>
-

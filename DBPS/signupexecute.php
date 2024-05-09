@@ -37,12 +37,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if (!$stmt_student_info->execute()) {
                     die("Error inserting into student_info table: " . $stmt_student_info->error);
                 }
-                
-                $stmt_evaluation_status = $conn->prepare("INSERT INTO evaluationstatus (userID, Status_E) VALUES (?, ?)");
-                $stmt_evaluation_status->bind_param("si", $username, $status_e);
-                if (!$stmt_evaluation_status->execute()) {
-                    die("Error inserting into evaluationstatus table: " . $stmt_evaluation_status->error);
-                }
                 break;
             case "Teacher":
                 $stmt_info = $conn->prepare("INSERT INTO teacher_info (firstname, lastname, username, gender, course_handle) VALUES (?, ?, ?, ?, ?)");

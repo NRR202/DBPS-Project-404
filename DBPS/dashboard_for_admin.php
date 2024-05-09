@@ -68,7 +68,7 @@
         <div class="item"  onclick="DashBoardFunction()"><a class="sub-btn"><i class='bx bx-grid-alt'></i><span class="name-text" id="dhtxt">Admin</span>
         </a>
         </div>
-        <div class="item" onclick="AccountManagement()"><a class="sub-btn"><i class='bx bx-envelope'></i><span class="name-text" id="ctxt">Account Management</span>
+        <div class="item" onclick="AccountManagement()"><a class="sub-btn"><i class='bx bxs-user-account'></i><span class="name-text" id="ctxt">Account Management</span>
         </a>
         </div>    
     </div>
@@ -100,12 +100,12 @@
 
 <div class="fullbg2" id="body2">
     <img src = "Images\v960-ning-31.jpg" class="background1">
-    <div class="RectangleCourse" id="rc">
+    <div class="RectangleAccMan" id="ram">
         <div class="coursename" id="txt2">Account Management</div>
     </div>
     <div class="form-course-for-student">
         <form class="accountmanage" id="cs">
-            
+            <iframe src="AccountManagement.html" width="100%" height="100%" frameborder="0" scrolling="auto"></iframe>
         </form>
     </div>
 </div>
