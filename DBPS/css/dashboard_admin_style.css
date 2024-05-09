@@ -567,7 +567,7 @@ a{
 }
 
 
-.RectangleCourse{
+.RectangleAccMan{
     background-color: #FFA500;
     position: absolute;
     width: 480px;
@@ -578,19 +578,19 @@ a{
     border-top-left-radius: 0px;
 }
 
-.position-course-size {
-    animation-name: change-position-size-course ;
+.position-AccMan-size {
+    animation-name: change-position-size-AccMan ;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
 }
 
-.position-course-reverse {
-    animation-name: change-position-size-reverse-course;
+.position-AccMan-reverse {
+    animation-name: change-position-size-reverse-AccMan;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
 }
 
-@keyframes change-position-size-course {
+@keyframes change-position-size-AccMan {
     from {
         width: 480px; /* Set the initial height */
     }
@@ -599,7 +599,7 @@ a{
     }
 }
 
-@keyframes change-position-size-reverse-course {
+@keyframes change-position-size-reverse-AccMan {
     from {
         width: 585px; /* Adjust as needed */
     }

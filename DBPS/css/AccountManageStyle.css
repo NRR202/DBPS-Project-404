@@ -1,0 +1,91 @@
+.FirstPage {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-image: linear-gradient(270deg, #1119E1 -27.71%, #0BA9ED 92.29%);
+    visibility: visible;
+}
+
+.SelectorAccount {
+    width: 90%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.StudentAccount, .TeacherAccount, .ParentAccount{
+    display: inline-block;
+    margin-left: 115px;
+    height: 100px;
+}
+label{
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+i{
+    font-size: 65pt;
+}
+.custom-z-index{
+    position: absolute;
+    right: 0px;
+    z-index: 5;
+}
+.StudentAccount,
+.TeacherAccount,
+.ParentAccount {
+    cursor: pointer;
+    color: black;
+    transition: 0.3s; /* Transition effect on color change */
+}
+#backbtn{
+    visibility: hidden;
+}
+.StudentAccount.hovered,
+.TeacherAccount.hovered,
+.ParentAccount.hovered {
+    color: blue; /* Change color to blue on hover */
+}
+body{
+    background-color: transparent;
+}
+.justify-content-end{
+    visibility: visible;
+}
+.SecondPage{
+    visibility: hidden;
+}
+.StudentInfoTable{
+    position: absolute;
+    top: 10px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+.TeacherInfoTable{
+    position: absolute;
+    top: 10px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    visibility: hidden;
+}
+.ParentInfoTable{
+    position: absolute;
+    top: 10px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: yellow;
+    visibility: hidden;
+}
+body{
+    overflow: hidden;
+}

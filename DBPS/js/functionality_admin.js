@@ -6,7 +6,7 @@ function toggleSidebar() {
     var sp2 = document.getElementById('esp');
     var fre = document.getElementById('fre');
     var rd = document.getElementById('rd');
-    var rc = document.getElementById('rc');
+    var ram = document.getElementById('ram');
     var txt = document.getElementById('txt');
     var txt2 = document.getElementById('txt2');
     var sidebar = document.getElementById('sidebar');
@@ -76,12 +76,12 @@ function toggleSidebar() {
         rd.classList.remove('position-size-reverse');
         rd.classList.add('position-size');
     }
-    if (rc.classList.contains('position-course-size')) {
-        rc.classList.remove('position-course-size');
-        rc.classList.add('position-course-reverse');
+    if (ram.classList.contains('position-AccMan-size')) {
+        ram.classList.remove('position-AccMan-size');
+        ram.classList.add('position-AccMan-reverse');
     } else {
-        rc.classList.remove('position-course-reverse');
-        rc.classList.add('position-course-size');
+        ram.classList.remove('position-AccMan-reverse');
+        ram.classList.add('position-AccMan-size');
     }
     
     if (txt.classList.contains('position-text')) {
