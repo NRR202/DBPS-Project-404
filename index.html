@@ -1,0 +1,86 @@
+<html>
+
+<head>
+   <title> DYCIAN Performance Monitoring System</title>
+   <link rel="stylesheet" href="css\index.css">
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+   <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+
+<body>
+
+   <div class="body">
+      <div class="logo-container">
+          <img class="logo"src="Images\Logoyanga.png" alt="Your Logo">
+          <img class="logo1"src="Images\CCSLogo.png" alt="Your Logo">
+      </div>
+      <div class="dycitxt">
+          <h1>Dycian Performance Monitoring System</h1>
+          <h4>Dr. Yanga's Colleges Inc.</h4>
+      </div>
+      <div class="image-container2">
+         <img class="yangapic" src="Images\Yangapic.png"
+         alt="Description of Image 2">
+      </div>
+      <div>
+         <a href="https://dyci.edu.ph/" target="_blank">
+            <button class="button2" name="see-more" type="button">See more...</button>
+         </a>
+      </div>
+      <div>
+         <a href="DBPSLogin.html">
+             <button class="button1" type="button">Login</button>
+         </a>
+     </div>
+     <div>
+      <a href="https://www.facebook.com/YangaCollege" target="_blank" class="facebook-button">Visit Facebook</a>
+     </div>
+     
+   </div>
+
+  <div class="hero1">                    
+             <div class="swipe_container">
+              <!-- Slider main container -->
+               <div class="swiper">
+            <!-- Additional required wrapper -->
+               <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><img src="Images\CCSimg1.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="Images\CCSimg2.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="Images\CCSimg3.png" alt=""></div>
+              <div class="swiper-slide"><img src="Images\CCSimg4.png" alt=""></div> 
+               </div>
+          
+               <div class="swiper-pagination"></div>
+          
+               <div class="swiper-button-prev"></div>
+               <div class="swiper-button-next"></div>
+          
+               </div>
+          
+           <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+           <script>
+              const swiper = new Swiper('.swiper', {
+              autoplay: {
+                 delay: 3000,
+                 disableOnInteraction: false,
+              },
+          
+          loop: true,
+          
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          
+          });
+           </script>
+   </div>
+</body>
+
+</html>
