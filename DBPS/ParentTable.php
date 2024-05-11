@@ -159,7 +159,7 @@ table td {
 </style>
 <script>
     function confirmDelete(username) {
-        if (confirm("Are you sure you want to delete user '" + username + "'?")) {
+        if (confirm("Are you sure you want to delete Parent User? Parent Account: '" + username + "'")) {
             window.location.href = "deleteparentuser.php?user=" + encodeURIComponent(username);
         } else {
             // Stay on the page

@@ -192,7 +192,7 @@ table td {
 </style>
 <script>
     function confirmDelete(username) {
-        if (confirm("Are you sure you want to delete user '" + username + "'?")) {
+        if (confirm("Are you sure you want to delete Student User? Student Number: '" + username + "'")) {
             window.location.href = "deletestudentuser.php?user=" + encodeURIComponent(username);
         } else {
             // Stay on the page
