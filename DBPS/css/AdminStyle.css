@@ -1,0 +1,92 @@
+.FirstPage {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-image: linear-gradient(270deg, #1119E1 -27.71%, #0BA9ED 92.29%);
+    visibility: visible;
+}
+
+.SelectorItem {
+    width: 90%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.lor, .loe, .loc{
+    display: inline-block;
+    margin-left: 95px;
+    height: 100px;
+    text-align: center;
+}
+label{
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+i{
+    font-size: 65pt;
+}
+
+.custom-z-index{
+    position: absolute;
+    right: 10px;
+    z-index: 5;
+}
+.lor,
+.loe,
+.loc {
+    cursor: pointer;
+    color: black;
+    transition: 0.3s; /* Transition effect on color change */
+}
+#backbtn{
+    visibility: hidden;
+}
+.lor:hover,
+.loe:hover,
+.loc:hover {
+    color: blue; /* Change color to blue on hover */
+}
+body{
+    background-color: transparent;
+}
+.justify-content-end{
+    visibility: visible;
+}
+.SecondPage{
+    visibility: hidden;
+}
+.ListOFRank{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+.ListofEvaluation{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    visibility: hidden;
+}
+.ListofConsultationLetter{
+    position: absolute;
+    top: 10px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    visibility: hidden;
+}
+body{
+    overflow: hidden;
+}
