@@ -81,7 +81,7 @@
 
 <div class="ProfilePic">
     <div class="Name_Role" id="nr">
-      <div class="Name_indicate">Name: <?php echo isset($admin_data['username']) ? $admin_data['username'] : ''; ?></div>
+      <div class="Name_indicate">Userame: <?php echo isset($admin_data['username']) ? $admin_data['username'] : ''; ?></div>
       <div class="Role_indicate">Role: <?php echo isset($admin_data['type_entity']) ? $admin_data['type_entity'] : ''; ?></div>
     </div>
 </div>
@@ -93,7 +93,7 @@
     </div>
     <div class="form-event_reminder" id="fre">
         <form class="event" id="esp">
-            
+            <iframe src="AdminTable.html" width="100%" height="100%" frameborder="0" scrolling="auto"></iframe>
         </form>
     </div>
 </div>
