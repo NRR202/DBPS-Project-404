@@ -4,6 +4,7 @@ function toggleSidebar() {
     var csp = document.getElementById('cs');
     var body2 = document.getElementById('body2');
     var sp2 = document.getElementById('esp');
+    var rp2 = document.getElementById('rsp');
     var fre = document.getElementById('fre');
     var rd = document.getElementById('rd');
     var rc = document.getElementById('rc');
@@ -99,14 +100,19 @@ function toggleSidebar() {
         txt2.classList.remove('position-text-reverse2');
         txt2.classList.add('position-text2');
     }
-
-
     if (sp2.classList.contains('event-sp')) {
         sp2.classList.remove('event-sp');
         sp2.classList.add('event-sp-reverse');
     } else {
         sp2.classList.remove('event-sp-reverse');
         sp2.classList.add('event-sp');
+    }
+    if (rp2.classList.contains('reminder-sp')) {
+        rp2.classList.remove('reminder-sp')
+        rp2.classList.add('reminder-sp-reverse')
+    } else {
+        rp2.classList.remove('reminder-sp-reverse')
+        rp2.classList.add('reminder-sp')
     }
     
     var menuItems = document.querySelectorAll('.menu .item a');
@@ -149,18 +155,9 @@ function toggleSidebar() {
     
 }
 
-document.querySelector('.CourseforStudent').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form submission
-    // Handle form submission here (e.g., AJAX request)
-    // You can update the content dynamically without reloading the page
-    // For now, let's assume the form is successfully submitted
-    alert('Form submitted successfully!');
-});
-
 function DashBoardFunction() {
     var dashboard = document.getElementById('body');
     var course = document.getElementById('body2');
-    var evaluation = document.getElementById('body3');
     dashboard.style.position = "absolute";
     dashboard.style.visibility = "visible";
     course.style.visibility = "hidden";
