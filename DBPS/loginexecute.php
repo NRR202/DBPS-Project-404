@@ -73,7 +73,7 @@ if ($result === false) {
             exit();
         } elseif ($role == 'Parent') {
             echo "Login Successful as Parent";
-            header("Location: dashbaord_parent.html"); // Redirect to student dashboard or other role-specific dashboard
+            header("Location: dashboard_for_parent.php"); // Redirect to student dashboard or other role-specific dashboard
             exit();
         } else {
             echo "Login Successful as Administrator";

@@ -8,15 +8,13 @@ if (isset($_GET['user']) && is_string($_GET['user'])) {
     $username = mysqli_real_escape_string($con, $_GET['user']);
 
     // Perform the deletion query
-    $iquery = "DELETE FROM student_info WHERE username = '$username'";
+    $iquery = "DELETE FROM evaluationformtable WHERE Student_ID = '$username'";
     $inforesult = mysqli_query($con, $iquery);
 
-    $cquery = "DELETE FROM credentials_account WHERE username = '$username'";
-    $credresult = mysqli_query($con, $cquery);
 
-    if ($inforesult && $credresult) {
+    if ($inforesult) {
         // Deletion successful
-        echo '<script>alert("Student Info and Credentials deleted successfully."); window.location.href = "StudentTable.php";</script>';
+        echo '<script>alert("Evaluation Form Deletion Successful."); window.location.href = "listofevaluationform.php";</script>';
         exit;
     } else {
         // Error handling
@@ -25,7 +23,7 @@ if (isset($_GET['user']) && is_string($_GET['user'])) {
 } else {
     // Invalid request
     echo 'Invalid request.';
-    echo '<script>window.location.href = "StudentTable.php";</script>';
+    echo '<script>window.location.href = "listofevaluationform.php";</script>';
     exit;
 }
 ?>

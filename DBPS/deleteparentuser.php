@@ -25,5 +25,7 @@ if (isset($_GET['user']) && is_string($_GET['user'])) {
 } else {
     // Invalid request
     echo 'Invalid request.';
+    echo '<script>window.location.href = "TeacherTable.php";</script>';
+    exit;
 }
 ?>

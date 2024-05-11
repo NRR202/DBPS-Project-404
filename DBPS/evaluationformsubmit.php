@@ -48,13 +48,18 @@
             die("Error inserting into evaluationformtable table: " . $stmt_evalaution_submit->error);
         }
 
-        $stmt_update_status = $con->prepare("UPDATE evaluationstatus SET Status_E = 1 WHERE userID = ?");
+        // Prepare and execute the UPDATE statement
+        $stmt_update_status = $con->prepare("UPDATE evaluationformtable SET Status_E = 1 WHERE Student_ID = ?");
+        if (!$stmt_update_status) {
+            die("Error preparing update statement: " . $con->error);
+        }
+
         $stmt_update_status->bind_param("s", $studentidnum);
-        
         if (!$stmt_update_status->execute()) {
             die("Error updating status: " . $stmt_update_status->error);
         }
 
+        // Close the prepared statements and database connection
         $stmt_evalaution_submit->close();
         $stmt_update_status->close();
         $con->close();
