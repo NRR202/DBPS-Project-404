@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link  rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+<script defer src="js\bootstrap.bundle.min.js"></script>
+<script src=""></script>
+<link href="css\AdminStyle.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="FirstPage" id="firstpage_selector">
+        <div class="SelectorItem">
+            <div class="lor" id="rank" onclick="selectorranklist()">
+                <label>List of Rank</label>
+                <i class='bx bx-list-ul'></i>
+            </div>
+            <div class="loe" id="evaluation" onclick="selectorevaluationlist()">
+                <label>List of Evaluation</label>
+                <i class='bx bx-spreadsheet' ></i>
+            </div>
+            <div class="loc" id="consultation" onclick="selectorconsultationlist()">
+                <label>List of Consultation</label>
+                <i class='bx bxs-receipt'></i>
+            </div>
+        </div>
+    </div>
+    <div class="SecondPage">
+        <div class="d-flex justify-content-end custom-z-index" style="margin-top: 10px; margin-right: 10px;" id="backbtn">
+            <button type="button" class="btn btn-primary ml-auto" onclick="backbutton()" id="slidebtn">Back</button>
+        </div>
+        <div class="ListOFRank" id="secondpage_lor">
+            <iframe src="RankingExcellect.php" width="100%" height="100%" frameborder="0" scrolling="auto"></iframe>
+        </div>
+        <div class="ListofEvaluation"  id="thirdpage_loe">
+            <iframe src="listofevaluationform.php" width="100%" height="100%" frameborder="0" scrolling="auto"></iframe>
+        </div>
+        <div class="ListofConsultationLetter" id="fourthpage_loc">
+            <iframe src="searchpreviewconsultation.php" width="100%" height="100%" frameborder="0" scrolling="auto"></iframe>
+        </div>
+    </div>    
+<script src="js/selectoritem.js"></script>
+</body>
+</html>
