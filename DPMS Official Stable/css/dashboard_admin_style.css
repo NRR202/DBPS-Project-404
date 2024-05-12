@@ -1,0 +1,774 @@
+
+*{
+ margin: 0;
+ padding: 0;
+}
+
+
+.sidebar, .logo-details{
+    background: linear-gradient(to bottom, #1119E1 -27.71%, #0BA9ED 92.29%); 
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 410px; 
+    background: linear-gradient(to bottom, #1119E1 -27.71%, #0BA9ED 92.29%);
+    transition: width 0.6s ease; 
+    overflow: hidden;
+}
+
+.sidebar-resize {
+    animation-name: side-change-width;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.sidebar-resize-reverse {
+    animation-name: side-change-width-reverse;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes side-change-width {
+    from {
+        width: 410px; /* Set the initial height */
+    }
+    to {
+        width: 150px; /* Adjust as needed */
+    }
+}
+
+@keyframes side-change-width-reverse {
+    from {
+        width: 150px; /* Adjust as needed */
+    }
+    to {
+        width: 410px; /* Set the height back to its original value */
+    }
+}
+
+.background1{
+    width: 100%;
+    height: 100%;
+}
+
+.fullbg{
+    left: 410px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color:white;
+    position: absolute; 
+    display: flex;
+    visibility: visible;
+}
+
+.fullbg2{
+    left: 410px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color:white;
+    position: fixed; 
+    visibility: hidden;
+}
+
+
+.resize2 {
+    animation-name: change-width2;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.resize-reverse2 {
+    animation-name: change-width-reverse2;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-width2 {
+    from {
+        left: 410px; /* Set the initial height */
+    }
+    to {
+        left: 150px; /* Adjust as needed */
+    }
+}
+
+@keyframes change-width-reverse2 {
+    from {
+        left: 150px; /* Adjust as needed */
+    }
+    to {
+        left: 410px; /* Set the height back to its original value */
+    }
+}
+
+.resize {
+    animation-name: change-width;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.resize-reverse {
+    animation-name: change-width-reverse;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-width {
+    from {
+        left: 410px; /* Set the initial height */
+    }
+    to {
+        left: 150px; /* Adjust as needed */
+    }
+}
+
+@keyframes change-width-reverse {
+    from {
+        left: 150px; /* Adjust as needed */
+    }
+    to {
+        left: 410px; /* Set the height back to its original value */
+    }
+}
+
+
+.bx.bx-menu{
+    position: absolute; 
+    color: white;
+    right: 10px;
+    top: 10px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.logo1{
+    width: 120px;
+}
+
+.logo-details{
+    display: flex;
+    background: none;
+    position: absolute;
+    top: 40px;
+    left: 13px;
+}
+
+
+.title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    margin-top: 30px;
+    margin-left: 7px;
+    color: white;
+    white-space: nowrap;
+    font-weight: bold;
+    left: 0px;
+}
+
+.Name_indicate{
+    font-size: 25px;
+    font-weight: bold;
+    color: gray;
+    margin-left: 60px;
+    padding-top: 3px;
+}
+
+.Role_indicate{
+    font-size: 25px;
+    font-weight: bold;
+    color: gray;
+    margin-left: 60px;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.menu{
+    width: 100%;
+    margin-top: 0px;
+    background: transparent;
+    position: absolute;
+    left: 0;
+    top: 160px;
+}
+
+.menu .item{
+    position: relative;
+    cursor: pointer;
+}
+
+.menu .item a{
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    display: block;
+    padding: 16px 24px;
+    line-height: 20px;
+    transition: padding 0.5s, font-size 0.5s;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.menu .item a.large {
+    padding: 22px 54px;
+    font-size: 40px;
+}
+
+
+
+.item i{
+    margin-right: 15px;
+}
+
+.item a .dropdown{
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    transition: 0.3s ease;
+}
+
+.item .sub-menu{
+    background: transparent;
+    display: none;
+}
+
+
+span.item {
+    color: black;
+}
+
+
+.user-icon{
+    position: right;
+    color: #000;
+}
+
+
+.sub-item:hover, .sub-btn:hover, .logout:hover{
+    background-color: rgba(255, 255, 255, 0.24);   
+}
+
+.sEdgeFilterProcessed{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.event{
+    position: absolute;
+    width: 1430px;
+    height: 750px;
+    background: #d9d4d4;
+    left: 40px;
+    top: 167px;
+    border-style: solid;
+    border-color: gray;
+}
+
+.event-sp {
+    animation-name: change-sp2;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.event-sp-reverse {
+    animation-name: change-sp2-reverse;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-sp2 {
+    from {
+        width: 1430px;
+        left: 40px;
+    }
+    to {
+        width: 1690px;
+        left: -70px;
+    }
+}
+
+@keyframes change-sp2-reverse {
+    from {
+        width: 1690px;
+        left: -70px;
+    }
+    to {
+        width: 1430px;
+        left: 40px;
+    }
+}
+
+.Label1 {
+    width: 390px;
+    height: 100px;
+    border: 1px solid black;
+    padding: 0px;
+    margin: 0px;
+    left: 434px;
+    top: 95px;
+    position: relative;
+    display: inline-block; /* or display: inline; */
+}
+
+.Label2 {
+    width: 390px;
+    height: 100px;
+    border: 1px solid black;
+    padding: 0px;
+    margin: 0px;
+    left: 500px;
+    top: 95px;
+    position: relative;
+    display: inline-block; /* or display: inline; */
+}
+
+span.b {
+    position: absolute;
+    width: 390px;
+    height: 100px;
+    padding: 5px;
+    left: 434px;
+    top: 17px;
+    border: 1px solid blue; 
+    background-color: yellow; 
+  }
+
+  span.c {
+    position: absolute;
+    width: 870px;
+    height: 100px;
+    padding: 5px;
+    left: 898px;
+    top: 17px;
+    border: 1px solid blue; 
+    background-color: yellow; 
+  }
+
+  .sub-btn {
+    white-space: nowrap;
+    /* Add any other styling as needed */
+}
+
+.sub-btn{
+    white-space: nowrap;
+    font-size: 100px;
+}
+.dashboard{
+    white-space: nowrap;
+}
+.logout{
+    background-color: transparent;
+    border: none;
+    color: white;
+    display: inline-flex;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 20px;
+}
+
+.logout-text{
+    margin-left: 15px;
+    margin-top: -5px;
+}
+
+.hide {
+    animation-name: change-hidden;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.show {
+    animation-name: change-appear;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-hidden {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes change-appear {
+    from {
+        opacity: 0; /* Adjust as needed */
+    }
+    to {
+        opacity: 1; /* Set the height back to its original value */
+    }
+}
+
+.logoutform{
+    position: absolute;
+    left: 29px;
+    bottom: 20px;
+    color: white;
+    font-size: 22px;
+    transition: padding 0.5s, font-size 0.5s;
+    white-space: nowrap;
+    font-weight: 900;
+}
+
+.logoutform.enlarge{
+    font-size: 40px;
+    margin-left: 20px;
+}
+.hide2 {
+    animation-name: change-hidden2;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.show2 {
+    animation-name: change-appear2;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-hidden2 {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes change-appear2 {
+    from {
+        opacity: 0; /* Adjust as needed */
+    }
+    to {
+        opacity: 1; /* Set the height back to its original value */
+    }
+}
+.test{
+    margin-left: 0px;
+}
+a{
+    font-size: small;
+}
+
+.ProfilePic{
+    position: absolute;
+    z-index: 4;
+    top: 30px;
+    right: 30px;
+}
+
+.profilepic{
+    width: 100px;
+    margin-bottom: 80px;
+    color: white;
+}
+.form-event_reminder{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.form-course-for-student{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.accountmanage{
+    position: absolute;
+    width: 1430px;
+    height: 750px;
+    background: #d9d4d4;
+    left: 40px;
+    top: 167px;
+    border-style: solid;
+    border-color: gray;
+}
+
+.position-course {
+    animation-name: change-course-position;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.position-course-reverse2 {
+    animation-name: change-course-position-reverse2;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-course-position {
+    from {
+        width: 1430px; /* Set the initial height */
+    }
+    to {
+        width: 1690px; /* Adjust as needed */
+    }
+}
+
+@keyframes change-course-position-reverse2 {
+    from {
+        width: 1690px; /* Adjust as needed */
+    }
+    to {
+        width: 1430px; /* Set the height back to its original value */
+    }
+}
+
+.position {
+    animation-name: change-position;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.position-reverse {
+    animation-name: change-position-reverse;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-position {
+    from {
+        left: 0px; /* Set the initial height */
+    }
+    to {
+        left: 110px; /* Adjust as needed */
+    }
+}
+
+@keyframes change-position-reverse {
+    from {
+        left: 110px; /* Adjust as needed */
+    }
+    to {
+        left: 0px; /* Set the height back to its original value */
+    }
+}
+.RectangleDashboard{
+    background-color: #FFA500;
+    position: absolute;
+    width: 480px;
+    height: 90px;
+    left: 25px;
+    top: 50px;
+    border-radius: 50px;
+    border-top-left-radius: 0px;
+}
+
+
+.RectangleAccMan{
+    background-color: #FFA500;
+    position: absolute;
+    width: 480px;
+    height: 90px;
+    left: 25px;
+    top: 50px;
+    border-radius: 50px;
+    border-top-left-radius: 0px;
+}
+
+.position-AccMan-size {
+    animation-name: change-position-size-AccMan ;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.position-AccMan-reverse {
+    animation-name: change-position-size-reverse-AccMan;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-position-size-AccMan {
+    from {
+        width: 480px; /* Set the initial height */
+    }
+    to {
+        width: 585px; /* Adjust as needed */
+    }
+}
+
+@keyframes change-position-size-reverse-AccMan {
+    from {
+        width: 585px; /* Adjust as needed */
+    }
+    to {
+        width: 480px; /* Set the height back to its original value */
+  }
+}
+
+.position-size {
+    animation-name: change-position-size;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.position-size-reverse {
+    animation-name: change-position-size-reverse;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-position-size {
+    from {
+        width: 480px; /* Set the initial height */
+    }
+    to {
+        width: 585px; /* Adjust as needed */
+    }
+}
+
+@keyframes change-position-size-reverse {
+    from {
+        width: 585px; /* Adjust as needed */
+    }
+    to {
+        width: 480px; /* Set the height back to its original value */
+    }
+}
+
+.dashboard{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    margin-top: 8px;
+    margin-left: 25px;
+    font-weight: bold;
+}
+
+.coursename{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 43px;
+    margin-top: 12px;
+    margin-left: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.position-text2 {
+    animation-name: change-position-text2;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.position-text-reverse2 {
+    animation-name: change-position-text-reverse2;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-position-text2 {
+    from {
+        margin-left: 15px; /* Set the initial height */
+        font-size: 43px;
+        margin-top: 12px;
+    }
+    to {
+        margin-left: 35px; /* Adjust as needed */
+        font-size: 50px;
+        margin-top: 8px;
+    }
+}
+
+@keyframes change-position-text-reverse2 {
+    from {
+        margin-left: 35px; /* Adjust as needed */
+        font-size: 50px;
+        margin-top: 8px;
+    }
+    to {
+        margin-left: 15px; /* Set the height back to its original value */
+        font-size: 43px;
+        margin-top: 12px;
+    }
+}
+
+.position-text {
+    animation-name: change-position-text;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.position-text-reverse {
+    animation-name: change-position-text-reverse;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-position-text {
+    from {
+        margin-left: 25px; /* Set the initial height */
+    }
+    to {
+        margin-left: 75px; /* Adjust as needed */
+    }
+}
+
+@keyframes change-position-text-reverse {
+    from {
+        margin-left: 75px; /* Adjust as needed */
+    }
+    to {
+        margin-left: 25px; /* Set the height back to its original value */
+    }
+}
+.Name_Role{
+    position: absolute;
+    background-color: #d9d4d4;
+    width: 500px;
+    height: 90px;
+    top: 6px;
+    right: 10px;
+    border-style: solid;
+    border-color: gray;
+}
+li{
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    margin-top: 7px;
+    margin-left: 20px;
+    font-weight: 600;
+}
+.sizeimg{
+    width: 98%;
+}
+
+.CourseTecherTable{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    border-style: solid;
+    border-color: gray;
+    width: 890px;
+    
+}
+
+.SelectionCourse {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: gray;
+}
+
+.coursename{
+    width: 100px;
+    height: 60px;
+    background-color: #FFA500; 
+}

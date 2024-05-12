@@ -1,0 +1,218 @@
+<html>
+
+
+    <HEAD>
+        <title> DYCIAN Performance Monitoring System</title>
+        <link rel="stylesheet" href="test.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+        rel='stylesheet'>
+        <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+        
+    </HEAD>
+
+        <body>
+            
+            <div class="hero">
+                <div class="logo-container">
+                    <img class="logo00"src="https://scontent.fmnl31-1.fna.fbcdn.net/v/t1.15752-9/399790811_863871625453789_5482853068745536236_n.png?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEMuGiL4LYxnClFYRAHPCLv_ueHOqHbNgH-54c6ods2ATB6DOg4-PZWpaAVvUIhjlipUOwx8J3tEaq2hP_h8Ylw&_nc_ohc=nrAgEoTo_7sAX-73EBm&_nc_ht=scontent.fmnl31-1.fna&oh=03_AdSq2ejAbVYilanEvK3C0wHNi3bHbePH2TPF1tp_BoQLqw&oe=6615EE44" alt="Your Logo">
+                    <img class="logo100"src="https://scontent.fmnl31-1.fna.fbcdn.net/v/t1.15752-9/423063039_840895534508717_5802541914296572707_n.png?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHZrmwAmk_gQyjwkmGakwu5oZUYsG94xTahlRiwb3jFNkvel42oW_lK0NRcA_xp5ft94spjXxQMyVQxxzFO7zs9&_nc_ohc=W8DFb8ahCv0AX8hN38h&_nc_ht=scontent.fmnl31-1.fna&oh=03_AdTa-dXjxj86W1u1DKpTR_xsTlzzh22VD7LPi9hBnfCzAA&oe=66160A3A" alt="Your Logo">
+                </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+                <div class="dycitxt">
+                    <h1>Dycian Performance Monitoring System</h1>
+                    <h4>Dr. Yanga's Colleges Inc.</h4>
+                 </div>
+                <div class="form-box">
+                    <div class="button-box">
+                        <div id="btn"></div>
+                        <button type="buttton" class="toggle-btn" onclick="login()">Log in</button>
+                        <button type="button" class="toggle-btn" onclick="register()">Sign up</button>
+                        <form id="login" class="input-group">
+                            <div class="input-icon"><span class="icon"><i class='bx bx-user-circle' ></i></span>
+                            <input type="text" class="input-field" placeholder="Username"
+                            required>
+                        </div>
+                            <div class="input-icon"><span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                            <input type="text" class="input-field" placeholder="Password"
+                            required>
+                        </div>
+                            <input type="checkbox" class="check-box"><span>Remember Password</span>
+                            <a href="http://127.0.0.1:5500/dashboard.html">
+                            <button type="submit" class="submit-btn">Log in</button></a>    
+                        </form>
+
+                        <form id="register" class="input-group">
+                            <div id="btns"></div> 
+                            <button type="button" class="toggles-btn" onclick="student()">Student</button>
+                            <button type="button" class="toggles-btn" onclick="teacher()">Teacher</button>
+                            <button type="button" class="toggles-btn" onclick="parent()">Parent</button>
+                            
+                             <form id="register_student" class="input-group">
+                                <div class="input-icon"><span class="icon"><i class='bx bxs-user-rectangle' ></i></i></span>
+                                <input type="text" name="firstname" class="input-field" placeholder="First Name"required>
+                            </div>
+                                <div class="input-icon"><span class="icon"><i class='bx bxs-user-rectangle' ></i></i></span>
+                                <input type="text" name="lastname" class="input-field" placeholder="Last Name"required>
+                            </div>
+                                <div class="input-icon"><span class="icon"><i class='bx bx-user-circle' ></i></span>
+                                <input type="email" name="username" class="input-field" placeholder="Username"required>
+                            </div> 
+                                <div class="input-icon"><span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                                <input type="text" name="password" class="input-field" placeholder="Password"required>
+                            </div>
+                            <div class="idk"><h5 class="gender">Gender:&nbsp;
+                                 <input type="radio" name="check-boxmf" value="M">&nbsp;Male&nbsp;
+                                 <input type="radio" name="check-boxmf" value="F">&nbsp;Female&nbsp;
+                                </h5>
+        
+                                 <h5 class="date"> Date of Birth:
+                                <input class="dates" type="date"></h5>
+        
+                               <h5 class="course">Course:&nbsp;<select>
+                                    <option>BSIT</option>
+                                    <option>BSCS</option>
+                                    <option>BSCPE</option>
+                               </select></h5>
+                            </div>
+                            
+                                <button type="submit" class="submit-btn">register</button>
+                            </form> 
+        
+                            <form id="register_teacher" class="input-group">
+                                <div class="input-icon"><span class="icon"><i class='bx bxs-user-rectangle' ></i></i></span>
+                                <input type="text" name="firstname" class="input-field" placeholder="First Name"required>
+                            </div>
+                                <div class="input-icon"><span class="icon"><i class='bx bxs-user-rectangle' ></i></i></span>
+                                <input type="text" name="lastname" class="input-field" placeholder="Last Name"required>
+                            </div>
+                                <div class="input-icon"><span class="icon"><i class='bx bx-user-circle' ></i></span>
+                                <input type="email" name="username" class="input-field" placeholder="Username"required>
+                            </div> 
+                                <div class="input-icon"><span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                                <input type="text" name="password" class="input-field" placeholder="Password"required>
+                            </div>
+                            <div class="idk"><h5 class="gender">Gender:&nbsp;
+                                 <input type="radio" name="check-boxmf" value="M">&nbsp;Male&nbsp;
+                                 <input type="radio" name="check-boxmf" value="F">&nbsp;Female&nbsp;
+                                </h5>
+        
+                                 <h5 class="date"> Date of Birth:
+                                <input class="dates" type="date"></h5>
+        
+                               <h5 class="course">Course:&nbsp;<select>
+                                    <option>BSIT</option>
+                                    <option>BSCS</option>
+                                    <option>BSCPE</option>
+                               </select></h5>
+                            </div>
+                            
+                                <button type="submit" class="submit-btn">register</button>
+                            </form>
+        
+                            <form id="register_parent" class="input-group">
+                                <div class="input-icon"><span class="icon"><i class='bx bxs-user-rectangle' ></i></i></span>
+                                <input type="text" name="firstname" class="input-field" placeholder="First Name"required>
+                            </div>
+                                <div class="input-icon"><span class="icon"><i class='bx bxs-user-rectangle' ></i></i></span>
+                                <input type="text" name="lastname" class="input-field" placeholder="Last Name"required>
+                            </div>
+                                <div class="input-icon"><span class="icon"><i class='bx bx-user-circle' ></i></span>
+                                <input type="email" name="username" class="input-field" placeholder="Username"required>
+                            </div> 
+                                <div class="input-icon"><span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                                <input type="text" name="password" class="input-field" placeholder="Password"required>
+                            </div>
+                            <div class="idk"><h5 class="gender">Gender:&nbsp;
+                                 <input type="radio" name="check-boxmf" value="M">&nbsp;Male&nbsp;
+                                 <input type="radio" name="check-boxmf" value="F">&nbsp;Female&nbsp;
+                                </h5>
+        
+                                 <h5 class="date"> Date of Birth:
+                                <input class="dates" type="date"></h5>
+        
+                               <h5 class="course">Course:&nbsp;<select>
+                                    <option>BSIT</option>
+                                    <option>BSCS</option>
+                                    <option>BSCPE</option>
+                               </select></h5>
+                            </div>
+                            
+                                <button type="submit" class="submit-btn">register</button>
+                            </form>
+                            
+                        </form> 
+                        </div><!-- button-box -->
+                        </div><!-- formbox -->
+                
+                <script>
+                    var x = document.getElementById("login")
+                    var y = document.getElementById("register")
+                    var z = document.getElementById("btn")
+
+                    function register(){
+                        x.style.left = "-500px"
+                        y.style.left = "-20px"
+                        z.style.left = "110px"
+                    }
+
+                    function login (){
+                        x.style.left = "-20px"
+                        y.style.left = "400px"
+                        z.style.left = "0px"
+                    }
+                    </script>
+                    
+                </script>
+
+            </div>
+            <div class="hero1">                    
+                       <div class="container">
+                        <!-- Slider main container -->
+                         <div class="swiper">
+                      <!-- Additional required wrapper -->
+                         <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide"><img src="CCSimg1.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="CCSimg2.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="CCSimg3.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="CCSimg4.jpg" alt=""></div> 
+                         </div>
+                    
+                         <div class="swiper-pagination"></div>
+                    
+                         <div class="swiper-button-prev"></div>
+                         <div class="swiper-button-next"></div>
+                    
+                     </div>
+                    
+                     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+                     <script>
+                        const swiper = new Swiper('.swiper', {
+                        autoplay: {
+                           delay: 3000,
+                           disableOnInteraction: false,
+                        },
+                    
+                    loop: true,
+                    
+                    pagination: {
+                      el: '.swiper-pagination',
+                      clickable: true,
+                    },
+                    
+                    navigation: {
+                      nextEl: '.swiper-button-next',
+                      prevEl: '.swiper-button-prev',
+                    },
+                    
+                    });
+                     </script>
+
+</form>
+</div>
+
+        </body>
+
+
+
+</html>

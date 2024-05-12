@@ -1,0 +1,351 @@
+h1,h4{
+    color: #fff;
+    
+}
+  
+.dycitxt{
+    font-family: Arial, sans-serif;
+    font-size: 25;
+    margin-left: -104px;
+}
+
+h1{
+    margin: 0px;
+    margin-left: 110px;
+    margin-top: 10px;
+}
+  
+h4{
+    margin: 0px;
+    margin-bottom: 20px;
+    margin-left: 111px;
+}
+
+h5{
+    font-family: Arial, sans-serif;
+    font-size: 14;
+    margin-top: 12px;
+    margin-left: -34px;
+}
+
+h6{
+    font-family: Arial, sans-serif;
+    font-size: 14;
+    margin-top: -20px;
+    padding-left: 120px;
+}
+
+h2{
+    font-family: Arial, sans-serif;
+    font-size: 14;
+    margin-top: 17px;
+    margin-left: -34px;
+}
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.logo00{
+    width: 120px;
+    margin-top:0;
+    margin-left: 10px;
+  }
+  
+  .logo100{
+    width: 60px;
+    margin-top: 0;
+    margin-left: -50px;
+  }
+
+.hero{
+    height: 100%;
+    width: 100%;
+    
+    background-image:linear-gradient(270deg, #1119E1 -27.71%, #0BA9ED 92.29%);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    display: flex;
+    
+}
+
+.btnback {
+    position: fixed;
+    left: 20px; /* Adjust as needed */
+    bottom: 20px; /* Adjust as needed */
+    width: 125px;
+    height: 45px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #FFA500;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    animation: fade-up_1 3s; 
+}
+
+.form-box {
+    width: 380px;
+    height: 480px;
+    margin: 20% auto;
+    margin-right: 180px;
+    background: #eaeaea;
+    padding: 5px;
+    border-radius: 5%;
+    margin-top: 173px;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+}
+
+.animate-height {
+    animation-name: change-height;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.animate-height-reverse {
+    animation-name: change-height-reverse;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-height {
+    from {
+        height: 480px;
+    }
+    to {
+        height: 530px;
+    }
+}
+
+@keyframes change-height-reverse {
+    from {
+        height: 530px;
+    }
+    to {
+        height: 480px;
+    }
+}
+
+.form-picbox{
+    width: 800px;
+    height: 480px;
+    position: absolute;
+    margin: 6% auto;
+    margin-left: 50px;
+    margin-top: 120px;
+    background: #ffff;
+    padding: 5px;
+}
+
+.button-box{
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+    margin-top: 25px;
+}
+
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #ffad06, #ffad06);
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.input-group{
+    top: 50px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.info-group{
+    top: 50px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.input-field{
+    width: 100%;
+    padding: 14px 0;
+    padding-left: 20px;
+    margin: -11px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: #999;
+    outline: none;
+    background: #fff;
+    border-radius: 25px;
+    margin-top: 0px;
+    
+}
+
+.input-parent{
+    width: 100%;
+    padding: 14px 0;
+    padding-left: 20px;
+    margin: 0px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: #999;
+    outline: none;
+    background: #fff;
+    border-radius: 25px;
+    margin-top: 0px;
+    
+}
+
+.input-field::placeholder {
+    padding-left: 0;
+}
+
+
+.type-btn{
+    padding: 10px 15px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    border-radius: 30px;
+    margin-left: 6px;
+    margin-top: 7px;
+}
+
+#btn1{
+    margin-top: 10px;
+    left: -5px;
+    position: absolute;
+    width: 98px;
+    height: 27.5px;;
+    background: linear-gradient(to right, #ffad06, #ffad06);
+    border-radius: 30px;
+    transition: .5s;
+}
+
+
+.submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    margin-top: 60px;
+    background: linear-gradient(to right, #ffad06, #ffad06 ) ;
+    border: 0;
+    outline: 0;
+    border-radius: 30px;
+}
+
+.submit-btn1{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin-top: 38px;
+    margin-left: 15px;
+    background: linear-gradient(to right, #ffad06, #ffad06 ) ;
+    border: 0;
+    outline: 0;
+    border-radius: 30px;
+}
+
+span{
+    color: #777;
+    font-size: 12px;
+    bottom: 64.5px;
+    position: absolute;
+}
+
+#login{
+    left: -20px
+    
+}
+
+#register{
+    left: 350px;
+    
+}
+
+.input-icon .icon {
+    position: relative;
+    top: 35px;
+    right: 35px;
+    font-size: 25px;
+ }
+
+
+ .container{
+    width: 1000px;
+    height: 400px;
+    margin-top: 0px;
+    margin-left: 190px;
+  }
+  
+  .swipe_container {
+    width: 1137px; /* Ensures the container doesn't exceed the width of its parent */
+    height: 641.6px; /* Ensures the container doesn't exceed the height of its parent */
+    margin: 0 auto; /* Centers the container horizontally */
+    padding-top: 170px;
+    padding-right: 590px;
+  }
+  
+  .swiper-slide img {
+    width: 1137px;
+    height: 641.6px;
+  }
+  
+
+  .logo-container{
+    margin-top: 9px;
+}
+
+.Student_Info{
+    padding-top: 18px;
+    visibility: visible;
+}
+
+.Teacher_Info{
+    margin-top: -89px;
+    visibility: hidden;
+}
+
+.Parent_Info{
+    margin-top: -77px;
+    visibility: hidden;
+}
+
+#studentinput{
+    visibility: visible;
+}
+
+#techerinput{
+    visibility: hidden;
+}
+
+#parentinput{
+    visibility: hidden;
+}

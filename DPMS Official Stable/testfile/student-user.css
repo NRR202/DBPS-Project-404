@@ -1,0 +1,945 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Poppins', sans-serif;
+}
+
+
+.sidebar, .logo-details{
+    background: linear-gradient(to bottom, #1119E1 -27.71%, #0BA9ED 92.29%); 
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 410px; 
+    background: linear-gradient(to bottom, #1119E1 -27.71%, #0BA9ED 92.29%);
+    transition: width 0.6s ease; 
+    overflow: hidden;
+}
+
+.sidebar-resize {
+    animation-name: side-change-width;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.sidebar-resize-reverse {
+    animation-name: side-change-width-reverse;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes side-change-width {
+    from {
+        width: 410px; /* Set the initial height */
+    }
+    to {
+        width: 150px; /* Adjust as needed */
+    }
+}
+
+@keyframes side-change-width-reverse {
+    from {
+        width: 150px; /* Adjust as needed */
+    }
+    to {
+        width: 410px; /* Set the height back to its original value */
+    }
+}
+
+
+.fullbg{
+    left: 410px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color:white;
+    position: absolute; 
+    display: flex;
+    visibility: visible;
+}
+
+.fullbg2{
+    left: 410px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color:white;
+    position: fixed; 
+    visibility: hidden;
+}
+
+.fullbg3{
+    left: 410px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color:white;
+    position: fixed; 
+    visibility: hidden;
+}
+
+.resize3 {
+    animation-name: change-width3;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.resize-reverse3 {
+    animation-name: change-width-reverse3;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-width3 {
+    from {
+        left: 410px; /* Set the initial height */
+    }
+    to {
+        left: 150px; /* Adjust as needed */
+    }
+}
+
+@keyframes change-width-reverse3 {
+    from {
+        left: 150px; /* Adjust as needed */
+    }
+    to {
+        left: 410px; /* Set the height back to its original value */
+    }
+}
+
+.resize2 {
+    animation-name: change-width2;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.resize-reverse2 {
+    animation-name: change-width-reverse2;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-width2 {
+    from {
+        left: 410px; /* Set the initial height */
+    }
+    to {
+        left: 150px; /* Adjust as needed */
+    }
+}
+
+@keyframes change-width-reverse2 {
+    from {
+        left: 150px; /* Adjust as needed */
+    }
+    to {
+        left: 410px; /* Set the height back to its original value */
+    }
+}
+
+.resize {
+    animation-name: change-width;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.resize-reverse {
+    animation-name: change-width-reverse;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-width {
+    from {
+        left: 410px; /* Set the initial height */
+    }
+    to {
+        left: 150px; /* Adjust as needed */
+    }
+}
+
+@keyframes change-width-reverse {
+    from {
+        left: 150px; /* Adjust as needed */
+    }
+    to {
+        left: 410px; /* Set the height back to its original value */
+    }
+}
+
+
+.bx.bx-menu{
+    position: absolute; 
+    color: white;
+    right: 10px;
+    top: 10px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.logo1{
+    width: 120px;
+}
+
+.logo-details{
+    display: flex;
+    background: none;
+    position: absolute;
+    top: 40px;
+    left: 13px;
+}
+
+
+h6{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    margin-top: 31px;
+    margin-left: 7px;
+    color: white;
+    white-space: nowrap;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.menu{
+    width: 100%;
+    margin-top: 0px;
+    background: transparent;
+    position: absolute;
+    left: 0;
+    top: 160px;
+}
+
+.menu .item{
+    position: relative;
+    cursor: pointer;
+}
+
+.menu .item a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    padding: 16px 24px;
+    line-height: 20px;
+    transition: padding 0.5s, font-size 0.5s;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.menu .item a.large {
+    padding: 22px 54px;
+    font-size: 40px;
+}
+
+.item i{
+    margin-right: 15px;
+}
+
+.item a .dropdown{
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    transition: 0.3s ease;
+}
+
+.item .sub-menu{
+    background: transparent;
+    display: none;
+}
+
+
+span.item {
+    color: black;
+}
+
+
+.user-icon{
+    position: right;
+    color: #000;
+}
+
+
+.sub-item:hover, .sub-btn:hover, .logout:hover{
+    background-color: rgba(255, 255, 255, 0.24);   
+}
+
+.reminder{
+    position: absolute;
+    left: 50px;
+    top: 167px;
+    width: 430px;
+    height: 500px;
+    background: #d9d4d4;
+    border-style: solid;
+    border-color: gray;
+}
+
+.reminder-sp {
+    animation-name: change-sp;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.reminder-sp-reverse {
+    animation-name: change-sp-reverse;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-sp {
+    from {
+        left: 50px; /* Set the initial height */
+        width: 430px;
+    }
+    to {
+        left: -60px; /* Adjust as needed */
+        width: 540px;
+    }
+}
+
+@keyframes change-sp-reverse {
+    from {
+        left: -60px; /* Adjust as needed */
+        width: 540px;
+    }
+    to {
+        left: 50px; /* Set the height back to its original value */
+        width: 430px;
+    }
+}
+
+.sEdgeFilterProcessed{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.event{
+    position: absolute;
+    display: inline-table;
+    width: 900px;
+    height: 750px;
+    background: #d9d4d4;
+    left: 550px;
+    top: 167px;
+    border-style: solid;
+    border-color: gray;
+}
+
+.event-sp {
+    animation-name: change-sp2;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.event-sp-reverse {
+    animation-name: change-sp2-reverse;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-sp2 {
+    from {
+        width: 900px;
+        left: 550px;
+    }
+    to {
+        width: 1030px;
+        left: 675px;
+    }
+}
+
+@keyframes change-sp2-reverse {
+    from {
+        width: 1030px;
+        left: 675px;
+    }
+    to {
+        width: 900px;
+        left: 550px;
+    }
+}
+
+.Label1 {
+    width: 390px;
+    height: 100px;
+    border: 1px solid black;
+    padding: 0px;
+    margin: 0px;
+    left: 434px;
+    top: 95px;
+    position: relative;
+    display: inline-block; /* or display: inline; */
+}
+
+.Label2 {
+    width: 390px;
+    height: 100px;
+    border: 1px solid black;
+    padding: 0px;
+    margin: 0px;
+    left: 500px;
+    top: 95px;
+    position: relative;
+    display: inline-block; /* or display: inline; */
+}
+
+span.b {
+    position: absolute;
+    width: 390px;
+    height: 100px;
+    padding: 5px;
+    left: 434px;
+    top: 17px;
+    border: 1px solid blue; 
+    background-color: yellow; 
+  }
+
+  span.c {
+    position: absolute;
+    width: 870px;
+    height: 100px;
+    padding: 5px;
+    left: 898px;
+    top: 17px;
+    border: 1px solid blue; 
+    background-color: yellow; 
+  }
+
+  .sub-btn {
+    white-space: nowrap;
+    /* Add any other styling as needed */
+}
+
+.sub-btn{
+    white-space: nowrap;
+    font-size: 100px;
+}
+.dashboard{
+    white-space: nowrap;
+}
+.logout{
+    white-space: nowrap;
+}
+.name-text{
+    transition: visibility 0ms ease;
+}
+.name-text.hidden {
+    visibility: hidden;
+}
+.test{
+    margin-left: 0px;
+}
+a{
+    font-size: small;
+}
+i{
+    padding-left: -10px;
+}
+.ProfilePic{
+    color: white;
+    background-color: #1119E1;
+    font-size: 100px;
+    position: absolute;
+    top: 30px;
+    z-index: 1;
+    right: 30px;
+    height: 101px;
+    border-radius: 50px;
+}
+.form-event_reminder{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.form-course-for-student{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.form-evaluation-for-student{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.CourseforStudent{
+    position: absolute;
+    width: 1400px;
+    height: 750px;
+    background: #d9d4d4;
+    left: 40px;
+    top: 167px;
+    border-style: solid;
+    border-color: gray;
+}
+
+.position-course {
+    animation-name: change-course-position;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.position-course-reverse2 {
+    animation-name: change-course-position-reverse2;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-course-position {
+    from {
+        width: 1400px; /* Set the initial height */
+    }
+    to {
+        width: 1660px; /* Adjust as needed */
+    }
+}
+
+@keyframes change-course-position-reverse2 {
+    from {
+        width: 1660px; /* Adjust as needed */
+    }
+    to {
+        width: 1400px; /* Set the height back to its original value */
+    }
+}
+
+.position {
+    animation-name: change-position;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.position-reverse {
+    animation-name: change-position-reverse;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-position {
+    from {
+        left: 0px; /* Set the initial height */
+    }
+    to {
+        left: 110px; /* Adjust as needed */
+    }
+}
+
+@keyframes change-position-reverse {
+    from {
+        left: 110px; /* Adjust as needed */
+    }
+    to {
+        left: 0px; /* Set the height back to its original value */
+    }
+}
+.RectangleDashboard{
+    background-color: #FFA500;
+    position: absolute;
+    width: 480px;
+    height: 90px;
+    left: 25px;
+    top: 50px;
+    border-radius: 50px;
+    border-top-left-radius: 0px;
+}
+
+.RectangleEvaluation{
+    background-color: #FFA500;
+    position: absolute;
+    width: 480px;
+    height: 90px;
+    left: 25px;
+    top: 50px;
+    border-radius: 50px;
+    border-top-left-radius: 0px;
+}
+
+.RectangleCourse{
+    background-color: #FFA500;
+    position: absolute;
+    width: 480px;
+    height: 90px;
+    left: 25px;
+    top: 50px;
+    border-radius: 50px;
+    border-top-left-radius: 0px;
+}
+
+.position-course-size {
+    animation-name: change-position-size-course ;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.position-course-reverse {
+    animation-name: change-position-size-reverse-course;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-position-size-course {
+    from {
+        width: 480px; /* Set the initial height */
+    }
+    to {
+        width: 585px; /* Adjust as needed */
+    }
+}
+
+@keyframes change-position-size-reverse-course {
+    from {
+        width: 585px; /* Adjust as needed */
+    }
+    to {
+        width: 480px; /* Set the height back to its original value */
+    }
+}
+
+.position-size {
+    animation-name: change-position-size;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.position-size-reverse {
+    animation-name: change-position-size-reverse;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-position-size {
+    from {
+        width: 480px; /* Set the initial height */
+    }
+    to {
+        width: 585px; /* Adjust as needed */
+    }
+}
+
+@keyframes change-position-size-reverse {
+    from {
+        width: 585px; /* Adjust as needed */
+    }
+    to {
+        width: 480px; /* Set the height back to its original value */
+    }
+}
+h3{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    margin-top: 15px;
+    margin-left: 100px;
+}
+
+.evaluationname{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    margin-top: 15px;
+    margin-left: 110px;
+    font-weight: bold;
+}
+
+.coursename{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    margin-top: 15px;
+    margin-left: 140px;
+    font-weight: bold;
+}
+
+.position-text2 {
+    animation-name: change-position-text2;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.position-text-reverse2 {
+    animation-name: change-position-text-reverse2;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-position-text2 {
+    from {
+        margin-left: 140px; /* Set the initial height */
+    }
+    to {
+        margin-left: 145px; /* Adjust as needed */
+    }
+}
+
+@keyframes change-position-text-reverse2 {
+    from {
+        margin-left: 145px; /* Adjust as needed */
+    }
+    to {
+        margin-left: 140px; /* Set the height back to its original value */
+    }
+}
+
+.position-text {
+    animation-name: change-position-text;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.position-text-reverse {
+    animation-name: change-position-text-reverse;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-position-text {
+    from {
+        margin-left: 100px; /* Set the initial height */
+    }
+    to {
+        margin-left: 145px; /* Adjust as needed */
+    }
+}
+
+@keyframes change-position-text-reverse {
+    from {
+        margin-left: 145px; /* Adjust as needed */
+    }
+    to {
+        margin-left: 100px; /* Set the height back to its original value */
+    }
+}
+.Name_Role{
+    position: absolute;
+    background-color: #d9d4d4;
+    width: 315px;
+    height: 90px;
+    top: 6px;
+    right: 115px;
+    border-style: solid;
+    border-color: gray;
+}
+li{
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    margin-top: 7px;
+    margin-left: 20px;
+    font-weight: 600;
+}
+.sizeimg{
+    width: 98%;
+}
+
+.evaluationforStudent{
+    position: absolute;
+    width: 1400px;
+    height: 750px;
+    background: #d9d4d4;
+    left: 40px;
+    top: 167px;
+    border-style: solid;
+    border-color: gray;
+}
+
+.position-evaluation {
+    animation-name: change-position-evaluation;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.position-evaluation-reverse {
+    animation-name: change-position-evaluation-reverse;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-position-evaluation {
+    from {
+        width: 1400px; /* Set the initial height */
+    }
+    to {
+        width: 1660px; /* Adjust as needed */
+    }
+}
+
+@keyframes change-position-evaluation-reverse {
+    from {
+        width: 1660px; /* Adjust as needed */
+    }
+    to {
+        width: 1400px; /* Set the height back to its original value */
+    }
+}
+
+ul.filter-block, ul.s-edge-feed{
+    margin-left: 10px;
+}
+
+.graph-board {
+    position: absolute;
+    left: 50px;
+    top: 700px; 
+}
+.graph{
+    position: relative;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    background: #FFA500;
+    border-style: solid;
+    border-color: #FFA500;
+    border-radius: 250px;
+    width: 100px;
+    height: 40px;
+}
+
+h2 {
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    top: 10px;
+}
+
+.reminders {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+    top: 10px;
+}
+
+.reminders-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.reminders-title::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 1px;
+    background-color: #ccc;
+    position: absolute;
+    bottom: -5px;
+    left: 25%;
+}
+
+.task-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.task-item {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.task-item.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* test */
+#home-feed-container #smart-box {
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    word-wrap: break-word;
+}
+* {
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+}
+*, a {
+    outline: 0;
+}
+
+/* Test event container */
+span.visually-hidden {
+    font-size: large;
+    font-weight: bold;
+    left: 30px;
+    position: relative;
+}
+a.sExtlink-processed {
+    font-size: large;
+    font-weight: bold;
+    left: 30px;
+    position: relative;
+}
+strong {
+    font-size: large;
+    font-weight: bold;
+    left: 30px;
+    position: relative;
+}
+img {
+    position: relative;
+    left: 30px;
+
+}
+
+.update-sentence-inner{
+    margin: 20px;
+}
+.profile-picture {
+    display: flex;
+    position: relative;
+}
+
+.fullbg2, .coursename{
+    font-size: 40px;
+}
+
+.coursename {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    right: 50px;
+}
+
+.prof-dropdown {
+    width: 200px;
+    height: 50px;
+}
+
+.box-idk{
+    position: relative;
+    width: 1000px;
+    height: 600px;
+    background-color: #fff;
+    left: 20px;
+    top: 20px;
+}
+
+.student-submit{
+    position: relative;
+    left: 20px;
+    top: 20px;
+}

@@ -1,0 +1,97 @@
+.View-Table-ReachOut{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: lightgray;
+}
+
+.View_Send-Message{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: lightgray;
+    visibility: hidden;
+}
+
+.box-messages{
+    margin: 23px auto; /* Center the div horizontally */
+    width: 90%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.send-message-title{
+    text-align: center;
+    font-size: 20pt;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.from-user, .to-user{
+    display: inline-block;
+    margin-top : 20px;
+    padding: 5px;
+}
+
+textarea{
+    min-height: 200px;
+    max-height: 200px;
+    width: 98.1%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.save-btn{
+    font-size: 15pt;
+    background-color: lightgreen;
+    width: 100px;
+    border-radius: 5px;
+    margin-left: 521px;
+}
+
+
+
+.tbl-fixed {
+    overflow-y: scroll;
+    height: fit-content;
+    max-height: 200vh;
+}
+
+table {
+    border-collapse: separate;
+    width: 100%; /* Ensure table takes full width */
+}
+
+table th {
+    position: sticky;
+    top: 0px;
+    background: white;
+    text-align: center;
+}
+
+table td {
+    text-align: center;
+}
+
+.View-Table-ReachOut table tbody tr:nth-child(odd) {
+    background-color: lightgray; /* Set background color for odd rows */
+}
+
+.View-Table-ReachOut table tbody tr:nth-child(even) {
+    background-color: white; /* Set background color for even rows */
+}
+.referenceclick{
+    cursor: pointer;
+    color: blue; /* Set color to blue */
+    text-decoration: underline;
+}

@@ -1,0 +1,51 @@
+.header{
+    background-color: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120;
+}
+.logo{
+    width: 110;
+    position: absolute;
+    top: 5;
+    left: 15;
+}
+
+.nametitle{
+    font-family: Arial, sans-serif;
+    color: white;
+    position: absolute; 
+    top: 5;
+    left: 140px; 
+  }
+
+h1{
+    font-size: 30px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+h2{
+    font-size: 20px;
+    font-weight: 800;
+    margin-top: -20px;
+    white-space: nowrap;
+}
+
+.loginbtn{
+    position: fixed;
+    font-family: Arial, sans-serif;
+    background-color: #FFA500;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    width: 135px;
+    height: 55px;
+    right: 20;
+    top: 32.5;
+    border-radius: 50px;
+    border: none;
+}
+
