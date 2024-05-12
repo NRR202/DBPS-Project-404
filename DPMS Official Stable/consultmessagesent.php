@@ -51,21 +51,24 @@
                 </div>
             </form>
             <script>
-                document.addEventListener("DOMContentLoaded", function() {
-                    // Generate 10-digit reference number
-                    var referenceNumber = '';
-                    for (var i = 0; i < 10; i++) {
-                        referenceNumber += Math.floor(Math.random() * 10); // Generate a random digit (0-9) and append to the referenceNumber string
-                    }
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get the current datetime
+        var currentDatetime = new Date();
+        
+        // Convert datetime to a 7-digit string format (YYMMDDH)
+        var datetimeString = currentDatetime.getFullYear().toString().substring(2, 4) + 
+                            (currentDatetime.getMonth() + 1).toString().padStart(2, '0') + 
+                            currentDatetime.getDate().toString().padStart(2, '0') +
+                            currentDatetime.getMilliseconds().toString().padStart(2, '0');
 
-                    // Set the reference number value to a hidden input field
-                    var referenceInput = document.createElement("input");
-                    referenceInput.type = "hidden";
-                    referenceInput.name = "reference_number";
-                    referenceInput.value = referenceNumber;
-                    document.getElementById("consultationForm").appendChild(referenceInput);
-                });
-            </script>
+        // Set the reference number value to a hidden input field
+        var referenceInput = document.createElement("input");
+        referenceInput.type = "hidden";
+        referenceInput.name = "reference_number";
+        referenceInput.value = datetimeString;
+        document.getElementById("consultationForm").appendChild(referenceInput);
+    });
+</script>
             <button class="back-btn" onclick="BackFun()">Back</button>
         </div>
     </div>
