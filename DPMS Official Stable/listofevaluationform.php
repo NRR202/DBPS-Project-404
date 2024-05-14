@@ -47,8 +47,8 @@
                                 <td><?php echo $row['teacher_name']; ?></td>
                                 <td><?php echo $row['year_level']; ?></td>
                                 <td><?php echo $row['section']; ?></td>
-                                <td><button type="button" class="btn btn-info view-btn" onclick="ViewForm('<?php echo urlencode($row['Student_ID']); ?>')">View</button>
-                                    <button type="button" class="btn btn-danger view-btn" onclick="confirmDeletionForm('<?php echo urlencode($row['Student_ID']); ?>')">Delete</button></td>
+                                <td><button type="button" class="btn btn-info view-btn" onclick="ViewForm('<?php echo urlencode($row['EvaluationForm_ID']); ?>')">View</button>
+                                    <button type="button" class="btn btn-danger view-btn" onclick="confirmDeletionForm('<?php echo urlencode($row['EvaluationForm_ID']); ?>')">Delete</button></td>
                                 </tr>
                     <?php
                             }
@@ -66,12 +66,12 @@
 </div>
 <script src="js\selectoritem.js"></script>
 <script>
-    function ViewForm(username) {
-        window.open("evaluationformpreview_admin.php?user=" + encodeURIComponent(username), "_blank");
+    function ViewForm(evaID) {
+        window.open("evaluationformpreview_admin.php?evaluationID=" + encodeURIComponent(evaID), "_blank");
     }
-    function confirmDeletionForm(username) {
-        if (confirm("Are you sure you want to delete Evaluation Form? Student Number: '" + username + "'")) {
-            window.location.href = "deleteevaluation.php?user=" + encodeURIComponent(username);
+    function confirmDeletionForm(evaID) {
+        if (confirm("Are you sure you want to delete Evaluation Form?")) {
+            window.location.href = "deleteevaluation.php?evaluationID=" + encodeURIComponent(evaID);
         } else {
             // Stay on the page
         }

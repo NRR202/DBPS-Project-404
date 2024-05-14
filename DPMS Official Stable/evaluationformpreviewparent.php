@@ -1,8 +1,8 @@
 <?php
     require_once('php/config.php');
     session_start();
-    $student_id = $_GET['user'];
-    $query = "SELECT * FROM evaluationformtable WHERE Student_ID = '$student_id'";
+    $eva_id = $_GET['evaluationID'];
+    $query = "SELECT * FROM evaluationformtable WHERE EvaluationForm_ID = '$eva_id'";
     $result_data = mysqli_query($con, $query);
     if($result_data) {
         // Fetch data from result set
@@ -40,7 +40,7 @@
                     <p>1. How would you rate the student's level of participation in class discussions?</p>
                     <?php
                         require_once('php/config.php');
-                        $sql = "SELECT question1 FROM evaluationformtable WHERE Student_ID = '$student_id'";
+                        $sql = "SELECT question1 FROM evaluationformtable WHERE EvaluationForm_ID = '$eva_id'";
                         $result = $con->query($sql);
                         if ($result->num_rows > 0) {
                             $row = $result->fetch_assoc();
@@ -63,7 +63,7 @@
                     <p>2. How well does the student demonstrate understanding of the material during in-class activities?</p>
                     <?php
                         require_once('php/config.php');
-                        $sql = "SELECT question2 FROM evaluationformtable WHERE Student_ID = '$student_id'";
+                        $sql = "SELECT question2 FROM evaluationformtable WHERE EvaluationForm_ID = '$eva_id'";
                         $result = $con->query($sql);
                         if ($result->num_rows > 0) {
                             $row = $result->fetch_assoc();
@@ -86,7 +86,7 @@
                     <p>3. To what extent does the student engage with and support their classmates during group work?</p>
                     <?php
                         require_once('php/config.php');
-                        $sql = "SELECT question3 FROM evaluationformtable WHERE Student_ID = '$student_id'";
+                        $sql = "SELECT question3 FROM evaluationformtable WHERE EvaluationForm_ID = '$eva_id'";
                         $result = $con->query($sql);
                         if ($result->num_rows > 0) {
                             $row = $result->fetch_assoc();
@@ -109,7 +109,7 @@
                     <p>4. How consistently does the student complete and submit assignments on time?</p>
                     <?php
                         require_once('php/config.php');
-                        $sql = "SELECT question4 FROM evaluationformtable WHERE Student_ID = '$student_id'";
+                        $sql = "SELECT question4 FROM evaluationformtable WHERE EvaluationForm_ID = '$eva_id'";
                         $result = $con->query($sql);
                         if ($result->num_rows > 0) {
                             $row = $result->fetch_assoc();
@@ -132,7 +132,7 @@
                     <p>5.How effectively does the student apply feedback provided on their work?</p>
                     <?php
                         require_once('php/config.php');
-                        $sql = "SELECT question5 FROM evaluationformtable WHERE Student_ID = '$student_id'";
+                        $sql = "SELECT question5 FROM evaluationformtable WHERE EvaluationForm_ID = '$eva_id'";
                         $result = $con->query($sql);
                         if ($result->num_rows > 0) {
                             $row = $result->fetch_assoc();
@@ -155,7 +155,7 @@
                     <p>6. How well does the student demonstrate critical thinking skills in their responses to questions?</p>
                     <?php
                         require_once('php/config.php');
-                        $sql = "SELECT question6 FROM evaluationformtable WHERE Student_ID = '$student_id'";
+                        $sql = "SELECT question6 FROM evaluationformtable WHERE EvaluationForm_ID = '$eva_id'";
                         $result = $con->query($sql);
                         if ($result->num_rows > 0) {
                             $row = $result->fetch_assoc();
@@ -178,7 +178,7 @@
                     <p>7. How thoroughly does the student prepare for assessments (tests, quizzes, etc.)?</p>
                     <?php
                         require_once('php/config.php');
-                        $sql = "SELECT question7 FROM evaluationformtable WHERE Student_ID = '$student_id'";
+                        $sql = "SELECT question7 FROM evaluationformtable WHERE EvaluationForm_ID = '$eva_id'";
                         $result = $con->query($sql);
                         if ($result->num_rows > 0) {
                             $row = $result->fetch_assoc();
@@ -201,7 +201,7 @@
                     <p>8. How well does the student demonstrate mastery of the subject matter through their perdivance on assessments?</p>
                     <?php
                         require_once('php/config.php');
-                        $sql = "SELECT question8 FROM evaluationformtable WHERE Student_ID = '$student_id'";
+                        $sql = "SELECT question8 FROM evaluationformtable WHERE EvaluationForm_ID = '$eva_id'";
                         $result = $con->query($sql);
                         if ($result->num_rows > 0) {
                             $row = $result->fetch_assoc();
@@ -224,7 +224,7 @@
                     <p>9. How effectively does the student communicate their ideas and understanding both verbally and in writing?</p>
                     <?php
                         require_once('php/config.php');
-                        $sql = "SELECT question9 FROM evaluationformtable WHERE Student_ID = '$student_id'";
+                        $sql = "SELECT question9 FROM evaluationformtable WHERE EvaluationForm_ID = '$eva_id'";
                         $result = $con->query($sql);
                         if ($result->num_rows > 0) {
                             $row = $result->fetch_assoc();
@@ -247,7 +247,7 @@
                     <p>10. Overall, how would you rate the student's engagement, effort, and perdivance in this class?</p>
                     <?php
                         require_once('php/config.php');
-                        $sql = "SELECT question10 FROM evaluationformtable WHERE Student_ID = '$student_id'";
+                        $sql = "SELECT question10 FROM evaluationformtable WHERE EvaluationForm_ID = '$eva_id'";
                         $result = $con->query($sql);
                         if ($result->num_rows > 0) {
                             $row = $result->fetch_assoc();
@@ -270,7 +270,7 @@
                     <p>11. How well does the student demonstrate curiosity and initiative in exploring topics beyond what is covered in class?</p>
                     <?php
                         require_once('php/config.php');
-                        $sql = "SELECT question11 FROM evaluationformtable WHERE Student_ID = '$student_id'";
+                        $sql = "SELECT question11 FROM evaluationformtable WHERE EvaluationForm_ID = '$eva_id'";
                         $result = $con->query($sql);
                         if ($result->num_rows > 0) {
                             $row = $result->fetch_assoc();
@@ -293,7 +293,7 @@
                     <p>12.How effectively does the student collaborate with peers on group projects or assignments?</p>
                     <?php
                         require_once('php/config.php');
-                        $sql = "SELECT question12 FROM evaluationformtable WHERE Student_ID = '$student_id'";
+                        $sql = "SELECT question12 FROM evaluationformtable WHERE EvaluationForm_ID = '$eva_id'";
                         $result = $con->query($sql);
                         if ($result->num_rows > 0) {
                             $row = $result->fetch_assoc();
@@ -315,7 +315,7 @@
                     <p>13. How consistently does the student demonstrate respect for classmates and the teacher during class discussions and activities?</p>
                     <?php
                         require_once('php/config.php');
-                        $sql = "SELECT question13 FROM evaluationformtable WHERE Student_ID = '$student_id'";
+                        $sql = "SELECT question13 FROM evaluationformtable WHERE EvaluationForm_ID = '$eva_id'";
                         $result = $con->query($sql);
                         if ($result->num_rows > 0) {
                             $row = $result->fetch_assoc();
@@ -338,7 +338,7 @@
                     <p>14. To what extent does the student take responsibility for their own learning and seek clarification when needed?</p>
                     <?php
                         require_once('php/config.php');
-                        $sql = "SELECT question14 FROM evaluationformtable WHERE Student_ID = '$student_id'";
+                        $sql = "SELECT question14 FROM evaluationformtable WHERE EvaluationForm_ID = '$eva_id'";
                         $result = $con->query($sql);
                         if ($result->num_rows > 0) {
                             $row = $result->fetch_assoc();
@@ -361,7 +361,7 @@
                     <p>15. How well does the student demonstrate organization and time management skills in completing tasks?</p>
                     <?php
                         require_once('php/config.php');
-                        $sql = "SELECT question15 FROM evaluationformtable WHERE Student_ID = '$student_id'";
+                        $sql = "SELECT question15 FROM evaluationformtable WHERE EvaluationForm_ID = '$eva_id'";
                         $result = $con->query($sql);
                         if ($result->num_rows > 0) {
                             $row = $result->fetch_assoc();
@@ -384,7 +384,7 @@
                     <p>16. How effectively does the student apply previously learned concepts and skills to new and unfamiliar situations?</p>
                     <?php
                         require_once('php/config.php');
-                        $sql = "SELECT question16 FROM evaluationformtable WHERE Student_ID = '$student_id'";
+                        $sql = "SELECT question16 FROM evaluationformtable WHERE EvaluationForm_ID = '$eva_id'";
                         $result = $con->query($sql);
                         if ($result->num_rows > 0) {
                             $row = $result->fetch_assoc();
@@ -407,7 +407,7 @@
                     <p>17. How well does the student demonstrate creativity and originality in their work?</p>
                     <?php
                         require_once('php/config.php');
-                        $sql = "SELECT question17 FROM evaluationformtable WHERE Student_ID = '$student_id'";
+                        $sql = "SELECT question17 FROM evaluationformtable WHERE EvaluationForm_ID = '$eva_id'";
                         $result = $con->query($sql);
                         if ($result->num_rows > 0) {
                             $row = $result->fetch_assoc();
@@ -430,7 +430,7 @@
                     <p>18. How consistently does the student demonstrate attendance and punctuality?</p>
                     <?php
                         require_once('php/config.php');
-                        $sql = "SELECT question18 FROM evaluationformtable WHERE Student_ID = '$student_id'";
+                        $sql = "SELECT question18 FROM evaluationformtable WHERE EvaluationForm_ID = '$eva_id'";
                         $result = $con->query($sql);
                         if ($result->num_rows > 0) {
                             $row = $result->fetch_assoc();
@@ -453,7 +453,7 @@
                     <p>19. How well does the student handle constructive feedback and incorporate it into their work or perdivance?</p>
                     <?php
                         require_once('php/config.php');
-                        $sql = "SELECT question19 FROM evaluationformtable WHERE Student_ID = '$student_id'";
+                        $sql = "SELECT question19 FROM evaluationformtable WHERE EvaluationForm_ID = '$eva_id'";
                         $result = $con->query($sql);
                         if ($result->num_rows > 0) {
                             $row = $result->fetch_assoc();
@@ -476,7 +476,7 @@
                     <p>20. Overall, how would you rate the student's commitment to their own academic growth and success?</p>
                     <?php
                         require_once('php/config.php');
-                        $sql = "SELECT question20 FROM evaluationformtable WHERE Student_ID = '$student_id'";
+                        $sql = "SELECT question20 FROM evaluationformtable WHERE EvaluationForm_ID = '$eva_id'";
                         $result = $con->query($sql);
                         if ($result->num_rows > 0) {
                             $row = $result->fetch_assoc();
@@ -500,7 +500,7 @@
                     <label for="feedback">Additional Feedback:</label><br>
                     <?php
                         require_once('php/config.php');
-                        $query = "SELECT * FROM evaluationformtable WHERE Student_ID = '$student_id'";
+                        $query = "SELECT * FROM evaluationformtable WHERE EvaluationForm_ID = '$eva_id'";
                         $result_data = mysqli_query($con, $query);
                         $row = mysqli_fetch_assoc($result_data); // Fetch data from result set
                     ?>

@@ -3,12 +3,12 @@
 require_once('php/config.php');
 
 // Check if the username is provided and is a string
-if (isset($_GET['user']) && is_string($_GET['user'])) {
+if (isset($_GET['evaluationID']) && is_string($_GET['evaluationID'])) {
     // Escape the username to prevent SQL injection
-    $username = mysqli_real_escape_string($con, $_GET['user']);
+    $evaID = mysqli_real_escape_string($con, $_GET['evaluationID']);
 
     // Perform the deletion query
-    $iquery = "DELETE FROM evaluationformtable WHERE Student_ID = '$username'";
+    $iquery = "DELETE FROM evaluationformtable WHERE EvaluationForm_ID = '$evaID'";
     $inforesult = mysqli_query($con, $iquery);
 
 

@@ -8,9 +8,10 @@ if (isset($_GET['user']) && is_string($_GET['user'])) {
     $username = mysqli_real_escape_string($con, $_GET['user']);
 
     // Perform the deletion query
+
     $iquery = "DELETE FROM teacher_info WHERE username = '$username'";
     $inforesult = mysqli_query($con, $iquery);
-
+    
     $cquery = "DELETE FROM credentials_account WHERE username = '$username'";
     $credresult = mysqli_query($con, $cquery);
 
