@@ -18,7 +18,7 @@
         // Construct the SQL query based on search parameters
         $query = "SELECT *
                   FROM evaluationformtable
-                  WHERE 1=1 AND Student_ID = '$username'"; // Start with a basic query
+                  WHERE 1=1 AND Student_Name = '$studentname'"; // Start with a basic query
 
         // Append conditions based on search parameters
         if (!empty($searchTeacher)) {
@@ -103,7 +103,7 @@
                                 <td><?php echo $row['teacher_name']; ?></td>
                                 <td><?php echo $row['year_level']; ?></td>
                                 <td><?php echo $row['section']; ?></td>
-                                <td><button type="button" class="btn btn-info view-btn" onclick="ViewForm('<?php echo urlencode($row['Student_ID']); ?>')">View</button></td>
+                                <td><button type="button" class="btn btn-info view-btn" onclick="ViewForm('<?php echo urlencode($row['EvaluationForm_ID']); ?>')">View</button></td>
                                 </tr>
                     <?php
                             }
@@ -120,8 +120,8 @@
         </div>
 </div>
 <script>
-    function ViewForm(username) {
-        window.location.href = "evaluationformpreviewparent.php?user=" + encodeURIComponent(username);
+    function ViewForm(evaID) {
+        window.location.href = "evaluationformpreviewparent.php?evaluationID=" + encodeURIComponent(evaID);
     }
 </script>
 <style>
